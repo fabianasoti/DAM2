@@ -1,0 +1,27 @@
+[
+    {
+        "nombre": "Lolita",
+        "apellidos": "Lamas Bonita",
+        "telefono": "611223344"
+    },
+    {
+        "nombre": "Pepe",
+        "apellidos": "Fosforo Boro",
+        "telefono": "622334455"
+    },
+    {
+        "nombre": "Susana",
+        "apellidos": "Horia Huerta",
+        "telefono": "633445566"
+    },
+    {
+        "nombre": "Lucas",
+        "apellidos": "Melenao Cucumber",
+        "telefono": "644556677"
+    },
+    {
+        "nombre": "Benjamin",
+        "apellidos": "Castillo Torres",
+        "telefono": "655667788"
+    }
+]
