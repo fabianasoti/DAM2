@@ -1,0 +1,10 @@
+Planeta añadido: MERCURY
+Planeta añadido: VENUS
+Planeta añadido: EARTH
+Planeta añadido: MOON
+Planeta añadido: MARS
+Planeta añadido: JUPITER
+Planeta añadido: SATURN
+Planeta añadido: URANUS
+Planeta añadido: NEPTUNE
+Planeta añadido: PLUTO
