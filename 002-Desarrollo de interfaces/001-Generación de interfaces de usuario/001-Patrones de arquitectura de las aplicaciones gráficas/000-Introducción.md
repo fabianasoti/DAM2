@@ -1,2 +1,2 @@
-# Patrones de arquitectura de las aplicaciones gráficas
+# Generación de interfaces de usuario
 
