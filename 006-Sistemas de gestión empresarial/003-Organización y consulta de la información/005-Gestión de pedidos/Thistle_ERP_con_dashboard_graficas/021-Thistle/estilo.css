@@ -1,0 +1,71 @@
+
+:root{--color_corporativo:#20263a;--margen_interior:20px;--color_grafica:#6577e8}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;font-family:Inter,Ubuntu,Arial,sans-serif;width:100%;min-height:100%;background:#f5f7fb;color:#20263a}
+body{display:flex;flex-direction:column}
+body>header{color:white;background:var(--color_corporativo);padding:18px 26px;box-shadow:0 2px 12px #17203318}
+header h1{padding:0;margin:0;font-size:20px;letter-spacing:.2px}
+main{flex:1;display:flex;min-height:calc(100vh - 60px)}
+nav{background:var(--color_corporativo);display:flex;flex-direction:column;padding:18px 12px;gap:8px}
+#modulos{width:170px;flex:0 0 170px}
+#entidades{width:205px;flex:0 0 205px;background:#293149}
+nav a{color:#dbe1f2;text-decoration:none;padding:12px 14px;border-radius:8px;font-size:14px;transition:.15s}
+nav a:hover,nav a.activo{background:#ffffff1c;color:#fff}
+section{flex:1;min-width:0;padding:26px;overflow:auto}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.barra small,.barra>div>small{font-size:10px;letter-spacing:1.4px;color:#81899b;font-weight:700}
+h2{margin:5px 0 0;font-size:27px;letter-spacing:-.6px}
+h3{font-size:16px;margin:0 0 12px}
+button{border:0;background:var(--color_corporativo);color:#fff;padding:10px 15px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{opacity:.88}
+button.secundario{background:#e8ebf2;color:#30384b}
+button.editar{background:#e8edff;color:#3447a8;padding:6px 10px}
+button.eliminar{background:#ffeded;color:#a63c42;padding:6px 10px}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #e4e7ef;border-radius:10px;overflow:hidden;font-size:13px}
+table th{background:#f0f2f8;color:#555e72;text-align:left;font-weight:700}
+table th,table td{padding:12px 13px;border-bottom:1px solid #edf0f5;white-space:nowrap}
+table tr:last-child td{border-bottom:0}
+table tbody tr:hover{background:#fafbff}
+.tabla-contenedor,.reporting-tabla-scroll{overflow:auto;border-radius:10px;margin-top:12px}
+.muted{color:#858da0;font-size:13px;line-height:1.5;margin:6px 0 18px}
+.demo-tag{background:#fff0d9;color:#8d5d16;padding:7px 10px;border-radius:7px;font-size:11px;font-weight:700}
+.metricas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}
+.metrica,.panel-grafica{background:white;border:1px solid #e7eaf1;border-radius:13px;padding:18px;box-shadow:0 3px 12px #1e2b4606;min-width:0}
+.metrica span,.metrica small{display:block;color:#858da0;font-size:12px}
+.metrica strong{display:block;font-size:28px;margin:12px 0 9px;letter-spacing:-.7px}
+.metrica small.positivo{color:#19866a}.metrica small.neutro{color:#858da0}
+.dashboard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grafica-svg{display:block;width:100%;height:auto;min-height:150px;overflow:visible}
+.panel-grafica{margin:18px 0}
+.dashboard-grid .panel-grafica{margin:0}
+.reporting-graficas{margin:22px 0 30px}
+.reporting-graficas-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.reporting-graficas-grid .panel-grafica{margin:0;padding:14px}
+.reporting-graficas-grid h3{font-size:14px}
+.reporting-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.reporting-toolbar small{display:block;color:#81899b;margin-top:5px}
+.reporting-documento{background:#e9edf5;padding:20px;border-radius:12px}
+.reporting-a4{background:white;max-width:1100px;margin:auto;padding:28px;border-radius:5px}
+.reporting-cabecera{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--color_corporativo);padding-bottom:18px;margin-bottom:20px}
+.reporting-cabecera h1{font-size:26px;margin:7px 0 0}
+.reporting-cabecera small{font-size:10px;letter-spacing:1px;color:#7b8497}
+.reporting-fecha{font-size:12px;color:#737c8e}
+.reporting-resumen{display:flex;gap:12px;margin:20px 0}
+.reporting-resumen>div{background:#f4f6fa;border-radius:9px;padding:14px 20px;min-width:120px}
+.reporting-resumen strong,.reporting-resumen span{display:block}.reporting-resumen strong{font-size:24px}.reporting-resumen span{font-size:12px;color:#7b8497;margin-top:4px}
+.reporting-bloque{margin:28px 0;break-inside:avoid}
+.reporting-titulo-tabla{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.reporting-titulo-tabla small{color:#8a92a4;font-size:10px;letter-spacing:1px}
+.reporting-titulo-tabla h2{font-size:18px}
+.reporting-contador{font-size:12px;color:#778095}
+.reporting-filtros input{width:100%;min-width:60px;padding:6px;border:1px solid #dfe4ee;border-radius:5px;font-size:11px}
+.reporting-bloque thead tr:nth-child(2) th{cursor:pointer}
+.reporting-resumen-label{font-weight:700}.numero{text-align:right}
+.vacio{color:#81899b;font-size:13px;padding:12px}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:800px;background:white;padding:22px;border:1px solid #e7eaf1;border-radius:12px;margin-top:18px}
+form label{font-size:12px;color:#667086;display:flex;flex-direction:column;gap:7px}
+form input{border:1px solid #dfe4ee;border-radius:7px;padding:10px;font:inherit;color:#20263a}
+form button{grid-column:1/-1;justify-self:start}
+@media(max-width:1050px){.metricas{grid-template-columns:repeat(2,minmax(0,1fr))}.reporting-graficas-grid{grid-template-columns:1fr}.reporting-graficas-grid .panel-grafica{margin:0}}
+@media(max-width:760px){main{flex-direction:column}#modulos,#entidades{width:100%;flex:0 0 auto;flex-direction:row;overflow:auto;padding:8px 12px}nav a{white-space:nowrap;padding:10px}section{padding:16px}.dashboard-grid{grid-template-columns:1fr}.metricas{gap:8px}.metrica{padding:13px}.metrica strong{font-size:22px}.reporting-a4{padding:14px}.reporting-documento{padding:8px}}
+@media print{body{background:white}body>header,main>nav,.reporting-toolbar{display:none!important}main{display:block}section{padding:0;overflow:visible}.reporting-documento{padding:0;background:white}.reporting-a4{padding:0;max-width:none}.reporting-graficas-grid{grid-template-columns:repeat(3,1fr)}.reporting-filtros{display:none}.reporting-tabla-scroll{overflow:visible}table{font-size:9px}table th,table td{padding:5px}}
