@@ -1,27 +1,17 @@
-#include <stdio.h>
-#include <omp.h>
+#include <iostream>
+#include <fstream>
+using namespace std;
 
 int main() {
-		// Establezco numero de operaciones
-    const long long iteraciones = 10000000000;
-    // Dame el tiempo de inicio
-    double inicio = omp_get_wtime();
-		// todo esto se ejecuta en paralelo
-    #pragma omp parallel
-    {
-        int hilo = omp_get_thread_num();
-        int total = omp_get_num_threads();
-        double numero = 1.000000065;
-        for (long long i = 0; i < iteraciones; i++) {
-            numero *= 1.0000000534;
-        }
-        printf("Hilo %d de %d | Resultado: %.10e\n",
-            hilo, total, numero);
-    }
-		// Ahora toma el tiempo al final 
-    double fin = omp_get_wtime();
-		// Y sacame una comparacion
-    printf("\nTiempo total: %.4f segundos\n", fin - inicio);
+		// Abrimos un archivo
+    	ofstream archivo("resultado.txt");
+		// Guardamos lineas dentro del archivo
+      archivo << "Hola mundo" << endl;
+      archivo << "Este texto se guarda en un archivo" << endl;
+      archivo << 12345 << endl;
+		// Todo lo que se abre se cierra
+    	archivo.close();
 
     return 0;
 }
+
