@@ -41,24 +41,10 @@ class DarkorangeReporting {
             <div><strong>${entidades.length}</strong><span>tablas</span></div>
             <div><strong>${totalRegistros}</strong><span>registros</span></div>
           </div>
-          <div class="reporting-graficas">
-            <h2>Panel gráfico de muestra</h2>
-            <p>Indicadores inventados para mostrar las posibilidades del reporting.</p>
-            <div class="reporting-graficas-grid">
-              <div class="panel-grafica"><h3>Evolución mensual</h3><div id="rep-evolucion"></div></div>
-              <div class="panel-grafica"><h3>Distribución de clientes</h3><div id="rep-clientes"></div></div>
-              <div class="panel-grafica"><h3>Actividad por día</h3><div id="rep-actividad"></div></div>
-            </div>
-          </div>
           <div id="reporting-tablas"></div>
         </article>
       </div>`;
 
-    if(window.dibujarBarras){
-      window.dibujarBarras(this.contenedor.querySelector("#rep-evolucion"), [{label:"May",value:62},{label:"Jun",value:78},{label:"Jul",value:71},{label:"Ago",value:90},{label:"Sep",value:84},{label:"Oct",value:100}], "Evolución mensual");
-      window.dibujarBarras(this.contenedor.querySelector("#rep-clientes"), [{label:"PYME",value:118},{label:"Autónomos",value:74},{label:"Empresa",value:56}], "Clientes");
-      window.dibujarBarras(this.contenedor.querySelector("#rep-actividad"), [{label:"Lun",value:35},{label:"Mar",value:48},{label:"Mié",value:41},{label:"Jue",value:57},{label:"Vie",value:63}], "Actividad");
-    }
     const zona = this.contenedor.querySelector("#reporting-tablas");
     entidades.forEach(entidad => zona.appendChild(this.crearTabla(entidad)));
     this.contenedor.querySelector("#reporting-imprimir").onclick = () => window.print();
@@ -75,6 +61,18 @@ class DarkorangeReporting {
         <span class="reporting-contador">${datos.registros.length} filas</span>
       </div>
       <div class="reporting-tabla-scroll"><table><thead></thead><tbody></tbody><tfoot></tfoot></table></div>`;
+
+    const botonCSV = document.createElement('button');
+    botonCSV.type = 'button';
+    botonCSV.textContent = 'Exportar CSV';
+    botonCSV.className = 'reporting-exportar-csv';
+    bloque.querySelector('.reporting-titulo-tabla').appendChild(botonCSV);
+    botonCSV.onclick = () => {
+      const filas = [...bloque.querySelector('tbody').rows]
+        .filter(fila => fila.style.display !== 'none')
+        .map(fila => Object.fromEntries(datos.columnas.map((c, i) => [c.name, fila.cells[i].textContent])));
+      DarkorangeCSV.descargar(datos.tabla, datos.columnas, filas);
+    };
 
     const thead = bloque.querySelector("thead");
     const filtros = document.createElement("tr");
@@ -120,6 +118,9 @@ class DarkorangeReporting {
       th.dataset.asc = asc ? "0" : "1";
     });
     actualizar();
+    const campo=DarkorangeGraficas.campo(datos.registros,datos.columnas);
+    if(campo&&datos.registros.length){const grafica=document.createElement('div');grafica.className='grafica-card reporting-grafica';bloque.querySelector('.reporting-titulo-tabla').after(grafica);const actualizarGrafica=()=>{const visibles=[...tbody.rows].filter(f=>f.style.display!=='none');const registros=visibles.map(f=>Object.fromEntries(datos.columnas.map((c,i)=>[c.name,f.cells[i].textContent])));const freq=DarkorangeGraficas.frecuencia(registros,campo.name);DarkorangeGraficas.crear(grafica,'anillo',freq.map(x=>x[0]),freq.map(x=>x[1]),'Frecuencia de '+campo.name)};
+    bloque.querySelectorAll('thead input').forEach(i=>i.addEventListener('input',actualizarGrafica));actualizarGrafica()}
     return bloque;
   }
 

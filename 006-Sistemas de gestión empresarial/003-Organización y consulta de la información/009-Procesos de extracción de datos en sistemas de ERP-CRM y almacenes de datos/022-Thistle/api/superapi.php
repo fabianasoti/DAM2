@@ -1,124 +1,95 @@
 <?php
- switch($_GET['ruta']){
- 		case "modulos":
-    	echo '
-      	["ventas","rrhh","facturacion","compras"]
-      ';
-      break;
- 		case "entidades":
-    	// Me conecto a SQLite
-    	$db = new SQLite3('../data/thistle.db');
-      // Pido el listado de tablas
-			$result = $db->query("SELECT name 
-                            FROM sqlite_master 
-                            WHERE type='table';");
-      // Creo un array de entidades
-      $entidades = [];
-      // Recorro el resultado
-      while ($fila = $result->fetchArray(SQLITE3_ASSOC)) {
-      	$entidades[] = $fila['name'];
-      }
-      // Y lo sacco por pantalla en formato json
-      echo json_encode($entidades);
-      $db->close();
-      break;
-    case "tabla":
-    	echo '
-      	{
-          "clientes": [
-            {
-              "id": 1,
-              "nombre": "Laura",
-              "apellidos": "Martínez García",
-              "email": "laura.martinez@example.com",
-              "telefono": "600123456",
-              "ciudad": "Valencia",
-              "edad": 34
-            },
-            {
-              "id": 2,
-              "nombre": "Carlos",
-              "apellidos": "Sánchez López",
-              "email": "carlos.sanchez@example.com",
-              "telefono": "611234567",
-              "ciudad": "Madrid",
-              "edad": 42
-            },
-            {
-              "id": 3,
-              "nombre": "Marta",
-              "apellidos": "Gómez Navarro",
-              "email": "marta.gomez@example.com",
-              "telefono": "622345678",
-              "ciudad": "Alicante",
-              "edad": 29
-            },
-            {
-              "id": 4,
-              "nombre": "David",
-              "apellidos": "Ruiz Fernández",
-              "email": "david.ruiz@example.com",
-              "telefono": "633456789",
-              "ciudad": "Castellón",
-              "edad": 37
-            },
-            {
-              "id": 5,
-              "nombre": "Elena",
-              "apellidos": "Torres Romero",
-              "email": "elena.torres@example.com",
-              "telefono": "644567890",
-              "ciudad": "Barcelona",
-              "edad": 31
-            },
-            {
-              "id": 6,
-              "nombre": "Javier",
-              "apellidos": "Moreno Pérez",
-              "email": "javier.moreno@example.com",
-              "telefono": "655678901",
-              "ciudad": "Valencia",
-              "edad": 46
-            },
-            {
-              "id": 7,
-              "nombre": "Sara",
-              "apellidos": "Vidal Ortega",
-              "email": "sara.vidal@example.com",
-              "telefono": "666789012",
-              "ciudad": "Sevilla",
-              "edad": 25
-            },
-            {
-              "id": 8,
-              "nombre": "Alejandro",
-              "apellidos": "Gil Molina",
-              "email": "alejandro.gil@example.com",
-              "telefono": "677890123",
-              "ciudad": "Murcia",
-              "edad": 39
-            },
-            {
-              "id": 9,
-              "nombre": "Lucía",
-              "apellidos": "Navarro Díaz",
-              "email": "lucia.navarro@example.com",
-              "telefono": "688901234",
-              "ciudad": "Valencia",
-              "edad": 28
-            },
-            {
-              "id": 10,
-              "nombre": "Pablo",
-              "apellidos": "Herrera Campos",
-              "email": "pablo.herrera@example.com",
-              "telefono": "699012345",
-              "ciudad": "Zaragoza",
-              "edad": 51
-            }
-          ]
-        }
-      ';
-      break;
- }
+header('Content-Type: application/json; charset=utf-8');
+$db = new SQLite3('../data/darkorange.db');
+$db->enableExceptions(true);
+
+function entrada() {
+    $datos = json_decode(file_get_contents('php://input'), true);
+    return is_array($datos) ? $datos : [];
+}
+function nombreSeguro($nombre) {
+    return '"' . str_replace('"', '""', $nombre) . '"';
+}
+function validarTabla($db, $tabla) {
+    $stmt = $db->prepare("SELECT name FROM sqlite_master WHERE type='table' AND name=? AND name NOT LIKE 'sqlite_%'");
+    $stmt->bindValue(1, $tabla, SQLITE3_TEXT);
+    $r = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
+    if (!$r) throw new Exception('Tabla no válida');
+    return nombreSeguro($tabla);
+}
+function estructura($db, $tabla) {
+    $segura = validarTabla($db, $tabla);
+    $res = $db->query("PRAGMA table_info($segura)");
+    $columnas = [];
+    $pk = null;
+    while ($c = $res->fetchArray(SQLITE3_ASSOC)) {
+        $columnas[] = $c;
+        if (!empty($c['pk'])) $pk = $c['name'];
+    }
+    return [$columnas, $pk];
+}
+
+try {
+    $ruta = $_GET['ruta'] ?? '';
+    switch ($ruta) {
+        case 'modulos':
+            echo json_encode(['ventas','rrhh','facturacion','compras'], JSON_UNESCAPED_UNICODE);
+            break;
+
+        case 'entidades':
+            $r = $db->query("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name");
+            $tablas = [];
+            while ($f = $r->fetchArray(SQLITE3_ASSOC)) $tablas[] = $f['name'];
+            echo json_encode($tablas, JSON_UNESCAPED_UNICODE);
+            break;
+
+        case 'tabla':
+            $tabla = $_GET['tabla'] ?? '';
+            $segura = validarTabla($db, $tabla);
+            [$columnas, $pk] = estructura($db, $tabla);
+            $orden = $pk ? ' ORDER BY '.nombreSeguro($pk).' DESC' : '';
+            $r = $db->query("SELECT * FROM $segura$orden");
+            $registros = [];
+            while ($f = $r->fetchArray(SQLITE3_ASSOC)) $registros[] = $f;
+            echo json_encode([
+                'tabla'=>$tabla,
+                'columnas'=>$columnas,
+                'clavePrimaria'=>$pk,
+                'registros'=>$registros
+            ], JSON_UNESCAPED_UNICODE);
+            break;
+
+        case 'crear':
+            $e = entrada();
+            $tabla = $e['tabla'] ?? '';
+            $datos = $e['datos'] ?? [];
+            $segura = validarTabla($db, $tabla);
+            [$columnas, $pk] = estructura($db, $tabla);
+
+            $permitidas = array_column(
+                array_filter($columnas, fn($c) => empty($c['pk']) && $c['name'] !== 'id'),
+                'name'
+            );
+            $datos = array_intersect_key($datos, array_flip($permitidas));
+            if (!$datos) throw new Exception('No hay campos para insertar');
+
+            $campos = array_keys($datos);
+            $nombres = implode(',', array_map('nombreSeguro', $campos));
+            $marcas = implode(',', array_fill(0, count($campos), '?'));
+            $stmt = $db->prepare("INSERT INTO $segura ($nombres) VALUES ($marcas)");
+            $i = 1;
+            foreach ($datos as $valor) $stmt->bindValue($i++, $valor, SQLITE3_TEXT);
+            $stmt->execute();
+
+            echo json_encode(['ok'=>true,'id'=>$db->lastInsertRowID()], JSON_UNESCAPED_UNICODE);
+            break;
+
+        default:
+            throw new Exception('Ruta no válida');
+    }
+} catch (Throwable $e) {
+    http_response_code(400);
+    echo json_encode(['ok'=>false,'error'=>$e->getMessage()], JSON_UNESCAPED_UNICODE);
+}
+$db->close();
 ?>

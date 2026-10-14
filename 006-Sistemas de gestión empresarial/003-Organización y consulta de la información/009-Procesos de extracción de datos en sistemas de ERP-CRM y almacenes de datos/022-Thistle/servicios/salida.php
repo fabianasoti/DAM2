@@ -1,6 +1,6 @@
 <?php
 
-$db = new SQLite3('../data/thistle.db');
+$db = new SQLite3('../data/darkorange.db');
 
 // Obtener todas las tablas
 $result = $db->query("

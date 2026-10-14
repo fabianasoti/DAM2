@@ -11,7 +11,14 @@ class DarkorangeTabla {
 
     const titulo = document.createElement("h3");
     titulo.textContent = "Listado de " + this.tabla;
-    this.contenedor.appendChild(titulo);
+    const cabecera = document.createElement('div');
+    cabecera.className = 'barra';
+    const botonCSV = document.createElement('button');
+    botonCSV.type = 'button';
+    botonCSV.textContent = 'Exportar CSV';
+    botonCSV.onclick = () => DarkorangeCSV.descargar(this.tabla, this.columnas, this.registros);
+    cabecera.append(titulo, botonCSV);
+    this.contenedor.appendChild(cabecera);
 
     if (!this.columnas.length) {
       this.contenedor.innerHTML += '<p class="vacio">No hay columnas.</p>';
@@ -52,6 +59,8 @@ class DarkorangeTabla {
       vacio.textContent = "Todavía no hay registros.";
       this.contenedor.appendChild(vacio);
     }
+    const campo=DarkorangeGraficas.campo(this.registros,this.columnas);
+    if(campo&&this.registros.length){const panel=document.createElement('div');panel.className='grafica-card grafica-tabla';this.contenedor.prepend(panel);const frec=DarkorangeGraficas.frecuencia(this.registros,campo.name);DarkorangeGraficas.crear(panel,'barras',frec.map(x=>x[0]),frec.map(x=>x[1]),'Frecuencia de '+campo.name)}
     return table;
   }
 }

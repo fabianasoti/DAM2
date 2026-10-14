@@ -7,7 +7,7 @@
 	echo "<br>";
 
 	// Creamos/abrimos la base de datos
-	$db = new SQLite3('../data/thistle.db');
+	$db = new SQLite3('../data/darkorange.db');
 
 	$partido = explode("\n",$_POST['modelo']);
 
@@ -72,5 +72,5 @@
 	echo "<br>";
 	echo "Base de datos creada correctamente";
 	echo "<br>";
-	echo "../data/thistle.db";
+	echo "../data/darkorange.db";
 ?>
