@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thistle | PMS Hotelero & GMAO</title>
+    <!-- Enlazamos la hoja de estilos unificada -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Thistle | PMS-GMAO</h1>
+        <p>Sistema Integral de Gestión Hotelera</p>
+    </header>
+
+    <!-- Contenedor general en dos columnas -->
+    <div id="contenedor-principal">
+        
+        <!-- Panel lateral izquierdo original -->
+        <aside>
+            <!-- Ocultamos visualmente los módulos pero mantenemos el div por si el JS los busca -->
+            <div class="grupo-menu" style="display: none;">
+                <h3>Módulos</h3>
+                <div id="modulos"></div>
+            </div>
+            
+            <div class="grupo-menu">
+                <h3>Entidades</h3>
+                <div id="entidades"></div>
+            </div>
+        </aside>
+
+        <!-- Contenido principal a la derecha -->
+        <main>
+            <section>
+                <!-- Aquí pintará dinámicamente tu codigo.js las tablas y formularios -->
+                <div class="vacio">Selecciona una entidad del menú lateral para comenzar.</div>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 - Proyecto Hotel Thistle</p>
+    </footer>
+
+    <script src="codigo.js"></script>
+</body>
+</html>

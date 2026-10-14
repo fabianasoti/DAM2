@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/var/www/html/DAM2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/002-Módulos de un sistema ERP-CRM/006-Thistle/data/thistle.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3588"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:maincategorias"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">INSERT INTO categorias (nombre, descripcion) VALUES
+('Lana', 'Ovillos de lana natural'),
+('Algodón', 'Ovillos de algodón'),
+('Acrílico', 'Ovillos de fibras acrílicas'),
+('Mezcla', 'Ovillos fabricados con mezcla de fibras'),
+('Alpaca', 'Ovillos de fibra de alpaca'),
+('Merino', 'Ovillos de lana merino');
+
+INSERT INTO proveedores
+(nombre, email, telefono, direccion, ciudad, codigo_postal, pais)
+VALUES
+('Lanas del Norte S.L.', 'ventas@lanasnorte.es', '944111222',
+ 'Calle Industria 15', 'Bilbao', '48001', 'España'),
+
+('Textiles Mediterráneo S.A.', 'info@textilesmediterraneo.es', '963222333',
+ 'Avenida del Puerto 82', 'Valencia', '46023', 'España'),
+
+('Fibras Ibéricas S.L.', 'contacto@fibrasibericas.es', '915333444',
+ 'Calle Mayor 120', 'Madrid', '28013', 'España'),
+
+('Wool Import Europe', 'sales@woolimport.eu', '+39 021234567',
+ 'Via Roma 45', 'Milán', '20121', 'Italia');
+ 
+INSERT INTO productos
+(id_categoria, nombre, descripcion, material, color, peso_gramos,
+ longitud_metros, precio, stock_actual, stock_minimo)
+VALUES
+(1, 'Lana Clásica 100g', 
+ 'Ovillo de lana para punto y ganchillo',
+ 'Lana 100%', 'Rojo', 100, 200, 4.50, 50, 10),
+
+(1, 'Lana Clásica 100g',
+ 'Ovillo de lana para punto y ganchillo',
+ 'Lana 100%', 'Azul', 100, 200, 4.50, 35, 10),
+
+(2, 'Algodón Natural 100g',
+ 'Algodón peinado para labores',
+ 'Algodón 100%', 'Blanco', 100, 170, 3.90, 60, 15),
+
+(2, 'Algodón Natural 100g',
+ 'Algodón peinado para labores',
+ 'Algodón 100%', 'Verde', 100, 170, 3.90, 42, 15),
+
+(3, 'Acrílico Soft 100g',
+ 'Fibra acrílica suave y económica',
+ 'Acrílico 100%', 'Amarillo', 100, 250, 2.80, 75, 20),
+
+(3, 'Acrílico Soft 100g',
+ 'Fibra acrílica suave y económica',
+ 'Acrílico 100%', 'Negro', 100, 250, 2.80, 80, 20),
+
+(4, 'Mix Wool 100g',
+ 'Mezcla de lana y acrílico',
+ 'Lana 50% / Acrílico 50%', 'Gris', 100, 220, 5.20, 30, 10),
+
+(4, 'Mix Wool 100g',
+ 'Mezcla de lana y acrílico',
+ 'Lana 50% / Acrílico 50%', 'Beige', 100, 220, 5.20, 25, 10),
+
+(5, 'Alpaca Premium 50g',
+ 'Fibra de alpaca de alta calidad',
+ 'Alpaca 100%', 'Natural', 50, 150, 8.90, 18, 5),
+
+(5, 'Alpaca Premium 50g',
+ 'Fibra de alpaca de alta calidad',
+ 'Alpaca 100%', 'Marrón', 50, 150, 8.90, 12, 5),
+
+(6, 'Merino Extra 100g',
+ 'Lana merino de gran suavidad',
+ 'Merino 100%', 'Burdeos', 100, 210, 7.50, 22, 5),
+
+(6, 'Merino Extra 100g',
+ 'Lana merino de gran suavidad',
+ 'Merino 100%', 'Verde botella', 100, 210, 7.50, 16, 5);
+ 
+ INSERT INTO producto_proveedor
+(id_producto, id_proveedor, precio_compra, referencia_proveedor)
+VALUES
+(1, 1, 2.50, 'LN-ROJO-100'),
+(2, 1, 2.50, 'LN-AZUL-100'),
+
+(3, 2, 2.10, 'ALG-BLA-100'),
+(4, 2, 2.10, 'ALG-VER-100'),
+
+(5, 3, 1.40, 'ACR-AMA-100'),
+(6, 3, 1.40, 'ACR-NEG-100'),
+
+(7, 1, 3.00, 'MIX-GRI-100'),
+(8, 1, 3.00, 'MIX-BEI-100'),
+
+(9, 4, 5.50, 'ALP-NAT-50'),
+(10, 4, 5.50, 'ALP-MAR-50'),
+
+(11, 1, 4.20, 'MER-BUR-100'),
+(12, 1, 4.20, 'MER-VBO-100');
+ 
+ INSERT INTO clientes
+(nombre, apellidos, email, telefono, direccion, ciudad, codigo_postal)
+VALUES
+('Laura', 'García López', 'laura.garcia@email.com', '600111222',
+ 'Calle Colón 25', 'Valencia', '46004'),
+
+('Carlos', 'Martínez Ruiz', 'carlos.martinez@email.com', '600222333',
+ 'Calle Aragón 14', 'Barcelona', '08015'),
+
+('Ana', 'Sánchez Pérez', 'ana.sanchez@email.com', '600333444',
+ 'Calle Serrano 50', 'Madrid', '28006'),
+
+('Marta', 'Navarro Gómez', 'marta.navarro@email.com', '600444555',
+ 'Calle San Vicente 18', 'Valencia', '46002'),
+
+('Javier', 'Torres Martín', 'javier.torres@email.com', '600555666',
+ 'Calle Mayor 32', 'Alicante', '03002'),
+
+('Elena', 'Ferrer Costa', 'elena.ferrer@email.com', '600666777',
+ 'Calle Mallorca 80', 'Barcelona', '08029');
+
+INSERT INTO pedidos
+(id_cliente, fecha_pedido, estado, direccion_envio, ciudad_envio, codigo_postal_envio, gastos_envio)
+VALUES
+(1, '2026-09-01 10:30:00', 'entregado',
+ 'Calle Colón 25', 'Valencia', '46004', 3.95),
+
+(2, '2026-09-03 16:45:00', 'enviado',
+ 'Calle Aragón 14', 'Barcelona', '08015', 5.50),
+
+(3, '2026-09-05 11:20:00', 'entregado',
+ 'Calle Serrano 50', 'Madrid', '28006', 4.95),
+
+(1, '2026-09-08 09:15:00', 'preparando',
+ 'Calle Colón 25', 'Valencia', '46004', 3.95),
+
+(4, '2026-09-10 18:30:00', 'confirmado',
+ 'Calle San Vicente 18', 'Valencia', '46002', 3.95),
+
+(5, '2026-09-12 13:10:00', 'pendiente',
+ 'Calle Mayor 32', 'Alicante', '03002', 4.50);
+
+INSERT INTO detalle_pedido
+(id_pedido, id_producto, cantidad, precio_unitario)
+VALUES
+-- Pedido 1 - Laura
+(1, 1, 3, 4.50),
+(1, 3, 2, 3.90),
+(1, 9, 1, 8.90),
+
+-- Pedido 2 - Carlos
+(2, 6, 5, 2.80),
+(2, 7, 2, 5.20),
+(2, 11, 2, 7.50),
+
+-- Pedido 3 - Ana
+(3, 2, 4, 4.50),
+(3, 4, 3, 3.90),
+(3, 10, 2, 8.90),
+
+-- Pedido 4 - Laura
+(4, 5, 10, 2.80),
+(4, 8, 3, 5.20),
+
+-- Pedido 5 - Marta
+(5, 3, 5, 3.90),
+(5, 12, 2, 7.50),
+
+-- Pedido 6 - Javier
+(6, 1, 2, 4.50),
+(6, 9, 2, 8.90),
+(6, 11, 1, 7.50);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
