@@ -1,0 +1,1 @@
+* * * * * /usr/bin/python3 "/var/www/html/DAM2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento/008-preparo dos cosas para cron.py"  >/dev/null 2>&1
