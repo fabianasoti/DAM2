@@ -1,5 +1,5 @@
 
-archivo = open("cursojava.txt", "r", encoding="utf-8")
+archivo = open("cursoprocesos.txt", "r", encoding="utf-8")
 
 texto = archivo.read().lower()
 archivo.close()

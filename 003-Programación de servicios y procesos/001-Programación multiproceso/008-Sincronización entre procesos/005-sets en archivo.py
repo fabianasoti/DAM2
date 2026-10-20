@@ -1,4 +1,4 @@
-archivo = open("cursojava.txt",'r')
+archivo = open("cursoprocesos.txt",'r')
 
 lineas = archivo.readlines()
 
