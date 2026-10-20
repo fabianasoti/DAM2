@@ -1,30 +1,23 @@
 
-
 class Agenda:
 
-    def __init__(self,archivo):
+    def __init__(self, archivo):
         self.archivo = archivo
 
-    def guardar(self,nombre,telefono):
-        f = open(self.archivo, "a")
-        f.write(nombre +","+ telefono + "\n")
-        f.close
+    def guardar(self, nombre, telefono):
+        with open(self.archivo, "a", encoding="utf-8") as f:
+            f.write(nombre + "," + telefono + "\n")
 
     def leer(self):
-        f = open(self.archivo, "r")
-        for linea in f:
-            nombre, telefono = linea.strip().split(",")
-            print(nombre +":"+ telefono)
-        f.close()
-
+        with open(self.archivo, "r", encoding="utf-8") as f:
+            for linea in f:
+                nombre, telefono = linea.strip().split(",")
+                print(nombre + ":" + telefono)
 
 
 print("--- MI AGENDA ---")
 agenda = Agenda("agenda.csv")
-agenda.guardar("Marta","611222333")
-agenda.guardar("Pablo","622333444")
-agenda.guardar("Lucia","633444555")
+agenda.guardar("Susana", "611222333")
+agenda.guardar("Cornelia", "622333444")
+agenda.guardar("Dionisio", "633444555")
 agenda.leer()
-
-
-
