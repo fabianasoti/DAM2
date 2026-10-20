@@ -45,7 +45,7 @@ $schema
 ";
 
 $datos = [
-    "model" => "granite4.1:8b",
+    "model" => "qwen3.5:4b",
     "prompt" => $prompt,
     "stream" => false,
     "options" => [
