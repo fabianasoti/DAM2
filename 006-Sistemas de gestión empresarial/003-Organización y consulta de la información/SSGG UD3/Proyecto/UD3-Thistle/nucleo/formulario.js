@@ -1,4 +1,4 @@
-class DarkorangeFormulario {
+class ThistleFormulario {
   constructor({contenedor, tabla, columnas, api="api/superapi.php", alGuardar=null}) {
     this.contenedor = typeof contenedor === "string" ? document.querySelector(contenedor) : contenedor;
     this.tabla = tabla;

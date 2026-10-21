@@ -43,7 +43,7 @@ try{
       $tabla=$_GET['tabla'] ?? ''; $segura=validarTabla($db,$tabla); [$columnas,$pk]=estructura($db,$tabla);
       $r=$db->query("SELECT * FROM $segura ORDER BY \"".str_replace('"','""',$pk)."\" DESC"); $registros=[];
       while($f=$r->fetchArray(SQLITE3_ASSOC)) $registros[]=$f;
-      echo json_encode(['columnas'=>$columnas,'clavePrimaria'=>$pk,'registros'=>$registros],JSON_UNESCAPED_UNICODE); 
+      echo json_encode(['tabla'=>$tabla,'columnas'=>$columnas,'clavePrimaria'=>$pk,'registros'=>$registros],JSON_UNESCAPED_UNICODE);
       break;
     case 'crear':
       $e=entrada(); $tabla=$e['tabla']??''; $datos=$e['datos']??[]; $segura=validarTabla($db,$tabla); [$columnas,$pk]=estructura($db,$tabla);

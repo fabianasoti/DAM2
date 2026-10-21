@@ -1,4 +1,4 @@
-class DarkorangeTabla {
+class ThistleTabla {
   constructor({contenedor, tabla, columnas, registros}) {
     this.contenedor = typeof contenedor === "string" ? document.querySelector(contenedor) : contenedor;
     this.tabla = tabla;
@@ -16,7 +16,7 @@ class DarkorangeTabla {
     const botonCSV = document.createElement('button');
     botonCSV.type = 'button';
     botonCSV.textContent = 'Exportar CSV';
-    botonCSV.onclick = () => DarkorangeCSV.descargar(this.tabla, this.columnas, this.registros);
+    botonCSV.onclick = () => ThistleCSV.descargar(this.tabla, this.columnas, this.registros);
     cabecera.append(titulo, botonCSV);
     this.contenedor.appendChild(cabecera);
 
@@ -59,8 +59,8 @@ class DarkorangeTabla {
       vacio.textContent = "Todavía no hay registros.";
       this.contenedor.appendChild(vacio);
     }
-    const campo=DarkorangeGraficas.campo(this.registros,this.columnas);
-    if(campo&&this.registros.length){const panel=document.createElement('div');panel.className='grafica-card grafica-tabla';this.contenedor.prepend(panel);const frec=DarkorangeGraficas.frecuencia(this.registros,campo.name);DarkorangeGraficas.crear(panel,'barras',frec.map(x=>x[0]),frec.map(x=>x[1]),'Frecuencia de '+campo.name)}
+    const campo=ThistleGraficas.campo(this.registros,this.columnas);
+    if(campo&&this.registros.length){const panel=document.createElement('div');panel.className='grafica-card grafica-tabla';this.contenedor.prepend(panel);const frec=ThistleGraficas.frecuencia(this.registros,campo.name);ThistleGraficas.crear(panel,'barras',frec.map(x=>x[0]),frec.map(x=>x[1]),'Frecuencia de '+campo.name)}
     return table;
   }
 }

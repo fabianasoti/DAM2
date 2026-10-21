@@ -1,4 +1,4 @@
-class DarkorangeCSV {
+class ThistleCSV {
   static descargar(nombre, columnas, registros) {
     const campos = columnas.map(c => typeof c === 'string' ? c : c.name);
     const escapar = valor => {

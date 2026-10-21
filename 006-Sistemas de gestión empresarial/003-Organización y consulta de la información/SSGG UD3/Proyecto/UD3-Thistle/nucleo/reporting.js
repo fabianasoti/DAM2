@@ -1,4 +1,4 @@
-class DarkorangeReporting {
+class ThistleReporting {
   constructor({contenedor="section", api="api/superapi.php"} = {}) {
     this.contenedor = typeof contenedor === "string" ? document.querySelector(contenedor) : contenedor;
     this.api = api;
@@ -34,7 +34,7 @@ class DarkorangeReporting {
       <div class="reporting-documento">
         <article class="reporting-a4">
           <header class="reporting-cabecera">
-            <div><small>JOCARSA · DARKORANGE</small><h1>Reporte general</h1></div>
+            <div><small>THISTLE · PMS-GMAO</small><h1>Reporte general</h1></div>
             <div class="reporting-fecha">${fecha}</div>
           </header>
           <div class="reporting-resumen">
@@ -71,7 +71,7 @@ class DarkorangeReporting {
       const filas = [...bloque.querySelector('tbody').rows]
         .filter(fila => fila.style.display !== 'none')
         .map(fila => Object.fromEntries(datos.columnas.map((c, i) => [c.name, fila.cells[i].textContent])));
-      DarkorangeCSV.descargar(datos.tabla, datos.columnas, filas);
+      ThistleCSV.descargar(datos.tabla, datos.columnas, filas);
     };
 
     const thead = bloque.querySelector("thead");
@@ -93,7 +93,7 @@ class DarkorangeReporting {
     const tbody = bloque.querySelector("tbody");
     datos.registros.forEach(registro => {
       const tr = document.createElement("tr");
-      datos.columnas.forEach(c => { const td=document.createElement("td"); td.textContent=registro[c.name] ?? ""; tr.appendChild(td); });
+      datos.columnas.forEach(c => { const td=document.createElement("td"); td.textContent=/pass|contras/i.test(c.name) ? "••••••" : (registro[c.name] ?? ""); tr.appendChild(td); });
       tbody.appendChild(tr);
     });
 
@@ -118,8 +118,8 @@ class DarkorangeReporting {
       th.dataset.asc = asc ? "0" : "1";
     });
     actualizar();
-    const campo=DarkorangeGraficas.campo(datos.registros,datos.columnas);
-    if(campo&&datos.registros.length){const grafica=document.createElement('div');grafica.className='grafica-card reporting-grafica';bloque.querySelector('.reporting-titulo-tabla').after(grafica);const actualizarGrafica=()=>{const visibles=[...tbody.rows].filter(f=>f.style.display!=='none');const registros=visibles.map(f=>Object.fromEntries(datos.columnas.map((c,i)=>[c.name,f.cells[i].textContent])));const freq=DarkorangeGraficas.frecuencia(registros,campo.name);DarkorangeGraficas.crear(grafica,'anillo',freq.map(x=>x[0]),freq.map(x=>x[1]),'Frecuencia de '+campo.name)};
+    const campo=ThistleGraficas.campo(datos.registros,datos.columnas);
+    if(campo&&datos.registros.length){const grafica=document.createElement('div');grafica.className='grafica-card reporting-grafica';bloque.querySelector('.reporting-titulo-tabla').after(grafica);const actualizarGrafica=()=>{const visibles=[...tbody.rows].filter(f=>f.style.display!=='none');const registros=visibles.map(f=>Object.fromEntries(datos.columnas.map((c,i)=>[c.name,f.cells[i].textContent])));const freq=ThistleGraficas.frecuencia(registros,campo.name);ThistleGraficas.crear(grafica,'anillo',freq.map(x=>x[0]),freq.map(x=>x[1]),'Frecuencia de '+campo.name)};
     bloque.querySelectorAll('thead input').forEach(i=>i.addEventListener('input',actualizarGrafica));actualizarGrafica()}
     return bloque;
   }

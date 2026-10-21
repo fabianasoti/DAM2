@@ -1,4 +1,3 @@
-
 "use strict";
 
 /* =========================================================
@@ -29,6 +28,7 @@ async function inicializarThistle() {
         await cargarConfiguracion();
         await cargarModulos();
         await cargarEntidades();
+        abrirDashboard();
     } catch (error) {
         console.error("Error al iniciar Thistle:", error);
         mostrarError(
@@ -112,8 +112,6 @@ async function cargarModulos() {
             "api/superapi.php?ruta=modulos"
         );
 
-        menu.replaceChildren();
-
         datos.forEach(modulo => {
             const enlace = document.createElement("a");
 
@@ -186,9 +184,11 @@ async function cargarTabla(tabla) {
     mostrarCargando("Cargando datos...");
 
     try {
+        const t0 = performance.now();
         const datos = await solicitarJSON(
             `api/superapi.php?ruta=tabla&tabla=${encodeURIComponent(tabla)}`
         );
+        const ms = Math.round(performance.now() - t0);
 
         if (!datos || !Array.isArray(datos.columnas)) {
             throw new Error("La API no ha devuelto una estructura de tabla válida.");
@@ -201,7 +201,8 @@ async function cargarTabla(tabla) {
             registros: Array.isArray(datos.registros)
                 ? datos.registros
                 : [],
-            clavePrimaria
+            clavePrimaria,
+            ms
         };
 
         pintarTabla(datosTablaActual);
@@ -242,6 +243,9 @@ function pintarTabla(datos) {
         crearBoton("+ Nuevo registro", nuevoRegistro),
         crearBoton("Exportar CSV", exportarTablaCSV, "secundario"),
         crearBoton("Exportar JSON", exportarTablaJSON, "secundario"),
+        crearBoton("Exportar MD", exportarTablaMD, "secundario"),
+        crearBoton("Exportar HTML", exportarTablaHTML, "secundario"),
+        crearBoton("Exportar SQL", exportarTablaSQL, "secundario"),
         crearBoton("Imprimir", () => window.print(), "secundario")
     );
 
@@ -271,6 +275,41 @@ function pintarTabla(datos) {
     resumen.id = "resumen-registros";
     resumen.className = "resumen-registros";
     seccion.appendChild(resumen);
+
+    /* Gráfica por entidad (tipo y columna seleccionables) */
+    const panel = document.createElement("div");
+    panel.className = "grafica-card grafica-tabla";
+
+    const selTipo = document.createElement("select");
+    ["barras", "horizontal", "lineas", "anillo", "tarta"]
+        .forEach(t => selTipo.add(new Option(t, t)));
+
+    const selCol = document.createElement("select");
+    columnas.filter(c => !c.pk).forEach(c => selCol.add(new Option(c.name, c.name)));
+
+    const lienzo = document.createElement("div");
+
+    const pintarGrafica = () => {
+        const f = ThistleGraficas.frecuencia(registros, selCol.value);
+        ThistleGraficas.crear(
+            lienzo, selTipo.value,
+            f.map(x => x[0]), f.map(x => x[1]),
+            "Frecuencia de " + selCol.value
+        );
+    };
+
+    selTipo.addEventListener("change", pintarGrafica);
+    selCol.addEventListener("change", pintarGrafica);
+
+    const campoInicial = ThistleGraficas.campo(registros, columnas);
+    if (campoInicial) selCol.value = campoInicial.name;
+
+    panel.append(selCol, selTipo, lienzo);
+
+    if (registros.length && selCol.value) {
+        seccion.appendChild(panel);
+        pintarGrafica();
+    }
 
     const contenedor = document.createElement("div");
     contenedor.className = "tabla-contenedor";
@@ -314,7 +353,7 @@ function pintarTabla(datos) {
         );
 
         resumen.textContent =
-            `${filtrados.length} registro(s) mostrado(s) de ${registros.length}.`;
+            `${filtrados.length} registro(s) mostrado(s) de ${registros.length} · consulta en ${datos.ms} ms.`;
 
         filtrados.forEach(registro => {
             const fila = document.createElement("tr");
@@ -590,26 +629,8 @@ function exportarTablaCSV() {
         return;
     }
 
-    function escaparCSV(valor) {
-        return '"' + String(valor ?? "").replace(/"/g, '""') + '"';
-    }
-
-    const filas = [
-        columnas.map(c => escaparCSV(c.name)).join(";"),
-        ...registros.map(registro =>
-            columnas
-                .map(c => escaparCSV(registro[c.name]))
-                .join(";")
-        )
-    ];
-
-    const contenido = "\uFEFF" + filas.join("\r\n");
-
-    descargarArchivo(
-        contenido,
-        `${nombreArchivo(tablaActual)}.csv`,
-        "text/csv;charset=utf-8;"
-    );
+    // Usa el módulo común: evita que Excel interprete datos como fórmulas
+    ThistleCSV.descargar(tablaActual, columnas, registros);
 }
 
 /* =========================================================
@@ -629,6 +650,57 @@ function exportarTablaJSON() {
         `${nombreArchivo(tablaActual)}.json`,
         "application/json;charset=utf-8;"
     );
+}
+
+/* =========================================================
+   12 bis. EXPORTACIÓN MARKDOWN, HTML Y SQL
+   ========================================================= */
+
+function exportarTablaMD() {
+    const { columnas, registros } = datosTablaActual;
+    if (!columnas.length) return mostrarError("No hay datos para exportar.");
+
+    const cel = v => String(v ?? "").replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
+
+    const md = [
+        `# ${tablaActual}`,
+        "",
+        `Exportado: ${new Date().toLocaleString("es-ES")} · ${registros.length} registros`,
+        "",
+        "| " + columnas.map(c => cel(c.name)).join(" | ") + " |",
+        "| " + columnas.map(() => "---").join(" | ") + " |",
+        ...registros.map(r => "| " + columnas.map(c => cel(r[c.name])).join(" | ") + " |")
+    ].join("\n");
+
+    descargarArchivo(md, `${nombreArchivo(tablaActual)}.md`, "text/markdown;charset=utf-8;");
+}
+
+function exportarTablaHTML() {
+    const { columnas, registros } = datosTablaActual;
+    if (!columnas.length) return mostrarError("No hay datos para exportar.");
+
+    const th = columnas.map(c => `<th>${escapar(c.name)}</th>`).join("");
+    const filas = registros
+        .map(r => `<tr>${columnas.map(c => `<td>${escapar(r[c.name])}</td>`).join("")}</tr>`)
+        .join("\n");
+
+    const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><title>${escapar(tablaActual)}</title><style>body{font-family:sans-serif}table{border-collapse:collapse}th,td{border:1px solid #ccc;padding:6px 10px}th{background:#4a3b4c;color:#fff}</style></head><body><h1>${escapar(tablaActual)}</h1><table><thead><tr>${th}</tr></thead><tbody>${filas}</tbody></table></body></html>`;
+
+    descargarArchivo(html, `${nombreArchivo(tablaActual)}.html`, "text/html;charset=utf-8;");
+}
+
+function exportarTablaSQL() {
+    const { columnas, registros } = datosTablaActual;
+    if (!columnas.length) return mostrarError("No hay datos para exportar.");
+
+    const q = v => (v === null || v === undefined) ? "NULL" : "'" + String(v).replace(/'/g, "''") + "'";
+    const nombres = columnas.map(c => `"${c.name}"`).join(", ");
+
+    const sql = registros
+        .map(r => `INSERT INTO "${tablaActual}" (${nombres}) VALUES (${columnas.map(c => q(r[c.name])).join(", ")});`)
+        .join("\n");
+
+    descargarArchivo(sql, `${nombreArchivo(tablaActual)}.sql`, "application/sql;charset=utf-8;");
 }
 
 /* =========================================================
@@ -750,3 +822,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("#boton-reporting")?.addEventListener("click", () => {
+        document
+            .querySelectorAll("#entidades a")
+            .forEach(a => a.classList.remove("activo"));
+
+        new ThistleReporting({ contenedor: "section" }).render();
+    });
+});

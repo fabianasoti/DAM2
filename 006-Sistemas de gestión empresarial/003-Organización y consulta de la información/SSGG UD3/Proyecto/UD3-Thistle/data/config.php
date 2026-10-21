@@ -1,4 +1,4 @@
 {
 	"nombre":"Thistle | PMS-GMAO",
-  "color":"thistle"
+  "color":"#4a3b4c"
 }
