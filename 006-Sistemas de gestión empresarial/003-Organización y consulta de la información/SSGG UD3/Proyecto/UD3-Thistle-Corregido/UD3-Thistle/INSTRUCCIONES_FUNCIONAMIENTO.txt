@@ -1,0 +1,18 @@
+THISTLE - REQUISITOS PARA LA API
+
+Este proyecto utiliza PHP con SQLite3. Sin la extensión PHP SQLite3, ninguna tabla, dashboard ni gráfica puede obtener datos.
+
+Ubuntu / Debian / Apache:
+  sudo apt update
+  sudo apt install php-sqlite3
+  sudo systemctl restart apache2
+
+Comprueba desde el navegador (usando tu ruta real):
+  http://localhost/UD3-Thistle/api/superapi.php?ruta=entidades
+Debe devolver un array JSON de nombres de tablas.
+
+Accede al proyecto por http://localhost/UD3-Thistle/ (ubicado en /var/www/html/UD3-Thistle), no abriendo index.html como archivo local.
+
+Si usas el servidor integrado PHP: php -S localhost:8000 desde la carpeta UD3-Thistle, y abre http://localhost:8000/ .
+
+No se han alterado estilos, colores ni maquetación.

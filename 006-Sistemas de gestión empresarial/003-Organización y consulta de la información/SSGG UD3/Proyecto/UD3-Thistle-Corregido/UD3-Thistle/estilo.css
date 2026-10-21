@@ -1,0 +1,375 @@
+/* ==========================================
+   Estilos Globales - Sistema PMS + GMAO
+   Paleta: Thistle & Clean Corporate (Hotel Thistle)
+   ========================================== */
+
+:root {
+    --color-principal: #d8bfd8; /* Thistle (Cardo suave) */
+    --color-secundario: #4a3b4c; /* Tono oscuro contrastado para textos y cabeceras */
+    --color-fondo: #f9f6f9;      /* Fondo general muy suave */
+    --color-blanco: #ffffff;
+    --color-borde: #e0d0e0;
+    --color-texto: #333333;
+    --color-hover: #c8afc8;
+    --color_corporativo: #4a3b4c;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+    color: var(--color-texto);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+}
+
+/* ==========================================
+   Cabecera Superior
+   ========================================== */
+header {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0 0 4px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+header p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-principal);
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================
+   Estructura Principal (Dos Columnas)
+   ========================================== */
+#contenedor-principal {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 100px);
+}
+
+aside {
+    width: 280px;
+    background-color: #f2eaf2; /* Cardo muy suave para el panel */
+    border-right: 1px solid var(--color-borde);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+aside .grupo-menu {
+    margin-bottom: 25px;
+}
+
+aside h3 {
+    font-size: 0.85rem;
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--color-principal);
+    padding-bottom: 5px;
+}
+
+/* Contenedores de menús de clase (#modulos y #entidades) */
+aside nav, aside div#entidades, aside div#modulos {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+aside a {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+aside a:hover, aside a.activo {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    border-color: var(--color-secundario);
+    font-weight: 600;
+    transform: translateX(3px);
+}
+
+/* ==========================================
+   Área de Contenido (Main y Secciones)
+   ========================================== */
+main {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    overflow-y: auto;
+    margin: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid var(--color-borde);
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.barra h2 {
+    color: var(--color-secundario);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.barra small {
+    color: #777;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   Tablas Dinámicas Corporativas
+   ========================================== */
+.tabla-contenedor {
+    overflow-x: auto;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+table, .tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+th, .tabla-datos th {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 12px 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+td, .tabla-datos td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--color-borde);
+    color: var(--color-texto);
+}
+
+tbody tr:nth-child(even), .tabla-datos tr:nth-child(even) {
+    background-color: #fbf8fb;
+}
+
+tbody tr:hover, .tabla-datos tr:hover {
+    background-color: #f2eaf2;
+}
+
+.acciones {
+    white-space: nowrap;
+    width: 1%;
+    text-align: right;
+}
+
+/* ==========================================
+   Botones Corporativos
+   ========================================== */
+button {
+    border: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+button.secundario {
+    background-color: #e8dee8;
+    color: var(--color-secundario);
+}
+
+.editar {
+    background-color: #6b526e;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+.eliminar {
+    background-color: #c94a4a;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   Formularios Dinámicos
+   ========================================== */
+form {
+    max-width: 650px;
+    display: grid;
+    gap: 16px;
+    background: #faf7fa;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-secundario);
+    display: grid;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input {
+    padding: 11px 14px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font: inherit;
+    background-color: var(--color-blanco);
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 3px rgba(74, 59, 76, 0.15);
+}
+
+form button {
+    justify-self: start;
+    margin-top: 8px;
+}
+
+.vacio {
+    color: #888;
+    padding: 40px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ==========================================
+   Pie de página
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ==========================================
+   Diseño Adaptativo (Responsive)
+   ========================================== */
+@media(max-width: 800px) {
+    #contenedor-principal {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--color-borde);
+    }
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+/* ==========================================
+   Mejora estética para el menú lateral automático
+   ========================================== */
+
+/* Contenedor de entidades en el aside */
+#entidades {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Transformamos los enlaces automáticos en botones elegantes */
+#entidades a, aside a {
+    display: block;
+    background-color: #ffffff;
+    color: var(--color-secundario);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    transition: all 0.2s ease-in-out;
+    text-transform: capitalize; /* Pone la primera letra en mayúscula (ej: Clientes, Habitaciones) */
+}
+
+/* Efecto al pasar el ratón o cuando está activo */
+#entidades a:hover, #entidades a.activo, aside a:hover, aside a.activo {
+    background-color: var(--color-secundario);
+    color: #ffffff;
+    border-color: var(--color-secundario);
+    font-weight: 600;
+    transform: translateX(3px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Módulo de sistema: Reporting */
+body>header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+body>header #boton-reporting{background:white;color:var(--color_corporativo);border:1px solid #ffffff80}
+.reporting-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.reporting-toolbar small{color:#777}
+.reporting-documento{background:#777;padding:24px;overflow:auto;border-radius:8px}
+.reporting-a4{width:210mm;min-height:297mm;margin:auto;background:#fff;padding:16mm;box-sizing:border-box;box-shadow:0 5px 30px #0004;color:#222}
+.reporting-cabecera{display:flex;justify-content:space-between;align-items:flex-start;background:none;color:#222;padding:0 0 8mm;box-shadow:none;border-bottom:3px solid var(--color_corporativo)}
+.reporting-cabecera h1{font-size:30px;margin:3px 0}.reporting-cabecera small{color:var(--color_corporativo);font-weight:bold;letter-spacing:1.5px}.reporting-fecha{font-size:11px;color:#777;text-align:right;max-width:55mm}
+.reporting-resumen{display:flex;gap:10px;margin:8mm 0}.reporting-resumen>div{border:1px solid #ddd;padding:10px 16px;min-width:35mm}.reporting-resumen strong{font-size:22px;color:var(--color_corporativo);display:block}.reporting-resumen span{font-size:10px;text-transform:uppercase;color:#777}
+.reporting-bloque{padding:0;margin:0 0 10mm;background:none;box-shadow:none;border-radius:0;overflow:visible;break-inside:auto}.reporting-titulo-tabla{display:flex;justify-content:space-between;align-items:end;margin-bottom:8px}.reporting-titulo-tabla h2{margin:0;font-size:20px}.reporting-titulo-tabla small{font-size:9px;color:#888;letter-spacing:1px}.reporting-contador{background:var(--color_corporativo);color:white;border-radius:20px;padding:5px 10px;font-size:10px}
+.reporting-tabla-scroll{overflow-x:auto}.reporting-bloque table{font-size:9px;border:1px solid #ddd}.reporting-bloque th,.reporting-bloque td{padding:5px 6px}.reporting-bloque thead tr:last-child th{cursor:pointer;user-select:none}.reporting-bloque thead tr:last-child th:hover{filter:brightness(.9)}
+.reporting-filtros th{padding:4px;background:color-mix(in srgb,var(--color_corporativo) 75%,white)}.reporting-filtros input{width:100%;padding:5px;border:0;border-radius:2px;font-size:9px;outline:none}.reporting-bloque tfoot td{font-weight:bold;border-top:2px solid #bbb;background:#f3f3f3}.reporting-bloque tfoot .numero{text-align:right}.reporting-resumen-label{color:var(--color_corporativo)}
+@page{size:A4;margin:10mm}
+@media print{
+  body>header,aside,footer,.reporting-toolbar,.acciones-tabla,.zona-busqueda,.acciones,.reporting-filtros{display:none!important}
+  #contenedor-principal{display:block} main{padding:0}
+  .reporting-documento{padding:0;background:#fff;overflow:visible}
+  .reporting-a4{width:auto;min-height:0;margin:0;padding:0;box-shadow:none}
+  }
+/* Dashboard y gráficas SVG */
+.dashboard-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:20px 0 24px}.dashboard-kpis>div,.grafica-card{border:1px solid #eee;background:#fff;border-radius:12px;padding:18px;box-shadow:0 3px 16px #00000009}.dashboard-kpis small,.dashboard-kpis span{display:block;color:#777}.dashboard-kpis strong{display:block;font-size:29px;margin:9px 0;color:var(--color_corporativo)}.dashboard-kpis span{font-size:12px}.dashboard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grafica-card{min-width:0}.grafica-card h3{margin:0 0 12px;font-size:15px}.grafica-svg{display:block;width:100%;height:auto;max-height:280px}.grafica-svg rect,.grafica-svg path{transition:opacity .15s;cursor:crosshair}.grafica-svg rect:hover,.grafica-svg path:hover{opacity:.72}.grafica-tooltip{display:none;position:fixed;z-index:9999;background:#252525;color:#fff;padding:9px 13px;border-radius:7px;font-size:12px;pointer-events:none;box-shadow:0 4px 14px #0004}.grafica-tabla{margin-bottom:20px;max-width:760px}.reporting-grafica{margin:12px 0 20px;max-width:155mm;box-shadow:none}.reporting-grafica .grafica-svg{max-height:200px}.demo-aviso{background:#fff3e1;color:#a75200;padding:7px 12px;border-radius:30px;font-size:12px}@media(max-width:1000px){.dashboard-kpis{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}}@media(max-width:550px){.dashboard-kpis{grid-template-columns:1fr}}@media print{.grafica-card{break-inside:avoid;box-shadow:none}.grafica-svg{max-height:170px}.reporting-grafica{border:0;padding:0}}
+
+.reporting-titulo-tabla{gap:12px;flex-wrap:wrap}.reporting-exportar-csv{margin-left:auto;font-size:11px;padding:7px 10px}@media print{.reporting-exportar-csv{display:none!important}}
