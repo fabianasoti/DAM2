@@ -1,4 +1,5 @@
-# Resultados de Aprendizaje 3
+# Resultados de Aprendizaje 3 
+## Fabiana Sotillo
 
 ### a) Se han utilizado herramientas y lenguajes de consulta y manipulación de datos proporcionados por los sistemas ERP-CRM.
 
