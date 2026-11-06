@@ -1,0 +1,17 @@
+{
+  "name": "agenda-contactos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongod": "^2.0.0",
+    "mongodb": "^7.8.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
