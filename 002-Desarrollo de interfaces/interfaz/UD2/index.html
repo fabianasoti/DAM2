@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fabiana Sotillo | interfaz integrada</title>
+  <link rel="shortcut icon" href="img/fs-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="fs-iu">
+
+  <!-- ==================== CABECERA ==================== -->
+  <header>
+    <div class="corporativo">
+      <img src="img/fs-monograma-blanco.svg" alt="">
+      <h1>Fabiana Sotillo | interfaz integrada</h1>
+    </div>
+    <div id="herramientas">
+      <input id="buscador" type="search" placeholder="Buscar en Clientes…" title="Ctrl + K">
+      <a id="ejercicios" href="ejercicios/" title="Ejercicios de cuerpo y realidad aumentada">Ejercicios UD2</a>
+      <button id="nuevo" type="button" title="Alt + N"><span data-icono="mas"></span>Nuevo</button>
+    </div>
+    <div id="usuario">
+      <div class="imagen" data-icono="usuario"></div>
+      <div>
+        <p>Fabiana Sotillo</p>
+        <a href="login.html">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== CUERPO: 3 COLUMNAS ==================== -->
+  <main>
+    <nav id="navegacion" aria-label="Módulos">
+      <div class="titulo-columna">Módulos</div>
+      <div class="contenido-columna"></div>
+      <button class="minimizar" type="button" title="Minimizar" data-icono="izquierda"></button>
+    </nav>
+    <div class="separador" title="Arrastra para redimensionar"></div>
+
+    <section id="entidades" aria-label="Vistas">
+      <div class="titulo-columna">Vistas</div>
+      <div class="contenido-columna"></div>
+      <button class="minimizar" type="button" title="Minimizar" data-icono="izquierda"></button>
+    </section>
+    <div class="separador" title="Arrastra para redimensionar"></div>
+
+    <div id="escenario" class="escenario"></div>
+  </main>
+
+  <!-- ==================== PIE: BARRA DE ESTADO ==================== -->
+  <footer id="estado">
+    <span id="estadoModulo">Clientes</span>
+    <span id="estadoVista">Listado</span>
+    <span id="estadoRegistros"></span>
+    <span id="estadoEvento" class="fs-pie-evento">Listo</span>
+    <span id="estadoConexion" class="fs-pie-conexion">● En línea</span>
+  </footer>
+
+  <!-- ==================== COMPONENTES FLOTANTES ==================== -->
+  <div class="fs-drawer-overlay" id="fsDrawerOverlay" aria-hidden="true"></div>
+  <aside class="fs-drawer" id="fsDrawer" aria-hidden="true" aria-label="Editor lateral">
+    <div class="fs-drawer-resizer" id="fsDrawerResizer" title="Arrastra para redimensionar"></div>
+    <header class="fs-drawer-header">
+      <div>
+        <small id="fsDrawerModo">CREAR</small>
+        <h2 id="fsDrawerTitulo">Nuevo registro</h2>
+      </div>
+      <button class="fs-drawer-cerrar" id="fsDrawerCerrar" type="button" aria-label="Cerrar" data-icono="cerrar"></button>
+    </header>
+    <div class="fs-drawer-body" id="fsDrawerCuerpo"></div>
+  </aside>
+
+  <div class="fs-modal-capa" id="fsModal" aria-hidden="true">
+    <div class="fs-modal-fondo" data-modal-cerrar></div>
+    <section class="fs-modal-ventana" role="dialog" aria-modal="true" aria-labelledby="fsModalTitulo">
+      <header class="fs-modal-header">
+        <h2 id="fsModalTitulo">Ventana modal</h2>
+        <button class="fs-modal-cerrar" type="button" data-modal-cerrar aria-label="Cerrar" data-icono="cerrar"></button>
+      </header>
+      <div class="fs-modal-body" id="fsModalCuerpo"></div>
+    </section>
+  </div>
+
+  <div class="fs-toast-pila" id="fsToasts" aria-live="polite"></div>
+
+  <!-- ==================== UD2 · ASISTENTE (interfaces naturales) ==================== -->
+  <section class="fs-asistente" id="fsAsistente" aria-label="Asistente de inteligencia artificial">
+    <div class="fs-asistente-barra" id="fsAsistenteBarra" title="Arrastra para mover">
+      <span class="fs-asistente-chispa">✦</span>
+      <span>Asistente local</span>
+      <button class="fs-asistente-minimizar" id="fsAsistenteMinimizar" type="button" title="Minimizar" aria-label="Minimizar">—</button>
+    </div>
+    <div class="fs-asistente-redactar">
+      <textarea id="fsAsistenteEntrada" rows="1" placeholder="Escribe o dicta lo que necesitas…"></textarea>
+      <button class="fs-asistente-micro" id="fsAsistenteMicro" type="button" title="Entrada por voz" aria-label="Entrada por voz">🎤</button>
+      <button class="fs-asistente-enviar" id="fsAsistenteEnviar" type="button" title="Enviar (Intro)" aria-label="Enviar">➜</button>
+    </div>
+    <div class="fs-asistente-opciones">
+      <label class="fs-interruptor" title="Leer en voz alta la respuesta">
+        <input id="fsAsistenteHablar" type="checkbox">
+        <span class="fs-interruptor-pista"><span class="fs-interruptor-boton"></span></span>
+        <span>Hablar respuesta</span>
+      </label>
+      <span class="fs-asistente-estado" id="fsAsistenteEstado" aria-live="polite"></span>
+    </div>
+    <div class="fs-asistente-redimensionar" id="fsAsistenteRedimensionar" title="Arrastra para redimensionar"></div>
+  </section>
+
+  <!-- Los <template> se cargan desde la carpeta templates/ (componentes externos) -->
+  <script src="js/componentes.js"></script>
+</body>
+</html>

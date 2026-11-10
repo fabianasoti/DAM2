@@ -1,0 +1,88 @@
+/* =========================================================
+   Fabiana Sotillo | iu · estilo común de los ejercicios independientes
+   (UD2: partes del cuerpo y realidad aumentada)
+   Se carga DESPUÉS del <style> de cada ejercicio para sobrescribirlo.
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap");
+:root{
+  --negro:#224653;--negro2:#1A3641;--negro3:#2f5a69;--negro4:#456f7e;
+  --naranja:#C73871;--naranja-osc:#A82A5C;--naranja-claro:#f8e3ec;
+  --crema:#F9F8F4;--seccion:#e9edee;--borde:#D5DCDF;--texto-suave:#4F6670;
+  --error:#E65855;--radio:12px;--radio-lg:16px;
+  --sombra:0 4px 14px rgb(34 70 83 / .10);--sombra-alta:0 12px 40px rgb(34 70 83 / .28);
+  --fuente:Inter,system-ui,sans-serif
+}
+
+/* ---------- base ---------- */
+body.fs-ej{font-family:var(--fuente);font-size:13px;color:var(--negro);background:var(--crema);margin:0}
+body.fs-ej *{box-sizing:border-box}
+body.fs-ej button,body.fs-ej input{font-family:inherit}
+
+/* ---------- cabecera de las páginas con scroll ---------- */
+.fs-ej-cabecera{display:flex;align-items:center;gap:12px;height:58px;padding:0 16px;background:var(--negro);color:#f2f2f2;border-bottom:3px solid var(--naranja);margin-bottom:24px}
+.fs-ej-cabecera img{width:30px;height:30px}
+.fs-ej-cabecera .marca{font-weight:500;white-space:nowrap}
+.fs-ej-cabecera h1{margin:0 0 0 8px;padding-left:14px;border-left:1px solid var(--negro4);font-size:15px;font-weight:500;color:var(--naranja-claro);text-align:left}
+.fs-ej-volver{margin-left:auto;padding:7px 16px;border-radius:999px;background:var(--naranja);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap}
+.fs-ej-volver:hover{background:var(--naranja-osc)}
+
+/* ---------- botón flotante en las páginas a pantalla completa ---------- */
+.fs-ej-chip{position:fixed;left:16px;top:16px;z-index:50;display:flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:999px;background:rgba(34,70,83,.88);color:#fff;text-decoration:none;font-weight:600;box-shadow:var(--sombra-alta);backdrop-filter:blur(8px)}
+.fs-ej-chip img{width:26px;height:26px}
+.fs-ej-chip:hover{background:var(--naranja-osc)}
+
+/* ---------- familia «cámara»: vídeo + canvas centrados ---------- */
+body.fs-ej-camara #contenedor{margin:0 auto 24px;border-radius:var(--radio-lg);overflow:hidden;box-shadow:var(--sombra-alta);background:var(--negro);border:3px solid #fff}
+
+/* ---------- familia «dividido»: webcam | sprite ---------- */
+body.fs-ej-dividido #pantalla{max-width:calc(100% - 32px);border:0;border-radius:var(--radio-lg);overflow:hidden;box-shadow:var(--sombra-alta);background:#fff}
+body.fs-ej-dividido #webcam{background:var(--negro)}
+body.fs-ej-dividido #avatar{background:var(--crema)}
+body.fs-ej-dividido .titulo{background:rgba(34,70,83,.85);color:#fff;border-radius:999px;padding:6px 14px;font-weight:600}
+
+/* chat de los avatares 006 y 007 */
+body.fs-ej-dividido #controlesChat{max-width:1280px;margin:16px auto;padding:0 16px;gap:8px;align-items:center}
+body.fs-ej-dividido #textoUsuario{padding:11px 16px;border-radius:999px;border:1px solid var(--borde);background:#fff;color:var(--negro);outline:none}
+body.fs-ej-dividido #textoUsuario:focus{border-color:var(--naranja);box-shadow:0 0 0 3px var(--naranja-claro)}
+body.fs-ej-dividido #enviar,body.fs-ej-dividido #microfono{padding:11px 20px;border-radius:999px;background:var(--naranja);color:#fff;font-weight:600}
+body.fs-ej-dividido #microfono{width:44px;height:44px;padding:0;border-radius:50%;background:var(--seccion)}
+body.fs-ej-dividido #enviar:hover{background:var(--naranja-osc)}
+body.fs-ej-dividido #conversacion{max-width:calc(1280px - 32px);margin:0 auto 24px;background:#fff;border:0;border-radius:var(--radio-lg);box-shadow:var(--sombra)}
+body.fs-ej-dividido .mensaje{border-radius:14px;line-height:1.45}
+body.fs-ej-dividido .yo{background:var(--naranja);color:#fff;border-bottom-right-radius:4px}
+body.fs-ej-dividido .maquina{background:var(--seccion);color:var(--negro);border-bottom-left-radius:4px}
+
+/* ---------- familia «avatar»: avatar a pantalla completa ---------- */
+body.fs-ej-avatar,body.fs-ej-avatar #pantalla{background:var(--crema)}
+body.fs-ej-avatar #webcam{border-radius:var(--radio-lg);border:3px solid #fff;background:var(--negro);box-shadow:var(--sombra-alta)}
+body.fs-ej-avatar #webcam.minimizada{border-radius:50%}
+body.fs-ej-avatar #minimizarWebcam{background:rgba(34,70,83,.75)}
+body.fs-ej-avatar #minimizarWebcam:hover{background:var(--naranja)}
+body.fs-ej-avatar #microfono{background:var(--naranja);box-shadow:var(--sombra-alta)}
+body.fs-ej-avatar #microfono:hover{background:var(--naranja-osc)}
+body.fs-ej-avatar #microfono.escuchando{background:var(--error);box-shadow:0 0 0 10px rgba(230,88,85,.25),var(--sombra-alta)}
+
+/* ---------- familia «realidad aumentada» ---------- */
+body.fs-ej-ra{background:var(--negro)}
+body.fs-ej-ra #estado{left:50%;top:16px;transform:translateX(-50%);background:rgba(34,70,83,.88);border-radius:999px;padding:8px 16px;font-size:12px;box-shadow:var(--sombra-alta);backdrop-filter:blur(8px)}
+body.fs-ej-ra #pip{border:3px solid var(--naranja);border-radius:var(--radio-lg);background:var(--negro)}
+
+/* ---------- ejercicio del ratón ---------- */
+.fs-ej-raton{display:grid;place-items:center;height:calc(100vh - 82px);margin-top:-24px}
+.fs-ej-raton output{position:relative;z-index:1;display:block;padding:18px 28px;border-radius:var(--radio-lg);background:#fff;box-shadow:var(--sombra);font-size:28px;font-weight:700;color:var(--naranja-osc);text-align:center}
+.fs-ej-raton small{display:block;margin-top:6px;font-size:12px;font-weight:400;color:var(--texto-suave)}
+.fs-ej-ejes::before,.fs-ej-ejes::after{content:"";position:fixed;background:var(--borde);pointer-events:none}
+.fs-ej-ejes::before{left:50%;top:58px;bottom:0;width:1px}
+.fs-ej-ejes::after{top:50%;left:0;right:0;height:1px}
+
+/* ---------- índice de ejercicios ---------- */
+.fs-ej-indice{max-width:1100px;margin:0 auto;padding:0 16px 40px}
+.fs-ej-indice > p{color:var(--texto-suave)}
+.fs-ej-aviso{padding:12px 16px;border-radius:var(--radio);background:var(--naranja-claro);color:var(--naranja-osc);margin:0 0 20px}
+.fs-ej-indice h2{font-size:16px;margin:26px 0 12px}
+.fs-ej-rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.fs-ej-tarjeta{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:var(--radio-lg);background:#fff;box-shadow:var(--sombra);color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.fs-ej-tarjeta:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.fs-ej-tarjeta .ficha{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:50%;background:var(--naranja);color:#fff;font-weight:700;font-size:12px}
+.fs-ej-tarjeta strong{display:block;margin-bottom:3px}
+.fs-ej-tarjeta span{color:var(--texto-suave);font-size:12px;line-height:1.4}

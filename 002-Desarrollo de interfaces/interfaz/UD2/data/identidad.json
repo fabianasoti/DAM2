@@ -1,0 +1,27 @@
+{
+  "nombre": "Fabiana Sotillo | interfaz integrada",
+  "lema": "Interfaces que se entienden a la primera: cercanas, claras y profesionales.",
+  "colores": [
+    { "variable": "--blackthorn-berry", "nombre": "Blackthorn Berry", "significado": "Estructura y solidez. Texto principal, cabecera, menú y cabeceras de tabla." },
+    { "variable": "--hawthorn-blossom", "nombre": "Hawthorn Blossom", "significado": "Blanco cálido de fondo. Descansa la vista en el escenario de trabajo." },
+    { "variable": "--silver-birch",     "nombre": "Silver Birch",     "significado": "Bordes, divisores y estados neutros sin líneas duras." },
+    { "variable": "--willow-leaf",      "nombre": "Willow Leaf",      "significado": "Cercanía y naturalidad. Detalles decorativos, nunca texto." },
+    { "variable": "--foxglove-strong",  "nombre": "Foxglove (CTA)",   "significado": "Acción principal. Un único botón rosa por pantalla; también el foco de los campos." },
+    { "variable": "--wild-honeysuckle", "nombre": "Wild Honeysuckle","significado": "Indicador activo del menú y acentos cálidos sobre fondo oscuro." },
+    { "variable": "--ivy-bloom",        "nombre": "Ivy Bloom",        "significado": "Éxito, confirmaciones y enlaces." },
+    { "variable": "--cowslip-meadow",   "nombre": "Cowslip Meadow",   "significado": "Avisos y advertencias." },
+    { "variable": "--rowan-berry",      "nombre": "Rowan Berry",      "significado": "Errores y acciones destructivas." }
+  ],
+  "tipografia": {
+    "familia": "Inter (interfaz), Instrument Serif (nombre de marca), JetBrains Mono (código)",
+    "motivo": "Una sans muy legible para trabajar, una serif elegante solo para la marca y una monoespaciada para el código."
+  },
+  "formas": {
+    "radio": "Esquinas de 0,5 a 1 rem en campos y tarjetas, botones en forma de píldora y fichas circulares.",
+    "motivo": "Las formas redondeadas transmiten cercanía y suavizan la base azul bosque."
+  },
+  "logo": {
+    "archivo": "img/fs-monograma.svg",
+    "motivo": "Monograma FS: la F en Blackthorn (solidez), la S en Willow (naturalidad), con órbita cálida y una chispa dorada."
+  }
+}
