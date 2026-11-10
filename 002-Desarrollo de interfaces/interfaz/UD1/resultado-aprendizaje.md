@@ -1,7 +1,7 @@
 # Resultado de aprendizaje · UD1 Generación de interfaces de usuario
 
-**Proyecto:** mavr | interfaz integrada (`003-UD1-completa`)
-**Autor:** Miguel Angel Vargas Rodriguez
+**Proyecto:** Fabiana Sotillo | interfaz integrada (`003-UD1-completa`)
+**Autor:** Fabiana Sotillo
 
 ## Resultado de aprendizaje
 
@@ -23,7 +23,7 @@ En mi proyecto he ubicado los componentes con etiquetas semánticas (`header`, `
 
 ### d) Se han modificado las propiedades de los componentes para adecuarlas a las necesidades de la aplicación.
 
-En mi proyecto he definido la identidad en variables CSS dentro de `:root` (colores, radios, sombras y anchos) para cambiar el aspecto de toda la aplicación desde un único sitio. He suavizado la paleta original a grafito y naranja suave, he sustituido las esquinas cuadradas por esquinas redondeadas y botones en forma de píldora, y he ajustado las propiedades de los controles: `required`, `min`, `max`, `step`, `pattern`, `minlength`, `maxlength`, `placeholder` y `accent-color`. Los estados de foco, error y elemento activo tienen su propio estilo.
+En mi proyecto he definido la identidad en variables CSS dentro de `:root` (colores, radios, sombras y anchos) para cambiar el aspecto de toda la aplicación desde un único sitio. He sustituido la paleta original por la de mi manual de identidad (azul bosque Blackthorn, rosa Foxglove para la acción principal y acentos naturales), importando mis tokens de diseño desde `css/tokens.css`, con esquinas redondeadas y botones en forma de píldora, y he ajustado las propiedades de los controles: `required`, `min`, `max`, `step`, `pattern`, `minlength`, `maxlength`, `placeholder` y `accent-color`. Los estados de foco, error y elemento activo tienen su propio estilo.
 
 ### e) Se ha analizado el código generado por el editor visual.
 
@@ -31,7 +31,7 @@ En mi proyecto he analizado el código base de jocarsa-iu: la estructura del HTM
 
 ### f) Se ha modificado el código generado por el editor visual.
 
-En mi proyecto he modificado el código en tres iteraciones (001, 002 y 003). Cambié la marca y los nombres y limité la cabecera general a `body > header`. Separé los componentes en plantillas externas (`templates/*.html`), y los datos en JSON: `menu.json` indica qué tabla y qué formulario usa cada módulo. Una misma clase pinta tablas con formatos de JSON distintos, la de clientes y la de productos. Por último, reorganicé todo el JavaScript en clases dentro del namespace `mavr.iu`: `AplicacionIU`, `TablaIU`, `FormularioIU`, `DrawerIU`, `ModalIU`, `ToastIU`, `GestorColumnas` y `BarraEstado`, cada una con su constructor, sus propiedades y sus métodos.
+En mi proyecto he modificado el código en tres iteraciones (001, 002 y 003). Cambié la marca y los nombres y limité la cabecera general a `body > header`. Separé los componentes en plantillas externas (`templates/*.html`), y los datos en JSON: `menu.json` indica qué tabla y qué formulario usa cada módulo. Una misma clase pinta tablas con formatos de JSON distintos, la de clientes y la de productos. Por último, reorganicé todo el JavaScript en clases dentro del namespace `fs.iu`: `AplicacionIU`, `TablaIU`, `FormularioIU`, `DrawerIU`, `ModalIU`, `ToastIU`, `GestorColumnas` y `BarraEstado`, cada una con su constructor, sus propiedades y sus métodos.
 
 ### g) Se han asociado a los eventos las acciones correspondientes.
 

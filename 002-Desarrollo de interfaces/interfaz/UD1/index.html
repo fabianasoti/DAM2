@@ -3,26 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>mavr | interfaz integrada</title>
-  <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
+  <title>Fabiana Sotillo | interfaz integrada</title>
+  <link rel="shortcut icon" href="img/fs-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body class="mavr-iu">
+<body class="fs-iu">
 
   <!-- ==================== CABECERA ==================== -->
   <header>
     <div class="corporativo">
-      <img src="img/logo.svg" alt="">
-      <h1>mavr | interfaz integrada</h1>
+      <img src="img/fs-monograma-blanco.svg" alt="">
+      <h1>Fabiana Sotillo | interfaz integrada</h1>
     </div>
     <div id="herramientas">
       <input id="buscador" type="search" placeholder="Buscar en Clientes…" title="Ctrl + K">
-      <button id="nuevo" type="button" title="Alt + N">+ Nuevo</button>
+      <button id="nuevo" type="button" title="Alt + N"><span data-icono="mas"></span>Nuevo</button>
     </div>
     <div id="usuario">
-      <div class="imagen">MA</div>
+      <div class="imagen" data-icono="usuario"></div>
       <div>
-        <p>Miguel Angel Vargas Rodriguez</p>
+        <p>Fabiana Sotillo</p>
         <a href="login.html">Cerrar sesión</a>
       </div>
     </div>
@@ -33,14 +37,14 @@
     <nav id="navegacion" aria-label="Módulos">
       <div class="titulo-columna">Módulos</div>
       <div class="contenido-columna"></div>
-      <button class="minimizar" type="button" title="Minimizar">◀</button>
+      <button class="minimizar" type="button" title="Minimizar" data-icono="izquierda"></button>
     </nav>
     <div class="separador" title="Arrastra para redimensionar"></div>
 
     <section id="entidades" aria-label="Vistas">
       <div class="titulo-columna">Vistas</div>
       <div class="contenido-columna"></div>
-      <button class="minimizar" type="button" title="Minimizar">◀</button>
+      <button class="minimizar" type="button" title="Minimizar" data-icono="izquierda"></button>
     </section>
     <div class="separador" title="Arrastra para redimensionar"></div>
 
@@ -52,36 +56,36 @@
     <span id="estadoModulo">Clientes</span>
     <span id="estadoVista">Listado</span>
     <span id="estadoRegistros"></span>
-    <span id="estadoEvento" class="mv-pie-evento">Listo</span>
-    <span id="estadoConexion" class="mv-pie-conexion">● En línea</span>
+    <span id="estadoEvento" class="fs-pie-evento">Listo</span>
+    <span id="estadoConexion" class="fs-pie-conexion">● En línea</span>
   </footer>
 
   <!-- ==================== COMPONENTES FLOTANTES ==================== -->
-  <div class="mv-drawer-overlay" id="mvDrawerOverlay" aria-hidden="true"></div>
-  <aside class="mv-drawer" id="mvDrawer" aria-hidden="true" aria-label="Editor lateral">
-    <div class="mv-drawer-resizer" id="mvDrawerResizer" title="Arrastra para redimensionar"></div>
-    <header class="mv-drawer-header">
+  <div class="fs-drawer-overlay" id="fsDrawerOverlay" aria-hidden="true"></div>
+  <aside class="fs-drawer" id="fsDrawer" aria-hidden="true" aria-label="Editor lateral">
+    <div class="fs-drawer-resizer" id="fsDrawerResizer" title="Arrastra para redimensionar"></div>
+    <header class="fs-drawer-header">
       <div>
-        <small id="mvDrawerModo">CREAR</small>
-        <h2 id="mvDrawerTitulo">Nuevo registro</h2>
+        <small id="fsDrawerModo">CREAR</small>
+        <h2 id="fsDrawerTitulo">Nuevo registro</h2>
       </div>
-      <button class="mv-drawer-cerrar" id="mvDrawerCerrar" type="button" aria-label="Cerrar">×</button>
+      <button class="fs-drawer-cerrar" id="fsDrawerCerrar" type="button" aria-label="Cerrar" data-icono="cerrar"></button>
     </header>
-    <div class="mv-drawer-body" id="mvDrawerCuerpo"></div>
+    <div class="fs-drawer-body" id="fsDrawerCuerpo"></div>
   </aside>
 
-  <div class="mv-modal-capa" id="mvModal" aria-hidden="true">
-    <div class="mv-modal-fondo" data-modal-cerrar></div>
-    <section class="mv-modal-ventana" role="dialog" aria-modal="true" aria-labelledby="mvModalTitulo">
-      <header class="mv-modal-header">
-        <h2 id="mvModalTitulo">Ventana modal</h2>
-        <button class="mv-modal-cerrar" type="button" data-modal-cerrar aria-label="Cerrar">×</button>
+  <div class="fs-modal-capa" id="fsModal" aria-hidden="true">
+    <div class="fs-modal-fondo" data-modal-cerrar></div>
+    <section class="fs-modal-ventana" role="dialog" aria-modal="true" aria-labelledby="fsModalTitulo">
+      <header class="fs-modal-header">
+        <h2 id="fsModalTitulo">Ventana modal</h2>
+        <button class="fs-modal-cerrar" type="button" data-modal-cerrar aria-label="Cerrar" data-icono="cerrar"></button>
       </header>
-      <div class="mv-modal-body" id="mvModalCuerpo"></div>
+      <div class="fs-modal-body" id="fsModalCuerpo"></div>
     </section>
   </div>
 
-  <div class="mv-toast-pila" id="mvToasts" aria-live="polite"></div>
+  <div class="fs-toast-pila" id="fsToasts" aria-live="polite"></div>
 
   <!-- Los <template> se cargan desde la carpeta templates/ (componentes externos) -->
   <script src="js/componentes.js"></script>

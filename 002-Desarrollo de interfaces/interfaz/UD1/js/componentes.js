@@ -1,16 +1,16 @@
 /**
- * mavr | iu
+ * Fabiana Sotillo | iu
  * Control de la interfaz mediante programación orientada a objetos.
  *
  * JavaScript no admite "|" dentro de un identificador, así que el
- * namespace técnico equivalente es `mavr.iu`.
+ * namespace técnico equivalente es `fs.iu`.
  *
  * Índice de clases
  *   DOM, Utilidades .......... ayudas generales
  *   OrigenDatos .............. carga de JSON con fetch()
  *   Plantillas ............... carga de componentes externos (templates/*.html)
  *   EstadoIU ................. datos que comparte toda la aplicación
- *   FichaIU .................. círculo de color con la inicial
+ *   FichaIU .................. icono de línea de cada módulo o vista
  *   BarraEstado .............. pie de página con el estado y el último evento
  *   ToastIU, ModalIU, DrawerIU  componentes flotantes
  *   FormularioIU ............. formulario generado desde JSON
@@ -18,8 +18,8 @@
  *   GestorColumnas ........... minimizar y redimensionar columnas
  *   AplicacionIU ............. orquesta todo lo anterior y pinta las vistas
  */
-window.mavr = window.mavr || {};
-window.mavr.iu = window.mavr.iu || {};
+window.fs = window.fs || {};
+window.fs.iu = window.fs.iu || {};
 
 (() => {
   "use strict";
@@ -49,7 +49,9 @@ window.mavr.iu = window.mavr.iu || {};
     /** Color suave y estable para cada texto (misma palabra = mismo color). */
     static colorTexto(texto) {
       const h = Utilidades.hashTexto(texto);
-      return `hsl(${16 + (h % 20)},${55 + (h % 15)}%,${52 + (h % 10)}%)`;
+      // Colores de la paleta corporativa con contraste suficiente para texto blanco
+      const paleta = ["--blackthorn-berry", "--ivy-bloom", "--foxglove-deep", "--copper-deep", "--willow-text", "--blackthorn-deep"];
+      return `var(${paleta[h % paleta.length]})`;
     }
 
     /** Evita que un texto se interprete como HTML. */
@@ -77,7 +79,7 @@ window.mavr.iu = window.mavr.iu || {};
 
     static async cargarJSON(url) {
       if (!OrigenDatos.cache.has(url)) {
-        const respuesta = await fetch(url);
+        const respuesta = await fetch(url, { cache: "no-cache" });
         if (!respuesta.ok) {
           throw new Error(`No se pudo cargar ${url}`);
         }
@@ -127,11 +129,54 @@ window.mavr.iu = window.mavr.iu || {};
     }
   }
 
+  /* =========================================================
+     Iconos de línea (estilo Lucide, trazo uniforme)
+     ========================================================= */
+  class Iconos {
+    static trazos = {
+      "formulario": "<path d=\"M12 20h9\"/><path d=\"M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z\"/>",
+      "users": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/>",
+      "package": "<path d=\"m7.5 4.27 9 5.15\"/><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/>",
+      "pedidos": "<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/><path d=\"M12 11h4M12 16h4M8 11h.01M8 16h.01\"/>",
+      "ajustes": "<path d=\"M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3M14 2v4M8 10v4M16 18v4\"/>",
+      "lista": "<path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/>",
+      "documento": "<path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8\"/>",
+      "controles": "<rect width=\"20\" height=\"12\" x=\"2\" y=\"6\" rx=\"6\"/><circle cx=\"8\" cy=\"12\" r=\"2\"/>",
+      "puntero": "<path d=\"m9 9 5 12 1.774-5.226L21 14 9 9z\"/><path d=\"m16.071 16.071 4.243 4.243M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122M5.97 11.828l-2.12 2.122\"/>",
+      "campana": "<path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"/><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"/>",
+      "panel": "<rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"/><path d=\"M15 3v18\"/>",
+      "entrar": "<path d=\"M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4\"/><path d=\"m10 17 5-5-5-5M15 12H3\"/>",
+      "paleta": "<circle cx=\"13.5\" cy=\"6.5\" r=\".5\"/><circle cx=\"17.5\" cy=\"10.5\" r=\".5\"/><circle cx=\"8.5\" cy=\"7.5\" r=\".5\"/><circle cx=\"6.5\" cy=\"12.5\" r=\".5\"/><path d=\"M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z\"/>",
+      "usuario": "<path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/>",
+      "cerrar": "<path d=\"M18 6 6 18M6 6l12 12\"/>",
+      "izquierda": "<path d=\"m15 18-6-6 6-6\"/>",
+      "derecha": "<path d=\"m9 18 6-6-6-6\"/>",
+      "ok": "<path d=\"M20 6 9 17l-5-5\"/>",
+      "info": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4M12 8h.01\"/>",
+      "aviso": "<path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4M12 17h.01\"/>",
+      "error": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6M9 9l6 6\"/>",
+      "mas": "<path d=\"M5 12h14M12 5v14\"/>",
+      "bandeja": "<path d=\"M22 12h-6l-2 3h-4l-2-3H2\"/><path d=\"M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\"/>"
+    };
+
+    /** Devuelve el <svg> de un icono; si no existe usa «documento». */
+    static svg(nombre) {
+      const trazo = Iconos.trazos[nombre] || Iconos.trazos.documento;
+      return `<svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${trazo}</svg>`;
+    }
+
+    /** Sustituye el contenido de todo [data-icono] por su dibujo. */
+    static aplicar(raiz = document) {
+      raiz.querySelectorAll("[data-icono]").forEach((el) => {
+        el.insertAdjacentHTML("afterbegin", Iconos.svg(el.dataset.icono));
+      });
+    }
+  }
+
   class FichaIU {
-    static completar(elemento, texto) {
+    static completar(elemento, texto, icono) {
       const ficha = DOM.uno(".ficha", elemento);
-      ficha.textContent = texto.charAt(0).toUpperCase();
-      ficha.style.background = Utilidades.colorTexto(texto);
+      ficha.innerHTML = Iconos.svg(icono);
       DOM.uno(".etiqueta", elemento).textContent = texto;
       elemento.title = texto;
     }
@@ -176,22 +221,23 @@ window.mavr.iu = window.mavr.iu || {};
      ========================================================= */
   class ToastIU {
     constructor() {
-      this.pila = DOM.uno("#mvToasts");
-      this.iconos = { exito: "✓", info: "i", aviso: "!", error: "×" };
+      this.pila = DOM.uno("#fsToasts");
+      this.iconos = { exito: "ok", info: "info", aviso: "aviso", error: "error" };
     }
 
     mostrar(tipo = "info", titulo = "Información", texto = "") {
       const toast = Plantillas.clonar("toast");
       toast.classList.add(tipo);
-      DOM.uno(".mv-toast-icono", toast).textContent = this.iconos[tipo] || "i";
-      DOM.uno(".mv-toast-titulo", toast).textContent = titulo;
-      DOM.uno(".mv-toast-texto", toast).textContent = texto;
+      DOM.uno(".fs-toast-icono", toast).innerHTML = Iconos.svg(this.iconos[tipo] || "info");
+      Iconos.aplicar(toast);
+      DOM.uno(".fs-toast-titulo", toast).textContent = titulo;
+      DOM.uno(".fs-toast-texto", toast).textContent = texto;
 
       const cerrar = () => {
         toast.classList.add("leaving");
         setTimeout(() => toast.remove(), 240);
       };
-      DOM.uno(".mv-toast-cerrar", toast).addEventListener("click", cerrar);
+      DOM.uno(".fs-toast-cerrar", toast).addEventListener("click", cerrar);
       this.pila.appendChild(toast);
       setTimeout(cerrar, 5000);
     }
@@ -199,9 +245,9 @@ window.mavr.iu = window.mavr.iu || {};
 
   class ModalIU {
     constructor() {
-      this.capa = DOM.uno("#mvModal");
-      this.titulo = DOM.uno("#mvModalTitulo");
-      this.cuerpo = DOM.uno("#mvModalCuerpo");
+      this.capa = DOM.uno("#fsModal");
+      this.titulo = DOM.uno("#fsModalTitulo");
+      this.cuerpo = DOM.uno("#fsModalCuerpo");
       DOM.todos("[data-modal-cerrar]", this.capa).forEach((nodo) =>
         nodo.addEventListener("click", () => this.cerrar())
       );
@@ -215,19 +261,19 @@ window.mavr.iu = window.mavr.iu || {};
       this.titulo.textContent = titulo;
       this.cuerpo.innerHTML = html;
       this.capa.setAttribute("aria-hidden", "false");
-      DOM.uno(".mv-modal-cerrar", this.capa).focus();
+      DOM.uno(".fs-modal-cerrar", this.capa).focus();
     }
 
     /** Ventana de confirmación: ejecuta alAceptar solo si se pulsa Aceptar. */
     confirmar(titulo, mensaje, alAceptar) {
       this.abrir(titulo, `
         <p>${Utilidades.escapar(mensaje)}</p>
-        <div class="mv-botones">
-          <button class="mv-btn" type="button" id="mvConfirmarSi">Aceptar</button>
-          <button class="mv-btn secundario" type="button" id="mvConfirmarNo">Cancelar</button>
+        <div class="fs-botones">
+          <button class="fs-btn" type="button" id="fsConfirmarSi">Aceptar</button>
+          <button class="fs-btn secundario" type="button" id="fsConfirmarNo">Cancelar</button>
         </div>`);
-      DOM.uno("#mvConfirmarSi").addEventListener("click", () => { this.cerrar(); alAceptar(); });
-      DOM.uno("#mvConfirmarNo").addEventListener("click", () => this.cerrar());
+      DOM.uno("#fsConfirmarSi").addEventListener("click", () => { this.cerrar(); alAceptar(); });
+      DOM.uno("#fsConfirmarNo").addEventListener("click", () => this.cerrar());
     }
 
     cerrar() {
@@ -237,15 +283,15 @@ window.mavr.iu = window.mavr.iu || {};
 
   class DrawerIU {
     constructor() {
-      this.panel = DOM.uno("#mvDrawer");
-      this.overlay = DOM.uno("#mvDrawerOverlay");
-      this.cuerpo = DOM.uno("#mvDrawerCuerpo");
-      this.modo = DOM.uno("#mvDrawerModo");
-      this.titulo = DOM.uno("#mvDrawerTitulo");
-      this.resizer = DOM.uno("#mvDrawerResizer");
+      this.panel = DOM.uno("#fsDrawer");
+      this.overlay = DOM.uno("#fsDrawerOverlay");
+      this.cuerpo = DOM.uno("#fsDrawerCuerpo");
+      this.modo = DOM.uno("#fsDrawerModo");
+      this.titulo = DOM.uno("#fsDrawerTitulo");
+      this.resizer = DOM.uno("#fsDrawerResizer");
       this.anchoMinimo = 300;
 
-      DOM.uno("#mvDrawerCerrar").addEventListener("click", () => this.cerrar());
+      DOM.uno("#fsDrawerCerrar").addEventListener("click", () => this.cerrar());
       this.overlay.addEventListener("click", () => this.cerrar());
       this.resizer.addEventListener("pointerdown", (e) => this.iniciarRedimension(e));
       window.addEventListener("resize", () => this.ajustarAlViewport());
@@ -324,15 +370,15 @@ window.mavr.iu = window.mavr.iu || {};
      */
     static construir(campos, valores = {}, textoBoton = "Guardar") {
       const formulario = document.createElement("form");
-      formulario.className = "mv-form";
+      formulario.className = "fs-form";
 
       campos.forEach((campo) => formulario.appendChild(FormularioIU.campo(campo, valores[campo.nombre])));
 
       const botones = document.createElement("div");
-      botones.className = "mv-botones mv-form-completo";
+      botones.className = "fs-botones fs-form-completo";
       botones.innerHTML = `
-        <button class="mv-btn" type="submit">${Utilidades.escapar(textoBoton)}</button>
-        <button class="mv-btn secundario" type="reset">Limpiar</button>`;
+        <button class="fs-btn" type="submit">${Utilidades.escapar(textoBoton)}</button>
+        <button class="fs-btn secundario" type="reset">Limpiar</button>`;
       formulario.appendChild(botones);
       return formulario;
     }
@@ -345,7 +391,7 @@ window.mavr.iu = window.mavr.iu || {};
 
       if (campo.tipo === "textarea") {
         control = document.createElement("textarea");
-        etiqueta.classList.add("mv-form-completo");
+        etiqueta.classList.add("fs-form-completo");
       } else if (campo.tipo === "select") {
         control = document.createElement("select");
         (campo.opciones || []).forEach((opcion) => control.add(new Option(opcion, opcion)));
@@ -367,7 +413,7 @@ window.mavr.iu = window.mavr.iu || {};
       if (campo.nombre === "id") control.min = 1;
 
       if (campo.tipo === "checkbox") {
-        etiqueta.classList.add("mv-check", "mv-form-completo");
+        etiqueta.classList.add("fs-check", "fs-form-completo");
         control.checked = Boolean(valor);
         etiqueta.append(control, texto);
       } else {
@@ -532,12 +578,12 @@ window.mavr.iu = window.mavr.iu || {};
         const ancho = parseFloat(columna.dataset.ancho) || 220;
         columna.classList.remove("compacto");
         columna.style.width = columna.style.flexBasis = `${ancho}px`;
-        boton.textContent = "◀";
+        boton.innerHTML = Iconos.svg("izquierda");
         boton.title = "Minimizar";
       } else {
         columna.dataset.ancho = columna.getBoundingClientRect().width;
         columna.classList.add("compacto");
-        boton.textContent = "▶";
+        boton.innerHTML = Iconos.svg("derecha");
         boton.title = "Restaurar";
       }
       this.alAnotar(`click en minimizar · ${columna.getAttribute("aria-label")}`);
@@ -612,7 +658,7 @@ window.mavr.iu = window.mavr.iu || {};
         ]);
       } catch (error) {
         this.escenario.innerHTML = `
-          <article class="mv-card">
+          <article class="fs-card">
             <h2>No se pudieron cargar los orígenes de datos</h2>
             <p>Sirve esta carpeta mediante HTTP, por ejemplo: <code>python -m http.server 8000</code></p>
             <pre>${Utilidades.escapar(error.message)}</pre>
@@ -694,7 +740,7 @@ window.mavr.iu = window.mavr.iu || {};
       contenedor.innerHTML = "";
       this.estado.menu.forEach((elemento) => {
         const enlace = Plantillas.clonar("nav");
-        FichaIU.completar(enlace, elemento.texto);
+        FichaIU.completar(enlace, elemento.texto, elemento.icono);
         enlace.href = `#${Utilidades.slug(elemento.texto)}/${this.estado.vista}`;
         enlace.dataset.texto = elemento.texto;
         enlace.addEventListener("click", (evento) => {
@@ -711,7 +757,7 @@ window.mavr.iu = window.mavr.iu || {};
       contenedor.innerHTML = "";
       this.estado.entidades.forEach((elemento) => {
         const tarjeta = Plantillas.clonar("tarjeta");
-        FichaIU.completar(tarjeta, elemento.texto);
+        FichaIU.completar(tarjeta, elemento.texto, elemento.icono);
         tarjeta.dataset.vista = elemento.vista;
 
         tarjeta.addEventListener("click", () => {
@@ -743,7 +789,7 @@ window.mavr.iu = window.mavr.iu || {};
 
     tarjeta(html) {
       const articulo = document.createElement("article");
-      articulo.className = "mv-card";
+      articulo.className = "fs-card";
       articulo.innerHTML = html;
       return articulo;
     }
@@ -752,8 +798,8 @@ window.mavr.iu = window.mavr.iu || {};
     vistaVacia(que) {
       const modulo = this.estado.modulo.texto;
       const tarjeta = this.tarjeta(`
-        <div class="mv-vacio">
-          <div class="ficha" style="background:${Utilidades.colorTexto(modulo)}">${Utilidades.escapar(modulo.charAt(0))}</div>
+        <div class="fs-vacio">
+          <div class="ficha">${Iconos.svg("bandeja")}</div>
           <h2>${Utilidades.escapar(modulo)}</h2>
           <p>Este módulo todavía no tiene ${que}. Añade su archivo JSON en <code>data/</code> y enlázalo en <code>menu.json</code>.</p>
         </div>`);
@@ -810,7 +856,7 @@ window.mavr.iu = window.mavr.iu || {};
       const tarjeta = this.tarjeta(`
         <h2>Librería · Controles de formulario</h2>
         <p>Todos los componentes nativos de HTML agrupados por tipo. Al enviar se muestran los datos en una ventana modal.</p>
-        <form class="mv-form" id="formControles">
+        <form class="fs-form" id="formControles">
           <fieldset>
             <legend>Texto</legend>
             <label><span>Texto *</span><input type="text" name="texto" required placeholder="Tu nombre"></label>
@@ -819,8 +865,8 @@ window.mavr.iu = window.mavr.iu || {};
             <label><span>Teléfono</span><input type="tel" name="telefono" pattern="[0-9 +]{9,15}"></label>
             <label><span>URL</span><input type="url" name="url" placeholder="https://"></label>
             <label><span>Búsqueda</span><input type="search" name="busqueda"></label>
-            <label class="mv-form-completo"><span>Área de texto</span><textarea name="comentario" maxlength="200"></textarea>
-              <small class="mv-ayuda"><output id="contador">0</output> / 200 caracteres</small></label>
+            <label class="fs-form-completo"><span>Área de texto</span><textarea name="comentario" maxlength="200"></textarea>
+              <small class="fs-ayuda"><output id="contador">0</output> / 200 caracteres</small></label>
           </fieldset>
 
           <fieldset>
@@ -855,22 +901,22 @@ window.mavr.iu = window.mavr.iu || {};
               <datalist id="lenguajes">
                 <option value="Python"><option value="Java"><option value="JavaScript"><option value="PHP"><option value="C++">
               </datalist></label>
-            <label><span>Color <output id="salidaColor">#ec8a4b</output></span><input type="color" name="color" value="#ec8a4b"></label>
-            <div class="mv-campo"><span>Turno (radio)</span>
-              <div class="mv-grupo-opciones">
-                <label class="mv-check"><input type="radio" name="turno" value="mañana" checked><span>Mañana</span></label>
-                <label class="mv-check"><input type="radio" name="turno" value="tarde"><span>Tarde</span></label>
+            <label><span>Color <output id="salidaColor">#c73871</output></span><input type="color" name="color" value="#c73871"></label>
+            <div class="fs-campo"><span>Turno (radio)</span>
+              <div class="fs-grupo-opciones">
+                <label class="fs-check"><input type="radio" name="turno" value="mañana" checked><span>Mañana</span></label>
+                <label class="fs-check"><input type="radio" name="turno" value="tarde"><span>Tarde</span></label>
               </div></div>
-            <label class="mv-check"><input type="checkbox" name="acepto"><span>Acepto las condiciones (checkbox)</span></label>
+            <label class="fs-check"><input type="checkbox" name="acepto"><span>Acepto las condiciones (checkbox)</span></label>
           </fieldset>
 
           <fieldset>
             <legend>Archivos y campos especiales</legend>
             <label><span>Archivo</span><input type="file" name="archivo"></label>
-            <div class="mv-campo"><span>Archivo elegido</span><output id="salidaArchivo">Ninguno</output></div>
+            <div class="fs-campo"><span>Archivo elegido</span><output id="salidaArchivo">Ninguno</output></div>
             <input type="hidden" name="origen" value="vista-controles">
-            <div class="mv-campo"><span>Input tipo button</span><input type="button" class="mv-btn secundario" value="Pulsar" id="inputBoton"></div>
-            <div class="mv-campo"><span>Input tipo image (envía)</span><input type="image" src="img/logo.svg" alt="Enviar" width="34" height="34"></div>
+            <div class="fs-campo"><span>Input tipo button</span><input type="button" class="fs-btn secundario" value="Pulsar" id="inputBoton"></div>
+            <div class="fs-campo"><span>Input tipo image (envía)</span><input type="image" src="img/logo.svg" alt="Enviar" width="34" height="34"></div>
           </fieldset>
 
           <fieldset>
@@ -878,13 +924,13 @@ window.mavr.iu = window.mavr.iu || {};
             <label><span>Precio (€)</span><input type="number" name="precio" min="0" step="0.01" value="100"></label>
             <label><span>Cantidad</span><input type="number" name="cantidad" min="1" value="1"></label>
             <label><span>IVA</span><select name="iva"><option value="0.21">21 %</option><option value="0.10">10 %</option><option value="0.04">4 %</option></select></label>
-            <div class="mv-campo"><span>Total con IVA (output)</span><output id="total">121,00 €</output></div>
-            <div class="mv-campo mv-form-completo"><span>Campos obligatorios completados (progress)</span><progress id="progreso" max="2" value="0"></progress></div>
+            <div class="fs-campo"><span>Total con IVA (output)</span><output id="total">121,00 €</output></div>
+            <div class="fs-campo fs-form-completo"><span>Campos obligatorios completados (progress)</span><progress id="progreso" max="2" value="0"></progress></div>
           </fieldset>
 
-          <div class="mv-botones mv-form-completo">
-            <button class="mv-btn" type="submit">Enviar</button>
-            <button class="mv-btn secundario" type="reset">Limpiar</button>
+          <div class="fs-botones fs-form-completo">
+            <button class="fs-btn" type="submit">Enviar</button>
+            <button class="fs-btn secundario" type="reset">Limpiar</button>
           </div>
         </form>`);
 
@@ -937,35 +983,35 @@ window.mavr.iu = window.mavr.iu || {};
       const tarjeta = this.tarjeta(`
         <h2>Laboratorio de eventos</h2>
         <p>Interactúa con cada zona y observa en el registro qué evento se dispara y en qué orden.</p>
-        <div class="mv-lab">
-          <div class="mv-lab-caja">
+        <div class="fs-lab">
+          <div class="fs-lab-caja">
             <h3>Ratón</h3>
-            <div class="mv-zona" id="zonaRaton" tabindex="0">Haz clic, doble clic,<br>clic derecho o usa la rueda<br><small id="coordenadas">x: 0 · y: 0</small></div>
+            <div class="fs-zona" id="zonaRaton" tabindex="0">Haz clic, doble clic,<br>clic derecho o usa la rueda<br><small id="coordenadas">x: 0 · y: 0</small></div>
           </div>
-          <div class="mv-lab-caja">
+          <div class="fs-lab-caja">
             <h3>Teclado, foco y portapapeles</h3>
-            <div class="mv-form"><label><span>Escribe, copia o pega aquí</span><input id="campoEventos" autocomplete="off"></label></div>
-            <p class="mv-ayuda">Atajos de la aplicación:</p>
-            <div class="mv-teclas"><span><kbd>Ctrl</kbd>+<kbd>K</kbd> buscar</span><span><kbd>Alt</kbd>+<kbd>N</kbd> nuevo</span><span><kbd>Esc</kbd> cerrar</span></div>
+            <div class="fs-form"><label><span>Escribe, copia o pega aquí</span><input id="campoEventos" autocomplete="off"></label></div>
+            <p class="fs-ayuda">Atajos de la aplicación:</p>
+            <div class="fs-teclas"><span><kbd>Ctrl</kbd>+<kbd>K</kbd> buscar</span><span><kbd>Alt</kbd>+<kbd>N</kbd> nuevo</span><span><kbd>Esc</kbd> cerrar</span></div>
           </div>
-          <div class="mv-lab-caja">
+          <div class="fs-lab-caja">
             <h3>Propagación (burbuja)</h3>
-            <div class="mv-burbuja" data-nombre="exterior">exterior
-              <div class="mv-burbuja" data-nombre="medio">medio
-                <div class="mv-burbuja" data-nombre="interior">interior</div>
+            <div class="fs-burbuja" data-nombre="exterior">exterior
+              <div class="fs-burbuja" data-nombre="medio">medio
+                <div class="fs-burbuja" data-nombre="interior">interior</div>
               </div>
             </div>
-            <div class="mv-form" style="margin-top:10px">
-              <label class="mv-check"><input type="checkbox" id="detener"><span>stopPropagation() en «interior»</span></label>
-              <label class="mv-check"><input type="checkbox" id="captura"><span>Escuchar también en fase de captura</span></label>
+            <div class="fs-form" style="margin-top:10px">
+              <label class="fs-check"><input type="checkbox" id="detener"><span>stopPropagation() en «interior»</span></label>
+              <label class="fs-check"><input type="checkbox" id="captura"><span>Escuchar también en fase de captura</span></label>
             </div>
           </div>
         </div>
-        <div class="mv-botones" style="margin:14px 0 8px;justify-content:space-between">
+        <div class="fs-botones" style="margin:14px 0 8px;justify-content:space-between">
           <h3 style="margin:0">Registro de eventos</h3>
-          <button class="mv-btn secundario" type="button" id="limpiarRegistro">Limpiar</button>
+          <button class="fs-btn secundario" type="button" id="limpiarRegistro">Limpiar</button>
         </div>
-        <ol class="mv-registro" id="registro" reversed></ol>`);
+        <ol class="fs-registro" id="registro" reversed></ol>`);
 
       const registro = DOM.uno("#registro", tarjeta);
       const log = (tipo, detalle = "") => {
@@ -996,7 +1042,7 @@ window.mavr.iu = window.mavr.iu || {};
       ["copy", "cut", "paste"].forEach((tipo) => campo.addEventListener(tipo, () => log(tipo)));
 
       // Propagación: el mismo escuchador en las tres cajas
-      const cajas = DOM.todos(".mv-burbuja", tarjeta);
+      const cajas = DOM.todos(".fs-burbuja", tarjeta);
       const escuchar = (fase) => (e) => {
         const caja = e.currentTarget;
         log(`click (${fase})`, `en «${caja.dataset.nombre}» · origen «${e.target.dataset.nombre}»`);
@@ -1027,11 +1073,11 @@ window.mavr.iu = window.mavr.iu || {};
       const tarjeta = this.tarjeta(`
         <h2>Librería · Toasts</h2>
         <p>Mensajes emergentes que se apilan abajo a la derecha, se cierran solos a los 5 segundos o con la ×.</p>
-        <div class="mv-botones">
-          <button class="mv-btn" data-toast="exito">Éxito</button>
-          <button class="mv-btn secundario" data-toast="info">Información</button>
-          <button class="mv-btn secundario" data-toast="aviso">Aviso</button>
-          <button class="mv-btn secundario" data-toast="error">Error</button>
+        <div class="fs-botones">
+          <button class="fs-btn" data-toast="exito">Éxito</button>
+          <button class="fs-btn secundario" data-toast="info">Información</button>
+          <button class="fs-btn secundario" data-toast="aviso">Aviso</button>
+          <button class="fs-btn secundario" data-toast="error">Error</button>
         </div>`);
       const textos = {
         exito: ["Guardado correctamente", "La operación se ha completado."],
@@ -1052,23 +1098,23 @@ window.mavr.iu = window.mavr.iu || {};
       const tarjeta = this.tarjeta(`
         <h2>Librería · Modal y panel lateral</h2>
         <p>Dos patrones para acciones que no deben sustituir el contenido del escenario.</p>
-        <div class="mv-rejilla">
+        <div class="fs-rejilla">
           <div>
             <h3>Ventana modal</h3>
             <p>Bloquea la interfaz para avisos o confirmaciones. Se cierra con la ×, haciendo clic fuera o con Escape.</p>
-            <div class="mv-botones">
-              <button class="mv-btn" id="demoModal">Abrir modal</button>
-              <button class="mv-btn secundario" id="demoConfirmar">Confirmación</button>
+            <div class="fs-botones">
+              <button class="fs-btn" id="demoModal">Abrir modal</button>
+              <button class="fs-btn secundario" id="demoConfirmar">Confirmación</button>
             </div>
           </div>
           <div>
             <h3>Panel lateral</h3>
             <p>Entra desde la derecha y mantiene el contexto visible. Arrastra su borde izquierdo: a partir del 25 % de la ventana el formulario pasa a dos columnas.</p>
-            <button class="mv-btn" id="demoDrawer">Abrir panel de creación</button>
+            <button class="fs-btn" id="demoDrawer">Abrir panel de creación</button>
           </div>
         </div>`);
       DOM.uno("#demoModal", tarjeta).addEventListener("click", () =>
-        this.modal.abrir("Ejemplo de ventana modal", "<p>Ventana modal reutilizable de <strong>mavr | iu</strong>.</p>")
+        this.modal.abrir("Ejemplo de ventana modal", "<p>Ventana modal reutilizable de <strong>Fabiana Sotillo | iu</strong>.</p>")
       );
       DOM.uno("#demoConfirmar", tarjeta).addEventListener("click", () =>
         this.modal.confirmar("¿Seguro?", "Esta acción es solo una demostración.", () =>
@@ -1083,21 +1129,21 @@ window.mavr.iu = window.mavr.iu || {};
     vistaLogin() {
       const contenedor = document.createElement("div");
       contenedor.innerHTML = `
-        <main class="mv-login incrustado">
-          <article class="mv-login-marca">
-            <img src="img/logo.svg" alt="">
-            <h1>${Utilidades.escapar(this.estado.identidad.nombre)}</h1>
+        <main class="fs-login incrustado">
+          <article class="fs-login-marca">
+            <img src="img/fs-logo-horizontal-blanco.svg" alt="Fabiana Sotillo">
+            <h1>Interfaz integrada</h1>
             <p>Pantalla de acceso como componente reutilizable.</p>
           </article>
-          <article class="mv-login-tarjeta">
+          <article class="fs-login-tarjeta">
             <h2>Iniciar sesión</h2>
-            <form class="mv-form" id="loginDemo">
+            <form class="fs-form" id="loginDemo">
               <label><span>Email</span><input type="email" required></label>
               <label><span>Contraseña</span><input type="password" required minlength="4"></label>
-              <label class="mv-check"><input type="checkbox"><span>Mantener la sesión</span></label>
-              <div class="mv-login-acciones">
-                <button class="mv-btn">Entrar</button>
-                <a class="mv-enlace" href="login.html">Abrir pantalla completa</a>
+              <label class="fs-check"><input type="checkbox"><span>Mantener la sesión</span></label>
+              <div class="fs-login-acciones">
+                <button class="fs-btn">Entrar</button>
+                <a class="fs-enlace" href="login.html">Abrir pantalla completa</a>
               </div>
             </form>
           </article>
@@ -1116,10 +1162,10 @@ window.mavr.iu = window.mavr.iu || {};
       const colores = id.colores.map((c) => {
         const valor = estilos.getPropertyValue(c.variable).trim();
         return `
-          <div class="mv-color">
-            <div class="mv-color-muestra" style="background:${valor}"></div>
+          <div class="fs-color">
+            <div class="fs-color-muestra" style="background:${valor}"></div>
             <div><strong>${Utilidades.escapar(c.nombre)}</strong> <code>${valor} · ${c.variable}</code>
-              <p class="mv-ayuda">${Utilidades.escapar(c.significado)}</p></div>
+              <p class="fs-ayuda">${Utilidades.escapar(c.significado)}</p></div>
           </div>`;
       }).join("");
 
@@ -1127,18 +1173,18 @@ window.mavr.iu = window.mavr.iu || {};
         <h2>Manual de identidad · ${Utilidades.escapar(id.nombre)}</h2>
         <p>${Utilidades.escapar(id.lema)} Los colores se leen en directo de las variables CSS de <code>:root</code>.</p>
         <h3>Colores</h3>
-        <div class="mv-paleta">${colores}</div>
-        <div class="mv-identidad-fila">
+        <div class="fs-paleta">${colores}</div>
+        <div class="fs-identidad-fila">
           <img src="${Utilidades.escapar(id.logo.archivo)}" alt="Logotipo">
-          <div><h3>Logotipo</h3><p class="mv-ayuda">${Utilidades.escapar(id.logo.motivo)}</p></div>
+          <div><h3>Logotipo</h3><p class="fs-ayuda">${Utilidades.escapar(id.logo.motivo)}</p></div>
         </div>
-        <div class="mv-identidad-fila">
+        <div class="fs-identidad-fila">
           <div style="font-size:32px;width:64px;text-align:center">Aa</div>
-          <div><h3>Tipografía</h3><p class="mv-ayuda"><code>${Utilidades.escapar(id.tipografia.familia)}</code> · ${Utilidades.escapar(id.tipografia.motivo)}</p></div>
+          <div><h3>Tipografía</h3><p class="fs-ayuda"><code>${Utilidades.escapar(id.tipografia.familia)}</code> · ${Utilidades.escapar(id.tipografia.motivo)}</p></div>
         </div>
-        <div class="mv-identidad-fila">
-          <div class="mv-muestra-forma"><span style="border-radius:50%"></span><span style="border-radius:10px"></span></div>
-          <div><h3>Formas</h3><p class="mv-ayuda">${Utilidades.escapar(id.formas.radio)} ${Utilidades.escapar(id.formas.motivo)}</p></div>
+        <div class="fs-identidad-fila">
+          <div class="fs-muestra-forma"><span style="border-radius:50%"></span><span style="border-radius:10px"></span></div>
+          <div><h3>Formas</h3><p class="fs-ayuda">${Utilidades.escapar(id.formas.radio)} ${Utilidades.escapar(id.formas.motivo)}</p></div>
         </div>`);
       this.barra.actualizar({ registros: null });
       this.pintar(tarjeta);
@@ -1164,7 +1210,7 @@ window.mavr.iu = window.mavr.iu || {};
       const formulario = FormularioIU.construir(this.estado.formulario, registro, "Guardar cambios");
       const borrar = document.createElement("button");
       borrar.type = "button";
-      borrar.className = "mv-btn secundario";
+      borrar.className = "fs-btn secundario";
       borrar.textContent = "Eliminar";
       borrar.addEventListener("click", () =>
         this.modal.confirmar("Eliminar registro", `¿Seguro que quieres eliminar «${registro.nombre ?? registro.id}»?`, () => {
@@ -1175,7 +1221,7 @@ window.mavr.iu = window.mavr.iu || {};
           this.refrescarListado();
         })
       );
-      DOM.uno(".mv-botones", formulario).appendChild(borrar);
+      DOM.uno(".fs-botones", formulario).appendChild(borrar);
 
       this.escucharFormulario(formulario, (datos) => {
         Object.assign(registro, datos);
@@ -1259,14 +1305,15 @@ window.mavr.iu = window.mavr.iu || {};
     }
   }
 
-  // Exponemos las clases en el namespace mavr.iu
-  Object.assign(window.mavr.iu, {
-    DOM, Utilidades, OrigenDatos, Plantillas, EstadoIU, FichaIU, BarraEstado,
+  // Exponemos las clases en el namespace fs.iu
+  Object.assign(window.fs.iu, {
+    DOM, Utilidades, OrigenDatos, Plantillas, EstadoIU, Iconos, FichaIU, BarraEstado,
     ToastIU, ModalIU, DrawerIU, FormularioIU, TablaIU, GestorColumnas, AplicacionIU
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    window.mavr.iu.aplicacion = new AplicacionIU();
-    window.mavr.iu.aplicacion.iniciar();
+    Iconos.aplicar(document);
+    window.fs.iu.aplicacion = new AplicacionIU();
+    window.fs.iu.aplicacion.iniciar();
   });
 })();

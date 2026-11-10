@@ -1,10 +1,10 @@
 [
-  { "texto": "Listado",          "vista": "listado",    "activo": true },
-  { "texto": "Formulario",       "vista": "formulario" },
-  { "texto": "Controles",        "vista": "controles" },
-  { "texto": "Eventos",          "vista": "eventos" },
-  { "texto": "Toasts",           "vista": "toasts" },
-  { "texto": "Modal y panel",    "vista": "modal" },
-  { "texto": "Login",            "vista": "login" },
-  { "texto": "Identidad",        "vista": "identidad" }
+  { "texto": "Listado", "icono": "lista",          "vista": "listado",    "activo": true },
+  { "texto": "Formulario", "icono": "formulario",       "vista": "formulario" },
+  { "texto": "Controles", "icono": "controles",        "vista": "controles" },
+  { "texto": "Eventos", "icono": "puntero",          "vista": "eventos" },
+  { "texto": "Toasts", "icono": "campana",           "vista": "toasts" },
+  { "texto": "Modal y panel", "icono": "panel",    "vista": "modal" },
+  { "texto": "Login", "icono": "entrar",            "vista": "login" },
+  { "texto": "Identidad", "icono": "paleta",        "vista": "identidad" }
 ]
