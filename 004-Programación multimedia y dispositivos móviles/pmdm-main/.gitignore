@@ -1,0 +1,25 @@
+# Gradle y Kotlin
+.gradle/
+build/
+.kotlin/
+
+# Configuración local (ruta del SDK, etc.)
+local.properties
+
+# Android Studio / IntelliJ
+*.iml
+.idea/*
+!.idea/codeStyles/
+!.idea/runConfigurations/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Claves de firma y secretos
+*.jks
+*.keystore
+keystore.properties
+
+# Sistema y logs
+.DS_Store
+*.log
