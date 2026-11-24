@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Procesador de fotos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Procesador de fotos</h1>
+      <p>Elige una foto, escoge un filtro y mira el resultado.</p>
+    </header>
+
+    <main>
+
+      <!-- Controles -->
+      <section id="controles">
+
+        <label class="boton" for="entrada">Elegir foto</label>
+        <input type="file" id="entrada" accept="image/*">
+
+        <select id="filtro">
+          <option value="grises">Escala de grises</option>
+          <option value="sepia">Sepia</option>
+          <option value="negativo">Negativo</option>
+          <option value="brillo">Más brillo</option>
+        </select>
+
+        <button id="aplicar" disabled>Aplicar filtro</button>
+
+      </section>
+
+      <!-- Original y resultado -->
+      <section id="fotos">
+
+        <figure>
+          <figcaption>Original</figcaption>
+          <canvas id="original"></canvas>
+        </figure>
+
+        <figure>
+          <figcaption>Resultado</figcaption>
+          <canvas id="resultado"></canvas>
+        </figure>
+
+      </section>
+
+      <!-- Mensaje de estado -->
+      <p id="estado">Todavía no hay ninguna foto.</p>
+
+    </main>
+
+    <script src="js/filtros.js"></script>
+    <script src="js/principal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+/* Estilo sencillo y suave */
+
+:root{
+  --fondo:#f6f2fc;
+  --tarjeta:#ffffff;
+  --principal:#a48ad9;
+  --principal-oscuro:#8c72c6;
+  --texto:#40384d;
+  --suave:#8f87a0;
+  --borde:#e3daf3;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:30px 20px;
+  font-family:system-ui, Arial, sans-serif;
+  background:var(--fondo);
+  color:var(--texto);
+}
+
+header{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+header h1{
+  margin:0 0 6px 0;
+}
+
+header p{
+  margin:0;
+  color:var(--suave);
+}
+
+main{
+  max-width:1000px;
+  margin:0 auto;
+}
+
+/* Controles */
+
+#controles{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:15px;
+}
+
+#entrada{
+  display:none; /* uso la etiqueta como botón */
+}
+
+.boton,
+button,
+select,
+input[type=number]{
+  padding:10px 18px;
+  border:none;
+  border-radius:999px;
+  font-size:15px;
+  font-family:inherit;
+}
+
+.boton,
+button{
+  background:var(--principal);
+  color:white;
+  cursor:pointer;
+}
+
+.boton:hover,
+button:hover:enabled{
+  background:var(--principal-oscuro);
+}
+
+button:disabled{
+  opacity:0.4;
+  cursor:not-allowed;
+}
+
+select,
+input[type=number]{
+  background:var(--tarjeta);
+  color:var(--texto);
+  border:2px solid var(--borde);
+}
+
+select{
+  cursor:pointer;
+}
+
+input[type=number]{
+  width:80px;
+  padding:8px 12px;
+  text-align:center;
+}
+
+.campo{
+  color:var(--suave);
+  font-size:14px;
+}
+
+/* Reloj de prueba */
+
+#reloj{
+  margin:0 0 20px 0;
+  text-align:center;
+  font-size:14px;
+  font-family:monospace;
+  color:var(--suave);
+}
+
+/* Galería: una tarjeta por foto */
+
+#galeria{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+  gap:14px;
+}
+
+figure{
+  margin:0;
+  padding:10px;
+  background:var(--tarjeta);
+  border-radius:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.07);
+  text-align:center;
+}
+
+figure canvas{
+  width:100%;
+  height:150px;
+  object-fit:contain;
+  border-radius:8px;
+  background:#efe9f8;
+}
+
+figcaption{
+  margin-top:8px;
+  font-size:11px;
+  color:var(--suave);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/* Mensaje de estado: sencillo, debajo de las fotos */
+#estado{
+  margin:18px 0 0 0;
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+  color:var(--principal-oscuro);
+}

@@ -1,0 +1,134 @@
+/* Estilo sencillo y suave */
+
+:root{
+  --fondo:#f6f2fc;
+  --tarjeta:#ffffff;
+  --principal:#a48ad9;
+  --principal-oscuro:#8c72c6;
+  --texto:#40384d;
+  --suave:#8f87a0;
+  --borde:#e3daf3;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:30px 20px;
+  font-family:system-ui, Arial, sans-serif;
+  background:var(--fondo);
+  color:var(--texto);
+}
+
+header{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+header h1{
+  margin:0 0 6px 0;
+}
+
+header p{
+  margin:0;
+  color:var(--suave);
+}
+
+main{
+  max-width:1000px;
+  margin:0 auto;
+}
+
+/* Controles */
+
+#controles{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:25px;
+}
+
+#entrada{
+  display:none; /* uso la etiqueta como botón */
+}
+
+.boton,
+button,
+select{
+  padding:10px 18px;
+  border:none;
+  border-radius:999px;
+  font-size:15px;
+  font-family:inherit;
+  cursor:pointer;
+}
+
+.boton,
+button{
+  background:var(--principal);
+  color:white;
+}
+
+.boton:hover,
+button:hover:enabled{
+  background:var(--principal-oscuro);
+}
+
+button:disabled{
+  opacity:0.4;
+  cursor:not-allowed;
+}
+
+select{
+  background:var(--tarjeta);
+  color:var(--texto);
+  border:2px solid var(--borde);
+}
+
+/* Fotos */
+
+#fotos{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+figure{
+  margin:0;
+  padding:12px;
+  background:var(--tarjeta);
+  border-radius:18px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.07);
+  text-align:center;
+}
+
+figcaption{
+  margin-bottom:10px;
+  font-weight:600;
+  color:var(--suave);
+}
+
+canvas{
+  max-width:100%;
+  max-height:300px;
+  border-radius:10px;
+  background:#efe9f8;
+}
+
+/* Mensaje de estado: sencillo, debajo de las fotos */
+#estado{
+  margin:18px 0 0 0;
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+  color:var(--principal-oscuro);
+}
+
+@media (max-width:700px){
+  #fotos{
+    grid-template-columns:1fr;
+  }
+}
