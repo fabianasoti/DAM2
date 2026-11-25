@@ -1,0 +1,17 @@
+# 2026-11-25 02:26
+# comando: PYTHONPATH=<carpeta de websockets 10.4, solo Python> python3 probar_chat.py   (la versión que instala apt en Ubuntu 24.04; Python 3.12.3; Ollama FALSO)
+OK    clave incorrecta se rechaza -> {'tipo': 'error', 'mensaje': 'Clave incorrecta'}
+OK    nombre vacío se rechaza -> {'tipo': 'error', 'mensaje': 'Nombre no válido (de 1 a 20 caracteres)'}
+OK    rol desconocido se rechaza -> {'tipo': 'error', 'mensaje': 'Clave incorrecta'}
+OK    mensaje sin presentación se cierra
+OK    conexión muda se cierra a los ~10 s -> 10.0 s
+OK    sin IAs, aviso claro -> {'tipo': 'error', 'mensaje': 'No hay ninguna IA conectada ahora mismo'}
+OK    el usuario ve que hay 1 IA -> {'tipo': 'estado', 'ias': 1}
+OK    pregunta y respuesta con IA simulada -> {'tipo': 'respuesta', 'texto': '[Respuesta simulada, sin IA real] Has preguntado: ¿Qué es un hilo?', 'ia': 'ia-1', 'segundos': 1.0}
+OK    pregunta de 501 caracteres se rechaza -> {'tipo': 'error', 'mensaje': 'La pregunta es demasiado larga (máximo 500 caracteres)'}
+OK    pregunta vacía se rechaza -> {'tipo': 'error', 'mensaje': 'Escribe una pregunta'}
+OK    límite de 10 preguntas por minuto -> respondidas=10, limitadas=1
+OK    8 preguntas repartidas entre 2 IAs (1 s cada una) -> {'ia-1': 4, 'ia-2': 4} en 4.0 s (con una sola IA serían ~8 s)
+OK    si la IA se cae, el usuario recibe aviso -> {'tipo': 'error', 'mensaje': 'La IA se ha desconectado, vuelve a preguntar'}
+OK    IA real hablando con un Ollama falso -> {'tipo': 'respuesta', 'texto': '[Ollama falso de prueba] respuesta a: ¿Qué hora es?', 'ia': 'ia-ollama', 'segundos': 0.3}
+OK    con Ollama apagado, error claro -> {'tipo': 'error', 'mensaje': 'La IA no ha podido responder (¿está Ollama iniciado y el modelo instalado?)'}

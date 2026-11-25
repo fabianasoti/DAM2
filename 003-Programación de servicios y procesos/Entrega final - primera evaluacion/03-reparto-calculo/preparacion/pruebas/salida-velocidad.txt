@@ -1,0 +1,7 @@
+# 2026-11-25 02:17
+# comando: node pruebas.js velocidad  (60 paquetes de 40 ventas, carga 10000000, esclavos como procesos Node)
+# equipo: 11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz, 4 núcleos y 8 hilos, Node v22.23.5, PHP 8.3.6
+esclavos=1 tiempo=74.39 s paquetes=60/60 coincide=true
+esclavos=2 tiempo=49.76 s paquetes=60/60 coincide=true
+esclavos=4 tiempo=35.93 s paquetes=60/60 coincide=true
+esclavos=8 tiempo=30.86 s paquetes=60/60 coincide=true

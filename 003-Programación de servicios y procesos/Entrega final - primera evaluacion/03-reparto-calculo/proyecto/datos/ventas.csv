@@ -1,0 +1,2401 @@
+fecha,tienda,producto,unidades,precio_centimos
+2026-09-01,Norte,Mochila escolar,5,2490
+2026-09-01,Puerto,Mochila escolar,5,2490
+2026-09-01,Universidad,Agenda 2027,5,1190
+2026-09-01,Universidad,Pegamento,4,180
+2026-09-01,Centro,Rotuladores x12,5,650
+2026-09-01,Centro,Mochila escolar,3,2490
+2026-09-01,Mercado,Mochila escolar,1,2490
+2026-09-01,Norte,Pegamento,2,180
+2026-09-01,Norte,Agenda 2027,3,1190
+2026-09-01,Mercado,Calculadora,6,1290
+2026-09-01,Norte,Mochila escolar,1,2490
+2026-09-01,Norte,Carpeta archivadora,4,560
+2026-09-01,Universidad,Estuche,3,750
+2026-09-01,Norte,Cuaderno A5,3,395
+2026-09-01,Mercado,Pegamento,1,180
+2026-09-01,Universidad,Agenda 2027,5,1190
+2026-09-01,Centro,Pegamento,4,180
+2026-09-01,Mercado,Pegamento,5,180
+2026-09-01,Mercado,Carpeta archivadora,5,560
+2026-09-01,Universidad,Pegamento,5,180
+2026-09-01,Universidad,Cuaderno A5,2,395
+2026-09-01,Centro,Estuche,6,750
+2026-09-01,Universidad,Mochila escolar,4,2490
+2026-09-01,Puerto,Pegamento,4,180
+2026-09-01,Centro,Rotuladores x12,6,650
+2026-09-01,Mercado,Pegamento,6,180
+2026-09-01,Universidad,Carpeta archivadora,4,560
+2026-09-01,Universidad,Carpeta archivadora,6,560
+2026-09-01,Mercado,Pegamento,4,180
+2026-09-01,Norte,Rotuladores x12,3,650
+2026-09-01,Centro,Cuaderno A5,2,395
+2026-09-01,Universidad,Pegamento,4,180
+2026-09-01,Puerto,Calculadora,3,1290
+2026-09-01,Mercado,Pegamento,5,180
+2026-09-01,Mercado,Pegamento,5,180
+2026-09-01,Norte,Cuaderno A5,3,395
+2026-09-01,Centro,Pegamento,4,180
+2026-09-01,Mercado,Carpeta archivadora,2,560
+2026-09-01,Mercado,Agenda 2027,1,1190
+2026-09-01,Mercado,Carpeta archivadora,3,560
+2026-09-01,Puerto,Mochila escolar,6,2490
+2026-09-01,Puerto,Agenda 2027,4,1190
+2026-09-01,Centro,Cuaderno A5,1,395
+2026-09-01,Universidad,Pegamento,5,180
+2026-09-01,Universidad,Mochila escolar,2,2490
+2026-09-01,Centro,Rotuladores x12,5,650
+2026-09-01,Universidad,Cuaderno A5,3,395
+2026-09-01,Puerto,Calculadora,1,1290
+2026-09-01,Universidad,Calculadora,5,1290
+2026-09-01,Puerto,Pegamento,5,180
+2026-09-01,Mercado,Rotuladores x12,5,650
+2026-09-01,Universidad,Estuche,6,750
+2026-09-01,Centro,Carpeta archivadora,4,560
+2026-09-01,Puerto,Estuche,5,750
+2026-09-01,Universidad,Carpeta archivadora,4,560
+2026-09-01,Puerto,Agenda 2027,5,1190
+2026-09-01,Mercado,Rotuladores x12,1,650
+2026-09-01,Mercado,Mochila escolar,1,2490
+2026-09-01,Norte,Cuaderno A5,6,395
+2026-09-01,Centro,Calculadora,1,1290
+2026-09-01,Norte,Pegamento,6,180
+2026-09-01,Mercado,Carpeta archivadora,3,560
+2026-09-01,Mercado,Mochila escolar,4,2490
+2026-09-01,Puerto,Estuche,5,750
+2026-09-01,Mercado,Rotuladores x12,5,650
+2026-09-01,Mercado,Calculadora,5,1290
+2026-09-01,Centro,Rotuladores x12,5,650
+2026-09-01,Centro,Agenda 2027,2,1190
+2026-09-01,Centro,Estuche,6,750
+2026-09-01,Mercado,Cuaderno A5,6,395
+2026-09-01,Mercado,Rotuladores x12,6,650
+2026-09-01,Puerto,Cuaderno A5,6,395
+2026-09-01,Universidad,Rotuladores x12,2,650
+2026-09-01,Puerto,Estuche,4,750
+2026-09-01,Mercado,Carpeta archivadora,5,560
+2026-09-01,Centro,Agenda 2027,4,1190
+2026-09-01,Puerto,Carpeta archivadora,3,560
+2026-09-01,Norte,Estuche,4,750
+2026-09-01,Mercado,Pegamento,3,180
+2026-09-01,Puerto,Pegamento,3,180
+2026-09-02,Mercado,Pegamento,1,180
+2026-09-02,Centro,Carpeta archivadora,2,560
+2026-09-02,Centro,Rotuladores x12,1,650
+2026-09-02,Norte,Pegamento,4,180
+2026-09-02,Centro,Estuche,3,750
+2026-09-02,Norte,Estuche,5,750
+2026-09-02,Centro,Rotuladores x12,5,650
+2026-09-02,Universidad,Carpeta archivadora,5,560
+2026-09-02,Universidad,Rotuladores x12,3,650
+2026-09-02,Universidad,Carpeta archivadora,2,560
+2026-09-02,Norte,Mochila escolar,1,2490
+2026-09-02,Puerto,Agenda 2027,1,1190
+2026-09-02,Norte,Cuaderno A5,6,395
+2026-09-02,Centro,Estuche,5,750
+2026-09-02,Norte,Calculadora,5,1290
+2026-09-02,Norte,Mochila escolar,3,2490
+2026-09-02,Norte,Estuche,3,750
+2026-09-02,Centro,Mochila escolar,4,2490
+2026-09-02,Mercado,Carpeta archivadora,1,560
+2026-09-02,Centro,Cuaderno A5,2,395
+2026-09-02,Norte,Cuaderno A5,1,395
+2026-09-02,Universidad,Mochila escolar,5,2490
+2026-09-02,Norte,Calculadora,4,1290
+2026-09-02,Mercado,Cuaderno A5,3,395
+2026-09-02,Universidad,Rotuladores x12,4,650
+2026-09-02,Centro,Agenda 2027,6,1190
+2026-09-02,Universidad,Calculadora,6,1290
+2026-09-02,Mercado,Carpeta archivadora,3,560
+2026-09-02,Centro,Calculadora,6,1290
+2026-09-02,Centro,Agenda 2027,3,1190
+2026-09-02,Norte,Calculadora,6,1290
+2026-09-02,Norte,Mochila escolar,4,2490
+2026-09-02,Universidad,Calculadora,1,1290
+2026-09-02,Puerto,Calculadora,5,1290
+2026-09-02,Centro,Cuaderno A5,2,395
+2026-09-02,Centro,Mochila escolar,1,2490
+2026-09-02,Universidad,Estuche,3,750
+2026-09-02,Centro,Carpeta archivadora,4,560
+2026-09-02,Norte,Estuche,4,750
+2026-09-02,Mercado,Agenda 2027,2,1190
+2026-09-02,Puerto,Agenda 2027,2,1190
+2026-09-02,Universidad,Estuche,1,750
+2026-09-02,Norte,Agenda 2027,2,1190
+2026-09-02,Centro,Rotuladores x12,1,650
+2026-09-02,Universidad,Carpeta archivadora,4,560
+2026-09-02,Norte,Agenda 2027,3,1190
+2026-09-02,Universidad,Estuche,1,750
+2026-09-02,Universidad,Estuche,1,750
+2026-09-02,Norte,Carpeta archivadora,6,560
+2026-09-02,Centro,Calculadora,6,1290
+2026-09-02,Puerto,Cuaderno A5,4,395
+2026-09-02,Puerto,Cuaderno A5,6,395
+2026-09-02,Mercado,Estuche,6,750
+2026-09-02,Puerto,Calculadora,5,1290
+2026-09-02,Norte,Carpeta archivadora,2,560
+2026-09-02,Norte,Calculadora,4,1290
+2026-09-02,Universidad,Pegamento,4,180
+2026-09-02,Puerto,Carpeta archivadora,2,560
+2026-09-02,Puerto,Agenda 2027,4,1190
+2026-09-02,Norte,Cuaderno A5,5,395
+2026-09-02,Centro,Agenda 2027,6,1190
+2026-09-02,Centro,Estuche,3,750
+2026-09-02,Universidad,Calculadora,6,1290
+2026-09-02,Puerto,Carpeta archivadora,6,560
+2026-09-02,Centro,Mochila escolar,5,2490
+2026-09-02,Universidad,Rotuladores x12,3,650
+2026-09-02,Mercado,Cuaderno A5,4,395
+2026-09-02,Universidad,Estuche,1,750
+2026-09-02,Puerto,Mochila escolar,6,2490
+2026-09-02,Norte,Agenda 2027,5,1190
+2026-09-02,Norte,Carpeta archivadora,1,560
+2026-09-02,Puerto,Rotuladores x12,3,650
+2026-09-02,Universidad,Carpeta archivadora,3,560
+2026-09-02,Puerto,Calculadora,4,1290
+2026-09-02,Centro,Rotuladores x12,5,650
+2026-09-02,Mercado,Pegamento,3,180
+2026-09-02,Universidad,Estuche,1,750
+2026-09-02,Norte,Estuche,5,750
+2026-09-02,Puerto,Estuche,1,750
+2026-09-02,Universidad,Mochila escolar,6,2490
+2026-09-03,Norte,Cuaderno A5,1,395
+2026-09-03,Norte,Calculadora,2,1290
+2026-09-03,Universidad,Estuche,5,750
+2026-09-03,Puerto,Rotuladores x12,1,650
+2026-09-03,Mercado,Calculadora,1,1290
+2026-09-03,Mercado,Mochila escolar,3,2490
+2026-09-03,Centro,Carpeta archivadora,3,560
+2026-09-03,Mercado,Pegamento,1,180
+2026-09-03,Norte,Rotuladores x12,6,650
+2026-09-03,Universidad,Pegamento,3,180
+2026-09-03,Centro,Mochila escolar,1,2490
+2026-09-03,Norte,Pegamento,3,180
+2026-09-03,Puerto,Rotuladores x12,3,650
+2026-09-03,Universidad,Agenda 2027,5,1190
+2026-09-03,Norte,Calculadora,6,1290
+2026-09-03,Mercado,Pegamento,3,180
+2026-09-03,Puerto,Estuche,4,750
+2026-09-03,Norte,Rotuladores x12,3,650
+2026-09-03,Universidad,Agenda 2027,4,1190
+2026-09-03,Puerto,Rotuladores x12,4,650
+2026-09-03,Mercado,Estuche,3,750
+2026-09-03,Centro,Calculadora,3,1290
+2026-09-03,Mercado,Carpeta archivadora,3,560
+2026-09-03,Universidad,Estuche,6,750
+2026-09-03,Puerto,Carpeta archivadora,3,560
+2026-09-03,Universidad,Estuche,1,750
+2026-09-03,Norte,Carpeta archivadora,5,560
+2026-09-03,Mercado,Pegamento,4,180
+2026-09-03,Universidad,Cuaderno A5,6,395
+2026-09-03,Mercado,Calculadora,3,1290
+2026-09-03,Mercado,Mochila escolar,6,2490
+2026-09-03,Mercado,Rotuladores x12,3,650
+2026-09-03,Centro,Calculadora,4,1290
+2026-09-03,Centro,Estuche,3,750
+2026-09-03,Puerto,Carpeta archivadora,3,560
+2026-09-03,Mercado,Agenda 2027,4,1190
+2026-09-03,Centro,Calculadora,1,1290
+2026-09-03,Centro,Rotuladores x12,6,650
+2026-09-03,Norte,Carpeta archivadora,1,560
+2026-09-03,Mercado,Rotuladores x12,5,650
+2026-09-03,Universidad,Carpeta archivadora,6,560
+2026-09-03,Centro,Calculadora,5,1290
+2026-09-03,Universidad,Rotuladores x12,1,650
+2026-09-03,Puerto,Mochila escolar,3,2490
+2026-09-03,Mercado,Rotuladores x12,2,650
+2026-09-03,Norte,Estuche,1,750
+2026-09-03,Universidad,Agenda 2027,6,1190
+2026-09-03,Centro,Estuche,1,750
+2026-09-03,Mercado,Carpeta archivadora,1,560
+2026-09-03,Universidad,Estuche,6,750
+2026-09-03,Mercado,Rotuladores x12,6,650
+2026-09-03,Norte,Calculadora,3,1290
+2026-09-03,Universidad,Calculadora,4,1290
+2026-09-03,Mercado,Carpeta archivadora,3,560
+2026-09-03,Centro,Carpeta archivadora,6,560
+2026-09-03,Puerto,Pegamento,1,180
+2026-09-03,Norte,Pegamento,3,180
+2026-09-03,Puerto,Pegamento,3,180
+2026-09-03,Universidad,Carpeta archivadora,6,560
+2026-09-03,Norte,Agenda 2027,2,1190
+2026-09-03,Mercado,Cuaderno A5,1,395
+2026-09-03,Mercado,Carpeta archivadora,5,560
+2026-09-03,Universidad,Mochila escolar,5,2490
+2026-09-03,Mercado,Calculadora,3,1290
+2026-09-03,Norte,Calculadora,2,1290
+2026-09-03,Universidad,Mochila escolar,2,2490
+2026-09-03,Universidad,Carpeta archivadora,5,560
+2026-09-03,Centro,Agenda 2027,5,1190
+2026-09-03,Centro,Rotuladores x12,4,650
+2026-09-03,Puerto,Rotuladores x12,4,650
+2026-09-03,Universidad,Estuche,2,750
+2026-09-03,Mercado,Carpeta archivadora,2,560
+2026-09-03,Norte,Calculadora,6,1290
+2026-09-03,Universidad,Agenda 2027,5,1190
+2026-09-03,Puerto,Rotuladores x12,5,650
+2026-09-03,Puerto,Estuche,2,750
+2026-09-03,Centro,Cuaderno A5,3,395
+2026-09-03,Puerto,Carpeta archivadora,2,560
+2026-09-03,Universidad,Carpeta archivadora,6,560
+2026-09-03,Puerto,Calculadora,4,1290
+2026-09-04,Puerto,Estuche,6,750
+2026-09-04,Puerto,Cuaderno A5,6,395
+2026-09-04,Mercado,Estuche,6,750
+2026-09-04,Universidad,Pegamento,1,180
+2026-09-04,Puerto,Carpeta archivadora,5,560
+2026-09-04,Universidad,Calculadora,1,1290
+2026-09-04,Mercado,Pegamento,2,180
+2026-09-04,Puerto,Calculadora,6,1290
+2026-09-04,Mercado,Cuaderno A5,1,395
+2026-09-04,Centro,Cuaderno A5,3,395
+2026-09-04,Norte,Carpeta archivadora,1,560
+2026-09-04,Universidad,Estuche,2,750
+2026-09-04,Mercado,Mochila escolar,6,2490
+2026-09-04,Puerto,Agenda 2027,2,1190
+2026-09-04,Puerto,Rotuladores x12,6,650
+2026-09-04,Puerto,Pegamento,3,180
+2026-09-04,Universidad,Estuche,4,750
+2026-09-04,Mercado,Agenda 2027,3,1190
+2026-09-04,Norte,Rotuladores x12,6,650
+2026-09-04,Universidad,Pegamento,5,180
+2026-09-04,Centro,Pegamento,2,180
+2026-09-04,Centro,Rotuladores x12,1,650
+2026-09-04,Universidad,Calculadora,6,1290
+2026-09-04,Centro,Estuche,2,750
+2026-09-04,Mercado,Rotuladores x12,2,650
+2026-09-04,Centro,Agenda 2027,5,1190
+2026-09-04,Norte,Estuche,3,750
+2026-09-04,Mercado,Calculadora,1,1290
+2026-09-04,Universidad,Pegamento,4,180
+2026-09-04,Norte,Carpeta archivadora,4,560
+2026-09-04,Centro,Estuche,2,750
+2026-09-04,Norte,Rotuladores x12,4,650
+2026-09-04,Universidad,Agenda 2027,6,1190
+2026-09-04,Universidad,Cuaderno A5,3,395
+2026-09-04,Centro,Carpeta archivadora,4,560
+2026-09-04,Norte,Pegamento,5,180
+2026-09-04,Norte,Mochila escolar,3,2490
+2026-09-04,Centro,Cuaderno A5,5,395
+2026-09-04,Centro,Cuaderno A5,5,395
+2026-09-04,Universidad,Pegamento,1,180
+2026-09-04,Universidad,Agenda 2027,4,1190
+2026-09-04,Universidad,Pegamento,1,180
+2026-09-04,Norte,Estuche,2,750
+2026-09-04,Centro,Cuaderno A5,4,395
+2026-09-04,Puerto,Mochila escolar,5,2490
+2026-09-04,Centro,Carpeta archivadora,1,560
+2026-09-04,Universidad,Mochila escolar,5,2490
+2026-09-04,Norte,Mochila escolar,6,2490
+2026-09-04,Norte,Estuche,4,750
+2026-09-04,Norte,Rotuladores x12,6,650
+2026-09-04,Puerto,Pegamento,4,180
+2026-09-04,Universidad,Rotuladores x12,3,650
+2026-09-04,Centro,Agenda 2027,4,1190
+2026-09-04,Universidad,Rotuladores x12,2,650
+2026-09-04,Puerto,Pegamento,1,180
+2026-09-04,Universidad,Pegamento,4,180
+2026-09-04,Universidad,Pegamento,1,180
+2026-09-04,Puerto,Pegamento,4,180
+2026-09-04,Universidad,Cuaderno A5,4,395
+2026-09-04,Norte,Estuche,2,750
+2026-09-04,Norte,Calculadora,4,1290
+2026-09-04,Norte,Cuaderno A5,5,395
+2026-09-04,Universidad,Estuche,1,750
+2026-09-04,Puerto,Calculadora,5,1290
+2026-09-04,Universidad,Mochila escolar,2,2490
+2026-09-04,Mercado,Pegamento,1,180
+2026-09-04,Mercado,Mochila escolar,4,2490
+2026-09-04,Puerto,Cuaderno A5,2,395
+2026-09-04,Norte,Cuaderno A5,2,395
+2026-09-04,Norte,Carpeta archivadora,1,560
+2026-09-04,Puerto,Carpeta archivadora,1,560
+2026-09-04,Universidad,Rotuladores x12,1,650
+2026-09-04,Universidad,Pegamento,6,180
+2026-09-04,Norte,Cuaderno A5,6,395
+2026-09-04,Universidad,Pegamento,6,180
+2026-09-04,Puerto,Cuaderno A5,6,395
+2026-09-04,Centro,Pegamento,3,180
+2026-09-04,Puerto,Mochila escolar,6,2490
+2026-09-04,Norte,Mochila escolar,2,2490
+2026-09-04,Norte,Cuaderno A5,5,395
+2026-09-05,Mercado,Cuaderno A5,3,395
+2026-09-05,Universidad,Mochila escolar,2,2490
+2026-09-05,Mercado,Rotuladores x12,1,650
+2026-09-05,Puerto,Calculadora,5,1290
+2026-09-05,Mercado,Agenda 2027,1,1190
+2026-09-05,Centro,Rotuladores x12,1,650
+2026-09-05,Mercado,Agenda 2027,5,1190
+2026-09-05,Mercado,Mochila escolar,6,2490
+2026-09-05,Puerto,Estuche,2,750
+2026-09-05,Universidad,Estuche,2,750
+2026-09-05,Mercado,Calculadora,3,1290
+2026-09-05,Mercado,Estuche,1,750
+2026-09-05,Norte,Cuaderno A5,1,395
+2026-09-05,Universidad,Estuche,5,750
+2026-09-05,Mercado,Rotuladores x12,6,650
+2026-09-05,Norte,Estuche,2,750
+2026-09-05,Universidad,Pegamento,1,180
+2026-09-05,Centro,Estuche,4,750
+2026-09-05,Mercado,Mochila escolar,6,2490
+2026-09-05,Universidad,Agenda 2027,3,1190
+2026-09-05,Centro,Calculadora,6,1290
+2026-09-05,Norte,Cuaderno A5,2,395
+2026-09-05,Mercado,Mochila escolar,2,2490
+2026-09-05,Universidad,Carpeta archivadora,6,560
+2026-09-05,Norte,Estuche,6,750
+2026-09-05,Centro,Cuaderno A5,3,395
+2026-09-05,Mercado,Estuche,5,750
+2026-09-05,Puerto,Mochila escolar,6,2490
+2026-09-05,Puerto,Pegamento,5,180
+2026-09-05,Centro,Pegamento,1,180
+2026-09-05,Centro,Estuche,5,750
+2026-09-05,Puerto,Carpeta archivadora,4,560
+2026-09-05,Centro,Carpeta archivadora,4,560
+2026-09-05,Puerto,Carpeta archivadora,4,560
+2026-09-05,Mercado,Cuaderno A5,5,395
+2026-09-05,Centro,Mochila escolar,2,2490
+2026-09-05,Mercado,Calculadora,1,1290
+2026-09-05,Norte,Agenda 2027,4,1190
+2026-09-05,Norte,Pegamento,3,180
+2026-09-05,Universidad,Pegamento,4,180
+2026-09-05,Norte,Pegamento,3,180
+2026-09-05,Centro,Estuche,5,750
+2026-09-05,Puerto,Cuaderno A5,2,395
+2026-09-05,Mercado,Carpeta archivadora,2,560
+2026-09-05,Puerto,Calculadora,1,1290
+2026-09-05,Mercado,Rotuladores x12,2,650
+2026-09-05,Universidad,Calculadora,4,1290
+2026-09-05,Universidad,Rotuladores x12,5,650
+2026-09-05,Universidad,Carpeta archivadora,5,560
+2026-09-05,Norte,Agenda 2027,3,1190
+2026-09-05,Puerto,Pegamento,2,180
+2026-09-05,Centro,Carpeta archivadora,6,560
+2026-09-05,Norte,Rotuladores x12,2,650
+2026-09-05,Universidad,Agenda 2027,2,1190
+2026-09-05,Mercado,Pegamento,6,180
+2026-09-05,Centro,Pegamento,5,180
+2026-09-05,Centro,Carpeta archivadora,5,560
+2026-09-05,Universidad,Calculadora,3,1290
+2026-09-05,Puerto,Agenda 2027,6,1190
+2026-09-05,Universidad,Carpeta archivadora,5,560
+2026-09-05,Norte,Calculadora,4,1290
+2026-09-05,Centro,Rotuladores x12,4,650
+2026-09-05,Mercado,Agenda 2027,5,1190
+2026-09-05,Puerto,Calculadora,5,1290
+2026-09-05,Norte,Agenda 2027,6,1190
+2026-09-05,Centro,Cuaderno A5,2,395
+2026-09-05,Puerto,Rotuladores x12,4,650
+2026-09-05,Mercado,Agenda 2027,2,1190
+2026-09-05,Universidad,Agenda 2027,2,1190
+2026-09-05,Centro,Calculadora,5,1290
+2026-09-05,Centro,Mochila escolar,1,2490
+2026-09-05,Mercado,Rotuladores x12,1,650
+2026-09-05,Universidad,Pegamento,3,180
+2026-09-05,Mercado,Mochila escolar,2,2490
+2026-09-05,Norte,Calculadora,1,1290
+2026-09-05,Centro,Mochila escolar,3,2490
+2026-09-05,Mercado,Estuche,6,750
+2026-09-05,Centro,Agenda 2027,6,1190
+2026-09-05,Puerto,Mochila escolar,5,2490
+2026-09-05,Norte,Pegamento,5,180
+2026-09-06,Centro,Estuche,1,750
+2026-09-06,Puerto,Calculadora,2,1290
+2026-09-06,Mercado,Pegamento,1,180
+2026-09-06,Puerto,Agenda 2027,1,1190
+2026-09-06,Mercado,Cuaderno A5,4,395
+2026-09-06,Mercado,Mochila escolar,4,2490
+2026-09-06,Mercado,Cuaderno A5,4,395
+2026-09-06,Centro,Calculadora,1,1290
+2026-09-06,Puerto,Agenda 2027,4,1190
+2026-09-06,Norte,Mochila escolar,6,2490
+2026-09-06,Mercado,Rotuladores x12,1,650
+2026-09-06,Puerto,Calculadora,1,1290
+2026-09-06,Universidad,Estuche,5,750
+2026-09-06,Norte,Carpeta archivadora,4,560
+2026-09-06,Puerto,Mochila escolar,3,2490
+2026-09-06,Mercado,Mochila escolar,6,2490
+2026-09-06,Universidad,Mochila escolar,5,2490
+2026-09-06,Norte,Carpeta archivadora,4,560
+2026-09-06,Puerto,Carpeta archivadora,6,560
+2026-09-06,Universidad,Estuche,4,750
+2026-09-06,Centro,Carpeta archivadora,5,560
+2026-09-06,Universidad,Carpeta archivadora,4,560
+2026-09-06,Mercado,Carpeta archivadora,6,560
+2026-09-06,Puerto,Carpeta archivadora,6,560
+2026-09-06,Puerto,Pegamento,3,180
+2026-09-06,Norte,Carpeta archivadora,3,560
+2026-09-06,Universidad,Mochila escolar,2,2490
+2026-09-06,Puerto,Cuaderno A5,5,395
+2026-09-06,Norte,Calculadora,6,1290
+2026-09-06,Norte,Mochila escolar,4,2490
+2026-09-06,Universidad,Agenda 2027,4,1190
+2026-09-06,Centro,Agenda 2027,3,1190
+2026-09-06,Mercado,Agenda 2027,5,1190
+2026-09-06,Universidad,Calculadora,4,1290
+2026-09-06,Centro,Calculadora,3,1290
+2026-09-06,Norte,Agenda 2027,3,1190
+2026-09-06,Centro,Pegamento,3,180
+2026-09-06,Mercado,Agenda 2027,1,1190
+2026-09-06,Norte,Cuaderno A5,5,395
+2026-09-06,Centro,Cuaderno A5,3,395
+2026-09-06,Norte,Agenda 2027,4,1190
+2026-09-06,Norte,Carpeta archivadora,1,560
+2026-09-06,Puerto,Rotuladores x12,1,650
+2026-09-06,Puerto,Mochila escolar,2,2490
+2026-09-06,Norte,Cuaderno A5,5,395
+2026-09-06,Centro,Pegamento,6,180
+2026-09-06,Norte,Cuaderno A5,2,395
+2026-09-06,Mercado,Mochila escolar,2,2490
+2026-09-06,Centro,Mochila escolar,1,2490
+2026-09-06,Universidad,Mochila escolar,6,2490
+2026-09-06,Centro,Agenda 2027,2,1190
+2026-09-06,Universidad,Pegamento,6,180
+2026-09-06,Norte,Cuaderno A5,4,395
+2026-09-06,Universidad,Calculadora,6,1290
+2026-09-06,Puerto,Pegamento,1,180
+2026-09-06,Norte,Agenda 2027,2,1190
+2026-09-06,Universidad,Carpeta archivadora,2,560
+2026-09-06,Centro,Agenda 2027,1,1190
+2026-09-06,Universidad,Pegamento,4,180
+2026-09-06,Mercado,Pegamento,6,180
+2026-09-06,Centro,Estuche,3,750
+2026-09-06,Puerto,Mochila escolar,4,2490
+2026-09-06,Norte,Rotuladores x12,6,650
+2026-09-06,Universidad,Pegamento,5,180
+2026-09-06,Puerto,Estuche,3,750
+2026-09-06,Norte,Estuche,1,750
+2026-09-06,Puerto,Mochila escolar,4,2490
+2026-09-06,Centro,Agenda 2027,3,1190
+2026-09-06,Centro,Agenda 2027,1,1190
+2026-09-06,Universidad,Calculadora,6,1290
+2026-09-06,Norte,Mochila escolar,5,2490
+2026-09-06,Puerto,Rotuladores x12,3,650
+2026-09-06,Centro,Carpeta archivadora,3,560
+2026-09-06,Universidad,Mochila escolar,1,2490
+2026-09-06,Mercado,Rotuladores x12,5,650
+2026-09-06,Puerto,Calculadora,2,1290
+2026-09-06,Puerto,Estuche,5,750
+2026-09-06,Centro,Carpeta archivadora,4,560
+2026-09-06,Universidad,Carpeta archivadora,6,560
+2026-09-06,Norte,Pegamento,2,180
+2026-09-07,Puerto,Rotuladores x12,3,650
+2026-09-07,Centro,Pegamento,6,180
+2026-09-07,Universidad,Estuche,3,750
+2026-09-07,Universidad,Cuaderno A5,3,395
+2026-09-07,Norte,Rotuladores x12,4,650
+2026-09-07,Norte,Cuaderno A5,2,395
+2026-09-07,Mercado,Carpeta archivadora,4,560
+2026-09-07,Puerto,Mochila escolar,3,2490
+2026-09-07,Norte,Mochila escolar,6,2490
+2026-09-07,Centro,Agenda 2027,4,1190
+2026-09-07,Norte,Calculadora,3,1290
+2026-09-07,Centro,Estuche,1,750
+2026-09-07,Mercado,Carpeta archivadora,1,560
+2026-09-07,Puerto,Rotuladores x12,5,650
+2026-09-07,Centro,Cuaderno A5,3,395
+2026-09-07,Centro,Rotuladores x12,6,650
+2026-09-07,Centro,Calculadora,3,1290
+2026-09-07,Universidad,Pegamento,4,180
+2026-09-07,Universidad,Calculadora,6,1290
+2026-09-07,Centro,Rotuladores x12,3,650
+2026-09-07,Mercado,Pegamento,6,180
+2026-09-07,Centro,Agenda 2027,6,1190
+2026-09-07,Norte,Calculadora,2,1290
+2026-09-07,Universidad,Carpeta archivadora,6,560
+2026-09-07,Mercado,Calculadora,5,1290
+2026-09-07,Centro,Mochila escolar,4,2490
+2026-09-07,Centro,Pegamento,6,180
+2026-09-07,Mercado,Cuaderno A5,2,395
+2026-09-07,Mercado,Pegamento,1,180
+2026-09-07,Centro,Calculadora,3,1290
+2026-09-07,Puerto,Mochila escolar,4,2490
+2026-09-07,Puerto,Rotuladores x12,3,650
+2026-09-07,Mercado,Rotuladores x12,6,650
+2026-09-07,Centro,Cuaderno A5,1,395
+2026-09-07,Norte,Pegamento,2,180
+2026-09-07,Puerto,Agenda 2027,2,1190
+2026-09-07,Puerto,Carpeta archivadora,3,560
+2026-09-07,Norte,Agenda 2027,4,1190
+2026-09-07,Universidad,Agenda 2027,4,1190
+2026-09-07,Centro,Rotuladores x12,4,650
+2026-09-07,Norte,Agenda 2027,2,1190
+2026-09-07,Norte,Pegamento,3,180
+2026-09-07,Norte,Rotuladores x12,5,650
+2026-09-07,Puerto,Mochila escolar,6,2490
+2026-09-07,Puerto,Carpeta archivadora,1,560
+2026-09-07,Puerto,Pegamento,2,180
+2026-09-07,Norte,Rotuladores x12,5,650
+2026-09-07,Mercado,Agenda 2027,4,1190
+2026-09-07,Norte,Cuaderno A5,6,395
+2026-09-07,Centro,Carpeta archivadora,6,560
+2026-09-07,Norte,Cuaderno A5,4,395
+2026-09-07,Centro,Calculadora,4,1290
+2026-09-07,Norte,Agenda 2027,4,1190
+2026-09-07,Centro,Mochila escolar,6,2490
+2026-09-07,Centro,Carpeta archivadora,6,560
+2026-09-07,Universidad,Cuaderno A5,2,395
+2026-09-07,Norte,Rotuladores x12,5,650
+2026-09-07,Puerto,Calculadora,3,1290
+2026-09-07,Centro,Carpeta archivadora,6,560
+2026-09-07,Puerto,Carpeta archivadora,5,560
+2026-09-07,Mercado,Carpeta archivadora,3,560
+2026-09-07,Universidad,Pegamento,6,180
+2026-09-07,Universidad,Mochila escolar,2,2490
+2026-09-07,Norte,Carpeta archivadora,4,560
+2026-09-07,Puerto,Cuaderno A5,4,395
+2026-09-07,Universidad,Mochila escolar,3,2490
+2026-09-07,Universidad,Agenda 2027,6,1190
+2026-09-07,Universidad,Cuaderno A5,1,395
+2026-09-07,Centro,Mochila escolar,1,2490
+2026-09-07,Norte,Cuaderno A5,6,395
+2026-09-07,Centro,Estuche,1,750
+2026-09-07,Centro,Pegamento,1,180
+2026-09-07,Mercado,Mochila escolar,1,2490
+2026-09-07,Universidad,Rotuladores x12,2,650
+2026-09-07,Puerto,Pegamento,2,180
+2026-09-07,Norte,Cuaderno A5,4,395
+2026-09-07,Puerto,Cuaderno A5,1,395
+2026-09-07,Universidad,Carpeta archivadora,5,560
+2026-09-07,Mercado,Pegamento,6,180
+2026-09-07,Mercado,Mochila escolar,6,2490
+2026-09-08,Centro,Agenda 2027,1,1190
+2026-09-08,Mercado,Carpeta archivadora,2,560
+2026-09-08,Centro,Calculadora,1,1290
+2026-09-08,Puerto,Cuaderno A5,1,395
+2026-09-08,Universidad,Rotuladores x12,2,650
+2026-09-08,Centro,Cuaderno A5,3,395
+2026-09-08,Puerto,Cuaderno A5,1,395
+2026-09-08,Norte,Cuaderno A5,2,395
+2026-09-08,Puerto,Agenda 2027,4,1190
+2026-09-08,Mercado,Mochila escolar,4,2490
+2026-09-08,Norte,Mochila escolar,3,2490
+2026-09-08,Universidad,Estuche,2,750
+2026-09-08,Centro,Cuaderno A5,2,395
+2026-09-08,Mercado,Agenda 2027,1,1190
+2026-09-08,Puerto,Mochila escolar,5,2490
+2026-09-08,Mercado,Pegamento,1,180
+2026-09-08,Mercado,Calculadora,5,1290
+2026-09-08,Universidad,Estuche,6,750
+2026-09-08,Puerto,Estuche,5,750
+2026-09-08,Puerto,Mochila escolar,2,2490
+2026-09-08,Centro,Pegamento,2,180
+2026-09-08,Centro,Pegamento,5,180
+2026-09-08,Centro,Agenda 2027,3,1190
+2026-09-08,Puerto,Mochila escolar,5,2490
+2026-09-08,Norte,Mochila escolar,4,2490
+2026-09-08,Mercado,Cuaderno A5,4,395
+2026-09-08,Norte,Calculadora,3,1290
+2026-09-08,Centro,Calculadora,4,1290
+2026-09-08,Puerto,Agenda 2027,3,1190
+2026-09-08,Mercado,Mochila escolar,4,2490
+2026-09-08,Universidad,Agenda 2027,2,1190
+2026-09-08,Universidad,Calculadora,4,1290
+2026-09-08,Norte,Rotuladores x12,5,650
+2026-09-08,Puerto,Mochila escolar,3,2490
+2026-09-08,Mercado,Mochila escolar,6,2490
+2026-09-08,Mercado,Estuche,3,750
+2026-09-08,Mercado,Rotuladores x12,4,650
+2026-09-08,Universidad,Estuche,2,750
+2026-09-08,Universidad,Cuaderno A5,2,395
+2026-09-08,Universidad,Cuaderno A5,6,395
+2026-09-08,Norte,Estuche,2,750
+2026-09-08,Centro,Estuche,6,750
+2026-09-08,Puerto,Carpeta archivadora,4,560
+2026-09-08,Universidad,Estuche,2,750
+2026-09-08,Centro,Pegamento,6,180
+2026-09-08,Centro,Calculadora,4,1290
+2026-09-08,Centro,Cuaderno A5,5,395
+2026-09-08,Centro,Pegamento,3,180
+2026-09-08,Norte,Mochila escolar,1,2490
+2026-09-08,Universidad,Pegamento,1,180
+2026-09-08,Puerto,Mochila escolar,2,2490
+2026-09-08,Norte,Estuche,2,750
+2026-09-08,Universidad,Agenda 2027,3,1190
+2026-09-08,Puerto,Agenda 2027,6,1190
+2026-09-08,Universidad,Pegamento,2,180
+2026-09-08,Mercado,Pegamento,6,180
+2026-09-08,Universidad,Cuaderno A5,2,395
+2026-09-08,Universidad,Mochila escolar,4,2490
+2026-09-08,Puerto,Mochila escolar,1,2490
+2026-09-08,Universidad,Rotuladores x12,3,650
+2026-09-08,Centro,Agenda 2027,4,1190
+2026-09-08,Centro,Cuaderno A5,2,395
+2026-09-08,Puerto,Estuche,5,750
+2026-09-08,Universidad,Agenda 2027,4,1190
+2026-09-08,Puerto,Calculadora,3,1290
+2026-09-08,Puerto,Rotuladores x12,4,650
+2026-09-08,Mercado,Carpeta archivadora,3,560
+2026-09-08,Centro,Calculadora,1,1290
+2026-09-08,Norte,Rotuladores x12,1,650
+2026-09-08,Centro,Cuaderno A5,4,395
+2026-09-08,Mercado,Rotuladores x12,1,650
+2026-09-08,Centro,Pegamento,6,180
+2026-09-08,Puerto,Mochila escolar,3,2490
+2026-09-08,Puerto,Rotuladores x12,6,650
+2026-09-08,Centro,Calculadora,4,1290
+2026-09-08,Universidad,Calculadora,3,1290
+2026-09-08,Universidad,Cuaderno A5,5,395
+2026-09-08,Universidad,Agenda 2027,1,1190
+2026-09-08,Norte,Mochila escolar,3,2490
+2026-09-08,Centro,Rotuladores x12,4,650
+2026-09-09,Centro,Mochila escolar,2,2490
+2026-09-09,Puerto,Cuaderno A5,2,395
+2026-09-09,Centro,Calculadora,2,1290
+2026-09-09,Norte,Mochila escolar,2,2490
+2026-09-09,Norte,Cuaderno A5,6,395
+2026-09-09,Centro,Mochila escolar,3,2490
+2026-09-09,Universidad,Estuche,6,750
+2026-09-09,Centro,Carpeta archivadora,5,560
+2026-09-09,Norte,Rotuladores x12,1,650
+2026-09-09,Universidad,Cuaderno A5,2,395
+2026-09-09,Universidad,Rotuladores x12,4,650
+2026-09-09,Puerto,Mochila escolar,3,2490
+2026-09-09,Centro,Estuche,6,750
+2026-09-09,Puerto,Estuche,2,750
+2026-09-09,Universidad,Rotuladores x12,6,650
+2026-09-09,Puerto,Agenda 2027,4,1190
+2026-09-09,Mercado,Pegamento,4,180
+2026-09-09,Norte,Cuaderno A5,6,395
+2026-09-09,Norte,Cuaderno A5,3,395
+2026-09-09,Norte,Estuche,4,750
+2026-09-09,Norte,Calculadora,6,1290
+2026-09-09,Norte,Estuche,2,750
+2026-09-09,Mercado,Pegamento,3,180
+2026-09-09,Puerto,Mochila escolar,5,2490
+2026-09-09,Norte,Pegamento,3,180
+2026-09-09,Mercado,Pegamento,4,180
+2026-09-09,Norte,Cuaderno A5,6,395
+2026-09-09,Centro,Pegamento,2,180
+2026-09-09,Mercado,Rotuladores x12,6,650
+2026-09-09,Norte,Cuaderno A5,3,395
+2026-09-09,Norte,Cuaderno A5,5,395
+2026-09-09,Norte,Agenda 2027,4,1190
+2026-09-09,Universidad,Cuaderno A5,4,395
+2026-09-09,Norte,Cuaderno A5,4,395
+2026-09-09,Puerto,Carpeta archivadora,2,560
+2026-09-09,Universidad,Rotuladores x12,4,650
+2026-09-09,Mercado,Estuche,5,750
+2026-09-09,Mercado,Pegamento,1,180
+2026-09-09,Universidad,Cuaderno A5,5,395
+2026-09-09,Norte,Agenda 2027,3,1190
+2026-09-09,Mercado,Carpeta archivadora,5,560
+2026-09-09,Centro,Carpeta archivadora,2,560
+2026-09-09,Puerto,Pegamento,1,180
+2026-09-09,Mercado,Calculadora,5,1290
+2026-09-09,Puerto,Rotuladores x12,4,650
+2026-09-09,Centro,Agenda 2027,4,1190
+2026-09-09,Mercado,Calculadora,5,1290
+2026-09-09,Norte,Agenda 2027,1,1190
+2026-09-09,Norte,Agenda 2027,5,1190
+2026-09-09,Mercado,Cuaderno A5,5,395
+2026-09-09,Centro,Estuche,6,750
+2026-09-09,Universidad,Rotuladores x12,4,650
+2026-09-09,Puerto,Estuche,1,750
+2026-09-09,Mercado,Pegamento,5,180
+2026-09-09,Puerto,Calculadora,6,1290
+2026-09-09,Centro,Pegamento,1,180
+2026-09-09,Centro,Cuaderno A5,5,395
+2026-09-09,Mercado,Pegamento,6,180
+2026-09-09,Centro,Cuaderno A5,2,395
+2026-09-09,Puerto,Estuche,1,750
+2026-09-09,Centro,Pegamento,1,180
+2026-09-09,Universidad,Agenda 2027,2,1190
+2026-09-09,Norte,Carpeta archivadora,2,560
+2026-09-09,Universidad,Pegamento,2,180
+2026-09-09,Mercado,Cuaderno A5,6,395
+2026-09-09,Norte,Estuche,3,750
+2026-09-09,Centro,Rotuladores x12,4,650
+2026-09-09,Norte,Pegamento,4,180
+2026-09-09,Norte,Agenda 2027,2,1190
+2026-09-09,Puerto,Estuche,1,750
+2026-09-09,Mercado,Agenda 2027,4,1190
+2026-09-09,Universidad,Pegamento,2,180
+2026-09-09,Norte,Mochila escolar,1,2490
+2026-09-09,Puerto,Calculadora,3,1290
+2026-09-09,Mercado,Carpeta archivadora,6,560
+2026-09-09,Mercado,Agenda 2027,2,1190
+2026-09-09,Puerto,Calculadora,1,1290
+2026-09-09,Puerto,Cuaderno A5,2,395
+2026-09-09,Centro,Estuche,2,750
+2026-09-09,Mercado,Agenda 2027,5,1190
+2026-09-10,Universidad,Agenda 2027,2,1190
+2026-09-10,Mercado,Estuche,1,750
+2026-09-10,Universidad,Rotuladores x12,2,650
+2026-09-10,Puerto,Mochila escolar,5,2490
+2026-09-10,Mercado,Carpeta archivadora,1,560
+2026-09-10,Centro,Calculadora,6,1290
+2026-09-10,Universidad,Estuche,3,750
+2026-09-10,Universidad,Estuche,2,750
+2026-09-10,Mercado,Cuaderno A5,3,395
+2026-09-10,Norte,Estuche,4,750
+2026-09-10,Mercado,Calculadora,5,1290
+2026-09-10,Mercado,Rotuladores x12,1,650
+2026-09-10,Mercado,Pegamento,2,180
+2026-09-10,Norte,Carpeta archivadora,2,560
+2026-09-10,Centro,Agenda 2027,6,1190
+2026-09-10,Norte,Agenda 2027,3,1190
+2026-09-10,Centro,Cuaderno A5,1,395
+2026-09-10,Norte,Carpeta archivadora,5,560
+2026-09-10,Mercado,Carpeta archivadora,1,560
+2026-09-10,Norte,Agenda 2027,6,1190
+2026-09-10,Norte,Carpeta archivadora,6,560
+2026-09-10,Centro,Cuaderno A5,4,395
+2026-09-10,Universidad,Carpeta archivadora,3,560
+2026-09-10,Norte,Mochila escolar,5,2490
+2026-09-10,Centro,Mochila escolar,1,2490
+2026-09-10,Puerto,Rotuladores x12,1,650
+2026-09-10,Mercado,Calculadora,1,1290
+2026-09-10,Centro,Carpeta archivadora,5,560
+2026-09-10,Mercado,Rotuladores x12,5,650
+2026-09-10,Universidad,Mochila escolar,3,2490
+2026-09-10,Centro,Agenda 2027,1,1190
+2026-09-10,Centro,Mochila escolar,1,2490
+2026-09-10,Norte,Calculadora,3,1290
+2026-09-10,Mercado,Carpeta archivadora,1,560
+2026-09-10,Centro,Calculadora,3,1290
+2026-09-10,Norte,Pegamento,6,180
+2026-09-10,Universidad,Rotuladores x12,6,650
+2026-09-10,Centro,Estuche,1,750
+2026-09-10,Norte,Estuche,3,750
+2026-09-10,Universidad,Cuaderno A5,2,395
+2026-09-10,Universidad,Mochila escolar,6,2490
+2026-09-10,Norte,Cuaderno A5,5,395
+2026-09-10,Puerto,Calculadora,1,1290
+2026-09-10,Puerto,Carpeta archivadora,2,560
+2026-09-10,Puerto,Pegamento,2,180
+2026-09-10,Universidad,Agenda 2027,4,1190
+2026-09-10,Centro,Calculadora,4,1290
+2026-09-10,Norte,Calculadora,2,1290
+2026-09-10,Mercado,Carpeta archivadora,3,560
+2026-09-10,Universidad,Carpeta archivadora,1,560
+2026-09-10,Universidad,Calculadora,3,1290
+2026-09-10,Mercado,Cuaderno A5,3,395
+2026-09-10,Universidad,Calculadora,3,1290
+2026-09-10,Puerto,Agenda 2027,3,1190
+2026-09-10,Universidad,Estuche,3,750
+2026-09-10,Mercado,Calculadora,1,1290
+2026-09-10,Puerto,Agenda 2027,3,1190
+2026-09-10,Norte,Cuaderno A5,4,395
+2026-09-10,Puerto,Mochila escolar,3,2490
+2026-09-10,Norte,Pegamento,1,180
+2026-09-10,Universidad,Agenda 2027,6,1190
+2026-09-10,Puerto,Carpeta archivadora,4,560
+2026-09-10,Universidad,Agenda 2027,5,1190
+2026-09-10,Norte,Mochila escolar,6,2490
+2026-09-10,Puerto,Rotuladores x12,1,650
+2026-09-10,Universidad,Pegamento,1,180
+2026-09-10,Puerto,Carpeta archivadora,6,560
+2026-09-10,Mercado,Cuaderno A5,3,395
+2026-09-10,Mercado,Pegamento,4,180
+2026-09-10,Puerto,Agenda 2027,6,1190
+2026-09-10,Universidad,Agenda 2027,1,1190
+2026-09-10,Norte,Cuaderno A5,6,395
+2026-09-10,Centro,Carpeta archivadora,5,560
+2026-09-10,Centro,Agenda 2027,2,1190
+2026-09-10,Centro,Carpeta archivadora,4,560
+2026-09-10,Mercado,Calculadora,2,1290
+2026-09-10,Norte,Mochila escolar,2,2490
+2026-09-10,Norte,Calculadora,6,1290
+2026-09-10,Centro,Agenda 2027,5,1190
+2026-09-10,Mercado,Cuaderno A5,3,395
+2026-09-11,Mercado,Agenda 2027,5,1190
+2026-09-11,Mercado,Mochila escolar,2,2490
+2026-09-11,Mercado,Carpeta archivadora,4,560
+2026-09-11,Centro,Carpeta archivadora,2,560
+2026-09-11,Centro,Estuche,2,750
+2026-09-11,Universidad,Carpeta archivadora,3,560
+2026-09-11,Norte,Estuche,5,750
+2026-09-11,Puerto,Cuaderno A5,6,395
+2026-09-11,Mercado,Calculadora,5,1290
+2026-09-11,Universidad,Pegamento,1,180
+2026-09-11,Mercado,Pegamento,5,180
+2026-09-11,Universidad,Pegamento,3,180
+2026-09-11,Centro,Agenda 2027,4,1190
+2026-09-11,Universidad,Pegamento,6,180
+2026-09-11,Norte,Calculadora,4,1290
+2026-09-11,Mercado,Calculadora,4,1290
+2026-09-11,Norte,Cuaderno A5,3,395
+2026-09-11,Universidad,Carpeta archivadora,2,560
+2026-09-11,Mercado,Agenda 2027,1,1190
+2026-09-11,Universidad,Pegamento,3,180
+2026-09-11,Centro,Rotuladores x12,4,650
+2026-09-11,Norte,Estuche,3,750
+2026-09-11,Centro,Pegamento,4,180
+2026-09-11,Norte,Pegamento,5,180
+2026-09-11,Mercado,Rotuladores x12,6,650
+2026-09-11,Centro,Carpeta archivadora,2,560
+2026-09-11,Centro,Estuche,1,750
+2026-09-11,Mercado,Mochila escolar,2,2490
+2026-09-11,Universidad,Estuche,1,750
+2026-09-11,Norte,Rotuladores x12,4,650
+2026-09-11,Centro,Calculadora,3,1290
+2026-09-11,Mercado,Cuaderno A5,4,395
+2026-09-11,Universidad,Pegamento,3,180
+2026-09-11,Norte,Carpeta archivadora,4,560
+2026-09-11,Centro,Mochila escolar,1,2490
+2026-09-11,Universidad,Agenda 2027,5,1190
+2026-09-11,Universidad,Estuche,2,750
+2026-09-11,Puerto,Rotuladores x12,4,650
+2026-09-11,Mercado,Mochila escolar,3,2490
+2026-09-11,Centro,Calculadora,6,1290
+2026-09-11,Puerto,Carpeta archivadora,3,560
+2026-09-11,Centro,Mochila escolar,3,2490
+2026-09-11,Mercado,Rotuladores x12,6,650
+2026-09-11,Puerto,Pegamento,4,180
+2026-09-11,Mercado,Agenda 2027,6,1190
+2026-09-11,Mercado,Carpeta archivadora,1,560
+2026-09-11,Mercado,Carpeta archivadora,2,560
+2026-09-11,Puerto,Estuche,1,750
+2026-09-11,Norte,Estuche,3,750
+2026-09-11,Universidad,Estuche,4,750
+2026-09-11,Centro,Pegamento,2,180
+2026-09-11,Mercado,Estuche,3,750
+2026-09-11,Centro,Carpeta archivadora,3,560
+2026-09-11,Centro,Rotuladores x12,5,650
+2026-09-11,Norte,Agenda 2027,2,1190
+2026-09-11,Norte,Estuche,2,750
+2026-09-11,Norte,Mochila escolar,2,2490
+2026-09-11,Norte,Rotuladores x12,5,650
+2026-09-11,Universidad,Mochila escolar,2,2490
+2026-09-11,Norte,Mochila escolar,6,2490
+2026-09-11,Mercado,Calculadora,3,1290
+2026-09-11,Centro,Carpeta archivadora,3,560
+2026-09-11,Mercado,Agenda 2027,2,1190
+2026-09-11,Centro,Pegamento,2,180
+2026-09-11,Puerto,Calculadora,1,1290
+2026-09-11,Puerto,Carpeta archivadora,4,560
+2026-09-11,Centro,Calculadora,1,1290
+2026-09-11,Puerto,Agenda 2027,4,1190
+2026-09-11,Universidad,Calculadora,2,1290
+2026-09-11,Universidad,Calculadora,1,1290
+2026-09-11,Mercado,Estuche,1,750
+2026-09-11,Norte,Cuaderno A5,2,395
+2026-09-11,Norte,Agenda 2027,6,1190
+2026-09-11,Mercado,Carpeta archivadora,1,560
+2026-09-11,Norte,Calculadora,1,1290
+2026-09-11,Centro,Rotuladores x12,1,650
+2026-09-11,Mercado,Cuaderno A5,1,395
+2026-09-11,Mercado,Carpeta archivadora,3,560
+2026-09-11,Norte,Calculadora,4,1290
+2026-09-11,Puerto,Estuche,2,750
+2026-09-12,Universidad,Carpeta archivadora,5,560
+2026-09-12,Centro,Rotuladores x12,2,650
+2026-09-12,Mercado,Estuche,6,750
+2026-09-12,Norte,Calculadora,5,1290
+2026-09-12,Universidad,Cuaderno A5,5,395
+2026-09-12,Puerto,Estuche,2,750
+2026-09-12,Puerto,Carpeta archivadora,1,560
+2026-09-12,Universidad,Calculadora,6,1290
+2026-09-12,Mercado,Cuaderno A5,1,395
+2026-09-12,Puerto,Estuche,4,750
+2026-09-12,Norte,Calculadora,2,1290
+2026-09-12,Norte,Calculadora,5,1290
+2026-09-12,Norte,Rotuladores x12,3,650
+2026-09-12,Norte,Pegamento,3,180
+2026-09-12,Centro,Calculadora,5,1290
+2026-09-12,Norte,Calculadora,5,1290
+2026-09-12,Universidad,Rotuladores x12,2,650
+2026-09-12,Mercado,Mochila escolar,1,2490
+2026-09-12,Mercado,Rotuladores x12,1,650
+2026-09-12,Universidad,Rotuladores x12,4,650
+2026-09-12,Centro,Rotuladores x12,6,650
+2026-09-12,Mercado,Rotuladores x12,3,650
+2026-09-12,Mercado,Estuche,5,750
+2026-09-12,Norte,Cuaderno A5,4,395
+2026-09-12,Centro,Agenda 2027,3,1190
+2026-09-12,Universidad,Mochila escolar,2,2490
+2026-09-12,Mercado,Pegamento,1,180
+2026-09-12,Norte,Estuche,2,750
+2026-09-12,Norte,Estuche,4,750
+2026-09-12,Puerto,Calculadora,4,1290
+2026-09-12,Mercado,Cuaderno A5,2,395
+2026-09-12,Universidad,Cuaderno A5,1,395
+2026-09-12,Universidad,Cuaderno A5,4,395
+2026-09-12,Mercado,Estuche,4,750
+2026-09-12,Puerto,Rotuladores x12,4,650
+2026-09-12,Norte,Carpeta archivadora,3,560
+2026-09-12,Mercado,Estuche,3,750
+2026-09-12,Mercado,Rotuladores x12,6,650
+2026-09-12,Norte,Cuaderno A5,2,395
+2026-09-12,Centro,Mochila escolar,3,2490
+2026-09-12,Mercado,Mochila escolar,2,2490
+2026-09-12,Centro,Agenda 2027,3,1190
+2026-09-12,Puerto,Estuche,3,750
+2026-09-12,Norte,Mochila escolar,2,2490
+2026-09-12,Mercado,Mochila escolar,6,2490
+2026-09-12,Mercado,Calculadora,4,1290
+2026-09-12,Norte,Pegamento,6,180
+2026-09-12,Mercado,Estuche,1,750
+2026-09-12,Universidad,Calculadora,6,1290
+2026-09-12,Universidad,Mochila escolar,5,2490
+2026-09-12,Universidad,Calculadora,5,1290
+2026-09-12,Universidad,Rotuladores x12,2,650
+2026-09-12,Universidad,Estuche,5,750
+2026-09-12,Mercado,Cuaderno A5,4,395
+2026-09-12,Universidad,Cuaderno A5,1,395
+2026-09-12,Centro,Rotuladores x12,4,650
+2026-09-12,Mercado,Calculadora,1,1290
+2026-09-12,Centro,Agenda 2027,1,1190
+2026-09-12,Universidad,Agenda 2027,4,1190
+2026-09-12,Mercado,Pegamento,3,180
+2026-09-12,Mercado,Carpeta archivadora,5,560
+2026-09-12,Universidad,Pegamento,2,180
+2026-09-12,Mercado,Pegamento,5,180
+2026-09-12,Mercado,Mochila escolar,6,2490
+2026-09-12,Mercado,Pegamento,6,180
+2026-09-12,Puerto,Cuaderno A5,3,395
+2026-09-12,Puerto,Estuche,4,750
+2026-09-12,Universidad,Calculadora,4,1290
+2026-09-12,Centro,Agenda 2027,2,1190
+2026-09-12,Universidad,Agenda 2027,2,1190
+2026-09-12,Norte,Pegamento,3,180
+2026-09-12,Norte,Pegamento,1,180
+2026-09-12,Norte,Calculadora,4,1290
+2026-09-12,Puerto,Pegamento,2,180
+2026-09-12,Mercado,Rotuladores x12,3,650
+2026-09-12,Mercado,Rotuladores x12,6,650
+2026-09-12,Puerto,Agenda 2027,1,1190
+2026-09-12,Norte,Carpeta archivadora,4,560
+2026-09-12,Universidad,Mochila escolar,1,2490
+2026-09-12,Universidad,Mochila escolar,2,2490
+2026-09-13,Centro,Rotuladores x12,4,650
+2026-09-13,Centro,Estuche,3,750
+2026-09-13,Centro,Carpeta archivadora,6,560
+2026-09-13,Universidad,Carpeta archivadora,1,560
+2026-09-13,Puerto,Calculadora,2,1290
+2026-09-13,Mercado,Mochila escolar,6,2490
+2026-09-13,Centro,Pegamento,4,180
+2026-09-13,Norte,Carpeta archivadora,6,560
+2026-09-13,Centro,Rotuladores x12,4,650
+2026-09-13,Mercado,Rotuladores x12,4,650
+2026-09-13,Centro,Calculadora,2,1290
+2026-09-13,Puerto,Pegamento,3,180
+2026-09-13,Norte,Calculadora,6,1290
+2026-09-13,Norte,Agenda 2027,1,1190
+2026-09-13,Norte,Pegamento,4,180
+2026-09-13,Mercado,Estuche,1,750
+2026-09-13,Centro,Cuaderno A5,2,395
+2026-09-13,Puerto,Cuaderno A5,4,395
+2026-09-13,Puerto,Agenda 2027,4,1190
+2026-09-13,Puerto,Pegamento,4,180
+2026-09-13,Mercado,Pegamento,4,180
+2026-09-13,Universidad,Agenda 2027,4,1190
+2026-09-13,Mercado,Mochila escolar,5,2490
+2026-09-13,Puerto,Pegamento,1,180
+2026-09-13,Norte,Agenda 2027,5,1190
+2026-09-13,Universidad,Mochila escolar,5,2490
+2026-09-13,Centro,Carpeta archivadora,5,560
+2026-09-13,Mercado,Rotuladores x12,5,650
+2026-09-13,Norte,Pegamento,5,180
+2026-09-13,Puerto,Agenda 2027,2,1190
+2026-09-13,Norte,Carpeta archivadora,6,560
+2026-09-13,Centro,Cuaderno A5,3,395
+2026-09-13,Centro,Pegamento,5,180
+2026-09-13,Universidad,Carpeta archivadora,1,560
+2026-09-13,Universidad,Pegamento,2,180
+2026-09-13,Universidad,Agenda 2027,3,1190
+2026-09-13,Centro,Calculadora,3,1290
+2026-09-13,Universidad,Rotuladores x12,4,650
+2026-09-13,Norte,Carpeta archivadora,1,560
+2026-09-13,Norte,Estuche,2,750
+2026-09-13,Universidad,Mochila escolar,4,2490
+2026-09-13,Mercado,Cuaderno A5,4,395
+2026-09-13,Universidad,Rotuladores x12,4,650
+2026-09-13,Puerto,Calculadora,3,1290
+2026-09-13,Universidad,Mochila escolar,1,2490
+2026-09-13,Mercado,Carpeta archivadora,1,560
+2026-09-13,Mercado,Pegamento,1,180
+2026-09-13,Mercado,Rotuladores x12,3,650
+2026-09-13,Norte,Cuaderno A5,5,395
+2026-09-13,Universidad,Pegamento,1,180
+2026-09-13,Puerto,Agenda 2027,6,1190
+2026-09-13,Mercado,Estuche,6,750
+2026-09-13,Norte,Estuche,5,750
+2026-09-13,Centro,Estuche,6,750
+2026-09-13,Centro,Pegamento,4,180
+2026-09-13,Norte,Pegamento,3,180
+2026-09-13,Universidad,Carpeta archivadora,6,560
+2026-09-13,Universidad,Estuche,6,750
+2026-09-13,Norte,Carpeta archivadora,2,560
+2026-09-13,Puerto,Estuche,6,750
+2026-09-13,Centro,Calculadora,6,1290
+2026-09-13,Puerto,Carpeta archivadora,3,560
+2026-09-13,Universidad,Mochila escolar,4,2490
+2026-09-13,Centro,Agenda 2027,3,1190
+2026-09-13,Norte,Rotuladores x12,2,650
+2026-09-13,Mercado,Mochila escolar,2,2490
+2026-09-13,Mercado,Mochila escolar,5,2490
+2026-09-13,Universidad,Rotuladores x12,5,650
+2026-09-13,Mercado,Calculadora,5,1290
+2026-09-13,Mercado,Mochila escolar,2,2490
+2026-09-13,Centro,Mochila escolar,3,2490
+2026-09-13,Centro,Mochila escolar,2,2490
+2026-09-13,Puerto,Calculadora,3,1290
+2026-09-13,Universidad,Pegamento,4,180
+2026-09-13,Puerto,Calculadora,1,1290
+2026-09-13,Norte,Cuaderno A5,1,395
+2026-09-13,Universidad,Estuche,4,750
+2026-09-13,Norte,Pegamento,4,180
+2026-09-13,Universidad,Carpeta archivadora,5,560
+2026-09-13,Universidad,Pegamento,1,180
+2026-09-14,Centro,Cuaderno A5,1,395
+2026-09-14,Centro,Mochila escolar,2,2490
+2026-09-14,Puerto,Rotuladores x12,1,650
+2026-09-14,Centro,Rotuladores x12,4,650
+2026-09-14,Norte,Calculadora,4,1290
+2026-09-14,Centro,Pegamento,2,180
+2026-09-14,Mercado,Rotuladores x12,4,650
+2026-09-14,Universidad,Estuche,6,750
+2026-09-14,Puerto,Pegamento,1,180
+2026-09-14,Norte,Carpeta archivadora,2,560
+2026-09-14,Centro,Rotuladores x12,4,650
+2026-09-14,Universidad,Mochila escolar,5,2490
+2026-09-14,Norte,Mochila escolar,3,2490
+2026-09-14,Puerto,Rotuladores x12,4,650
+2026-09-14,Centro,Agenda 2027,1,1190
+2026-09-14,Puerto,Mochila escolar,1,2490
+2026-09-14,Centro,Estuche,6,750
+2026-09-14,Mercado,Agenda 2027,4,1190
+2026-09-14,Puerto,Mochila escolar,1,2490
+2026-09-14,Norte,Calculadora,5,1290
+2026-09-14,Puerto,Rotuladores x12,5,650
+2026-09-14,Norte,Estuche,1,750
+2026-09-14,Centro,Pegamento,1,180
+2026-09-14,Mercado,Carpeta archivadora,3,560
+2026-09-14,Mercado,Pegamento,1,180
+2026-09-14,Mercado,Estuche,3,750
+2026-09-14,Norte,Estuche,5,750
+2026-09-14,Puerto,Mochila escolar,6,2490
+2026-09-14,Centro,Mochila escolar,3,2490
+2026-09-14,Puerto,Agenda 2027,1,1190
+2026-09-14,Puerto,Rotuladores x12,3,650
+2026-09-14,Puerto,Rotuladores x12,4,650
+2026-09-14,Mercado,Mochila escolar,6,2490
+2026-09-14,Puerto,Rotuladores x12,5,650
+2026-09-14,Universidad,Estuche,3,750
+2026-09-14,Centro,Mochila escolar,1,2490
+2026-09-14,Universidad,Estuche,3,750
+2026-09-14,Norte,Estuche,3,750
+2026-09-14,Centro,Estuche,3,750
+2026-09-14,Centro,Rotuladores x12,2,650
+2026-09-14,Mercado,Calculadora,6,1290
+2026-09-14,Puerto,Pegamento,1,180
+2026-09-14,Universidad,Cuaderno A5,2,395
+2026-09-14,Mercado,Calculadora,6,1290
+2026-09-14,Centro,Agenda 2027,5,1190
+2026-09-14,Puerto,Calculadora,1,1290
+2026-09-14,Norte,Calculadora,2,1290
+2026-09-14,Centro,Mochila escolar,1,2490
+2026-09-14,Mercado,Mochila escolar,5,2490
+2026-09-14,Puerto,Pegamento,5,180
+2026-09-14,Norte,Calculadora,1,1290
+2026-09-14,Norte,Mochila escolar,4,2490
+2026-09-14,Puerto,Pegamento,1,180
+2026-09-14,Centro,Agenda 2027,1,1190
+2026-09-14,Centro,Estuche,6,750
+2026-09-14,Mercado,Mochila escolar,5,2490
+2026-09-14,Norte,Carpeta archivadora,3,560
+2026-09-14,Universidad,Calculadora,6,1290
+2026-09-14,Centro,Carpeta archivadora,5,560
+2026-09-14,Mercado,Calculadora,1,1290
+2026-09-14,Norte,Rotuladores x12,1,650
+2026-09-14,Universidad,Rotuladores x12,3,650
+2026-09-14,Universidad,Rotuladores x12,3,650
+2026-09-14,Centro,Mochila escolar,5,2490
+2026-09-14,Mercado,Cuaderno A5,1,395
+2026-09-14,Norte,Mochila escolar,4,2490
+2026-09-14,Universidad,Carpeta archivadora,5,560
+2026-09-14,Centro,Estuche,3,750
+2026-09-14,Norte,Cuaderno A5,6,395
+2026-09-14,Universidad,Mochila escolar,1,2490
+2026-09-14,Puerto,Calculadora,3,1290
+2026-09-14,Centro,Cuaderno A5,5,395
+2026-09-14,Universidad,Mochila escolar,4,2490
+2026-09-14,Puerto,Calculadora,1,1290
+2026-09-14,Puerto,Cuaderno A5,6,395
+2026-09-14,Mercado,Carpeta archivadora,5,560
+2026-09-14,Puerto,Carpeta archivadora,1,560
+2026-09-14,Norte,Rotuladores x12,1,650
+2026-09-14,Mercado,Pegamento,3,180
+2026-09-14,Norte,Mochila escolar,2,2490
+2026-09-15,Universidad,Carpeta archivadora,4,560
+2026-09-15,Centro,Pegamento,3,180
+2026-09-15,Puerto,Rotuladores x12,4,650
+2026-09-15,Mercado,Calculadora,2,1290
+2026-09-15,Centro,Cuaderno A5,1,395
+2026-09-15,Centro,Mochila escolar,5,2490
+2026-09-15,Norte,Pegamento,2,180
+2026-09-15,Mercado,Cuaderno A5,1,395
+2026-09-15,Centro,Cuaderno A5,3,395
+2026-09-15,Mercado,Rotuladores x12,5,650
+2026-09-15,Centro,Mochila escolar,1,2490
+2026-09-15,Puerto,Pegamento,4,180
+2026-09-15,Mercado,Mochila escolar,2,2490
+2026-09-15,Norte,Estuche,6,750
+2026-09-15,Universidad,Calculadora,5,1290
+2026-09-15,Universidad,Carpeta archivadora,1,560
+2026-09-15,Norte,Carpeta archivadora,2,560
+2026-09-15,Centro,Rotuladores x12,2,650
+2026-09-15,Puerto,Mochila escolar,5,2490
+2026-09-15,Centro,Cuaderno A5,6,395
+2026-09-15,Mercado,Estuche,3,750
+2026-09-15,Centro,Carpeta archivadora,6,560
+2026-09-15,Universidad,Mochila escolar,4,2490
+2026-09-15,Puerto,Calculadora,4,1290
+2026-09-15,Mercado,Cuaderno A5,4,395
+2026-09-15,Puerto,Mochila escolar,2,2490
+2026-09-15,Universidad,Carpeta archivadora,6,560
+2026-09-15,Norte,Agenda 2027,6,1190
+2026-09-15,Mercado,Agenda 2027,5,1190
+2026-09-15,Centro,Calculadora,4,1290
+2026-09-15,Mercado,Carpeta archivadora,3,560
+2026-09-15,Puerto,Rotuladores x12,1,650
+2026-09-15,Mercado,Cuaderno A5,4,395
+2026-09-15,Norte,Estuche,4,750
+2026-09-15,Norte,Calculadora,6,1290
+2026-09-15,Universidad,Cuaderno A5,1,395
+2026-09-15,Universidad,Cuaderno A5,2,395
+2026-09-15,Puerto,Cuaderno A5,3,395
+2026-09-15,Norte,Calculadora,5,1290
+2026-09-15,Norte,Rotuladores x12,2,650
+2026-09-15,Norte,Pegamento,1,180
+2026-09-15,Mercado,Pegamento,4,180
+2026-09-15,Universidad,Rotuladores x12,3,650
+2026-09-15,Centro,Carpeta archivadora,3,560
+2026-09-15,Norte,Mochila escolar,6,2490
+2026-09-15,Universidad,Rotuladores x12,1,650
+2026-09-15,Universidad,Calculadora,4,1290
+2026-09-15,Centro,Carpeta archivadora,1,560
+2026-09-15,Norte,Rotuladores x12,6,650
+2026-09-15,Mercado,Cuaderno A5,3,395
+2026-09-15,Puerto,Mochila escolar,2,2490
+2026-09-15,Universidad,Cuaderno A5,6,395
+2026-09-15,Mercado,Calculadora,6,1290
+2026-09-15,Puerto,Cuaderno A5,4,395
+2026-09-15,Norte,Rotuladores x12,3,650
+2026-09-15,Mercado,Carpeta archivadora,2,560
+2026-09-15,Universidad,Agenda 2027,3,1190
+2026-09-15,Puerto,Pegamento,1,180
+2026-09-15,Centro,Rotuladores x12,3,650
+2026-09-15,Mercado,Mochila escolar,6,2490
+2026-09-15,Mercado,Mochila escolar,4,2490
+2026-09-15,Norte,Agenda 2027,1,1190
+2026-09-15,Puerto,Calculadora,4,1290
+2026-09-15,Centro,Calculadora,6,1290
+2026-09-15,Centro,Pegamento,2,180
+2026-09-15,Mercado,Rotuladores x12,5,650
+2026-09-15,Norte,Agenda 2027,2,1190
+2026-09-15,Norte,Agenda 2027,5,1190
+2026-09-15,Puerto,Estuche,4,750
+2026-09-15,Universidad,Agenda 2027,3,1190
+2026-09-15,Norte,Rotuladores x12,2,650
+2026-09-15,Norte,Pegamento,3,180
+2026-09-15,Centro,Agenda 2027,6,1190
+2026-09-15,Norte,Rotuladores x12,5,650
+2026-09-15,Centro,Agenda 2027,2,1190
+2026-09-15,Mercado,Rotuladores x12,2,650
+2026-09-15,Centro,Agenda 2027,2,1190
+2026-09-15,Mercado,Mochila escolar,5,2490
+2026-09-15,Mercado,Calculadora,1,1290
+2026-09-15,Norte,Cuaderno A5,2,395
+2026-09-16,Universidad,Carpeta archivadora,1,560
+2026-09-16,Mercado,Carpeta archivadora,5,560
+2026-09-16,Norte,Calculadora,6,1290
+2026-09-16,Puerto,Estuche,5,750
+2026-09-16,Puerto,Calculadora,5,1290
+2026-09-16,Universidad,Calculadora,5,1290
+2026-09-16,Puerto,Rotuladores x12,2,650
+2026-09-16,Universidad,Agenda 2027,2,1190
+2026-09-16,Centro,Mochila escolar,5,2490
+2026-09-16,Centro,Calculadora,6,1290
+2026-09-16,Mercado,Mochila escolar,5,2490
+2026-09-16,Puerto,Cuaderno A5,4,395
+2026-09-16,Norte,Pegamento,2,180
+2026-09-16,Mercado,Mochila escolar,2,2490
+2026-09-16,Norte,Mochila escolar,3,2490
+2026-09-16,Centro,Agenda 2027,2,1190
+2026-09-16,Puerto,Carpeta archivadora,6,560
+2026-09-16,Universidad,Calculadora,4,1290
+2026-09-16,Norte,Calculadora,6,1290
+2026-09-16,Puerto,Agenda 2027,1,1190
+2026-09-16,Norte,Calculadora,3,1290
+2026-09-16,Universidad,Calculadora,4,1290
+2026-09-16,Puerto,Carpeta archivadora,2,560
+2026-09-16,Universidad,Rotuladores x12,4,650
+2026-09-16,Mercado,Mochila escolar,6,2490
+2026-09-16,Norte,Estuche,5,750
+2026-09-16,Mercado,Agenda 2027,3,1190
+2026-09-16,Centro,Calculadora,4,1290
+2026-09-16,Puerto,Mochila escolar,3,2490
+2026-09-16,Norte,Rotuladores x12,5,650
+2026-09-16,Mercado,Rotuladores x12,5,650
+2026-09-16,Puerto,Agenda 2027,4,1190
+2026-09-16,Universidad,Pegamento,1,180
+2026-09-16,Mercado,Cuaderno A5,3,395
+2026-09-16,Mercado,Mochila escolar,2,2490
+2026-09-16,Universidad,Calculadora,4,1290
+2026-09-16,Universidad,Carpeta archivadora,3,560
+2026-09-16,Mercado,Estuche,6,750
+2026-09-16,Universidad,Mochila escolar,5,2490
+2026-09-16,Puerto,Mochila escolar,1,2490
+2026-09-16,Norte,Agenda 2027,1,1190
+2026-09-16,Centro,Pegamento,1,180
+2026-09-16,Centro,Cuaderno A5,3,395
+2026-09-16,Norte,Estuche,5,750
+2026-09-16,Centro,Cuaderno A5,4,395
+2026-09-16,Centro,Calculadora,3,1290
+2026-09-16,Universidad,Estuche,2,750
+2026-09-16,Universidad,Cuaderno A5,2,395
+2026-09-16,Centro,Carpeta archivadora,1,560
+2026-09-16,Norte,Cuaderno A5,1,395
+2026-09-16,Mercado,Calculadora,3,1290
+2026-09-16,Norte,Carpeta archivadora,6,560
+2026-09-16,Centro,Agenda 2027,4,1190
+2026-09-16,Universidad,Mochila escolar,4,2490
+2026-09-16,Mercado,Carpeta archivadora,4,560
+2026-09-16,Centro,Rotuladores x12,5,650
+2026-09-16,Norte,Carpeta archivadora,2,560
+2026-09-16,Norte,Mochila escolar,3,2490
+2026-09-16,Centro,Rotuladores x12,2,650
+2026-09-16,Norte,Calculadora,3,1290
+2026-09-16,Puerto,Mochila escolar,1,2490
+2026-09-16,Mercado,Mochila escolar,6,2490
+2026-09-16,Centro,Carpeta archivadora,3,560
+2026-09-16,Norte,Calculadora,3,1290
+2026-09-16,Centro,Estuche,3,750
+2026-09-16,Centro,Estuche,3,750
+2026-09-16,Universidad,Agenda 2027,4,1190
+2026-09-16,Centro,Cuaderno A5,6,395
+2026-09-16,Puerto,Mochila escolar,3,2490
+2026-09-16,Norte,Mochila escolar,4,2490
+2026-09-16,Universidad,Pegamento,6,180
+2026-09-16,Universidad,Carpeta archivadora,4,560
+2026-09-16,Centro,Carpeta archivadora,2,560
+2026-09-16,Mercado,Agenda 2027,1,1190
+2026-09-16,Universidad,Agenda 2027,3,1190
+2026-09-16,Mercado,Mochila escolar,5,2490
+2026-09-16,Universidad,Calculadora,4,1290
+2026-09-16,Puerto,Cuaderno A5,1,395
+2026-09-16,Norte,Pegamento,5,180
+2026-09-16,Universidad,Mochila escolar,4,2490
+2026-09-17,Centro,Calculadora,1,1290
+2026-09-17,Norte,Cuaderno A5,3,395
+2026-09-17,Norte,Agenda 2027,5,1190
+2026-09-17,Norte,Agenda 2027,5,1190
+2026-09-17,Mercado,Carpeta archivadora,1,560
+2026-09-17,Mercado,Calculadora,2,1290
+2026-09-17,Universidad,Carpeta archivadora,1,560
+2026-09-17,Puerto,Rotuladores x12,4,650
+2026-09-17,Puerto,Calculadora,5,1290
+2026-09-17,Puerto,Mochila escolar,5,2490
+2026-09-17,Puerto,Agenda 2027,3,1190
+2026-09-17,Mercado,Pegamento,6,180
+2026-09-17,Centro,Agenda 2027,3,1190
+2026-09-17,Centro,Cuaderno A5,3,395
+2026-09-17,Centro,Agenda 2027,6,1190
+2026-09-17,Norte,Estuche,1,750
+2026-09-17,Mercado,Calculadora,3,1290
+2026-09-17,Universidad,Rotuladores x12,6,650
+2026-09-17,Puerto,Cuaderno A5,2,395
+2026-09-17,Centro,Pegamento,4,180
+2026-09-17,Norte,Rotuladores x12,1,650
+2026-09-17,Puerto,Cuaderno A5,6,395
+2026-09-17,Mercado,Estuche,1,750
+2026-09-17,Mercado,Estuche,2,750
+2026-09-17,Puerto,Carpeta archivadora,6,560
+2026-09-17,Universidad,Estuche,5,750
+2026-09-17,Universidad,Agenda 2027,4,1190
+2026-09-17,Centro,Pegamento,2,180
+2026-09-17,Norte,Agenda 2027,2,1190
+2026-09-17,Centro,Pegamento,3,180
+2026-09-17,Norte,Pegamento,3,180
+2026-09-17,Centro,Carpeta archivadora,5,560
+2026-09-17,Universidad,Mochila escolar,6,2490
+2026-09-17,Centro,Calculadora,4,1290
+2026-09-17,Universidad,Rotuladores x12,2,650
+2026-09-17,Puerto,Estuche,5,750
+2026-09-17,Centro,Mochila escolar,2,2490
+2026-09-17,Mercado,Mochila escolar,1,2490
+2026-09-17,Norte,Cuaderno A5,4,395
+2026-09-17,Mercado,Carpeta archivadora,1,560
+2026-09-17,Mercado,Agenda 2027,5,1190
+2026-09-17,Centro,Rotuladores x12,3,650
+2026-09-17,Centro,Calculadora,5,1290
+2026-09-17,Norte,Rotuladores x12,6,650
+2026-09-17,Puerto,Estuche,1,750
+2026-09-17,Centro,Carpeta archivadora,3,560
+2026-09-17,Centro,Carpeta archivadora,5,560
+2026-09-17,Puerto,Pegamento,3,180
+2026-09-17,Universidad,Estuche,6,750
+2026-09-17,Mercado,Carpeta archivadora,2,560
+2026-09-17,Puerto,Mochila escolar,1,2490
+2026-09-17,Mercado,Estuche,6,750
+2026-09-17,Universidad,Pegamento,2,180
+2026-09-17,Puerto,Agenda 2027,4,1190
+2026-09-17,Centro,Cuaderno A5,1,395
+2026-09-17,Mercado,Pegamento,6,180
+2026-09-17,Norte,Carpeta archivadora,4,560
+2026-09-17,Centro,Calculadora,2,1290
+2026-09-17,Universidad,Estuche,2,750
+2026-09-17,Mercado,Calculadora,5,1290
+2026-09-17,Universidad,Cuaderno A5,1,395
+2026-09-17,Puerto,Pegamento,4,180
+2026-09-17,Centro,Estuche,5,750
+2026-09-17,Centro,Carpeta archivadora,3,560
+2026-09-17,Norte,Calculadora,5,1290
+2026-09-17,Centro,Agenda 2027,6,1190
+2026-09-17,Puerto,Cuaderno A5,6,395
+2026-09-17,Puerto,Estuche,2,750
+2026-09-17,Norte,Estuche,3,750
+2026-09-17,Norte,Agenda 2027,1,1190
+2026-09-17,Norte,Calculadora,2,1290
+2026-09-17,Norte,Carpeta archivadora,2,560
+2026-09-17,Puerto,Calculadora,1,1290
+2026-09-17,Centro,Estuche,1,750
+2026-09-17,Centro,Carpeta archivadora,2,560
+2026-09-17,Puerto,Carpeta archivadora,2,560
+2026-09-17,Norte,Mochila escolar,3,2490
+2026-09-17,Mercado,Calculadora,3,1290
+2026-09-17,Puerto,Rotuladores x12,6,650
+2026-09-17,Puerto,Estuche,6,750
+2026-09-18,Universidad,Estuche,2,750
+2026-09-18,Mercado,Pegamento,3,180
+2026-09-18,Centro,Calculadora,1,1290
+2026-09-18,Puerto,Estuche,5,750
+2026-09-18,Puerto,Estuche,2,750
+2026-09-18,Universidad,Carpeta archivadora,5,560
+2026-09-18,Mercado,Cuaderno A5,6,395
+2026-09-18,Centro,Rotuladores x12,3,650
+2026-09-18,Norte,Agenda 2027,2,1190
+2026-09-18,Universidad,Rotuladores x12,1,650
+2026-09-18,Norte,Rotuladores x12,5,650
+2026-09-18,Universidad,Cuaderno A5,3,395
+2026-09-18,Norte,Calculadora,4,1290
+2026-09-18,Universidad,Cuaderno A5,3,395
+2026-09-18,Norte,Calculadora,2,1290
+2026-09-18,Universidad,Rotuladores x12,6,650
+2026-09-18,Universidad,Rotuladores x12,5,650
+2026-09-18,Universidad,Cuaderno A5,3,395
+2026-09-18,Mercado,Mochila escolar,3,2490
+2026-09-18,Centro,Carpeta archivadora,6,560
+2026-09-18,Puerto,Rotuladores x12,1,650
+2026-09-18,Mercado,Pegamento,3,180
+2026-09-18,Mercado,Rotuladores x12,3,650
+2026-09-18,Centro,Agenda 2027,3,1190
+2026-09-18,Centro,Agenda 2027,4,1190
+2026-09-18,Centro,Carpeta archivadora,3,560
+2026-09-18,Universidad,Mochila escolar,3,2490
+2026-09-18,Centro,Agenda 2027,4,1190
+2026-09-18,Norte,Calculadora,2,1290
+2026-09-18,Universidad,Agenda 2027,1,1190
+2026-09-18,Puerto,Pegamento,3,180
+2026-09-18,Centro,Rotuladores x12,4,650
+2026-09-18,Mercado,Mochila escolar,3,2490
+2026-09-18,Centro,Mochila escolar,3,2490
+2026-09-18,Mercado,Cuaderno A5,1,395
+2026-09-18,Centro,Estuche,2,750
+2026-09-18,Centro,Rotuladores x12,1,650
+2026-09-18,Norte,Mochila escolar,3,2490
+2026-09-18,Universidad,Carpeta archivadora,3,560
+2026-09-18,Universidad,Calculadora,5,1290
+2026-09-18,Centro,Pegamento,5,180
+2026-09-18,Mercado,Mochila escolar,3,2490
+2026-09-18,Puerto,Pegamento,2,180
+2026-09-18,Universidad,Cuaderno A5,4,395
+2026-09-18,Puerto,Carpeta archivadora,2,560
+2026-09-18,Norte,Carpeta archivadora,3,560
+2026-09-18,Norte,Agenda 2027,6,1190
+2026-09-18,Mercado,Rotuladores x12,1,650
+2026-09-18,Centro,Calculadora,1,1290
+2026-09-18,Puerto,Agenda 2027,1,1190
+2026-09-18,Puerto,Mochila escolar,5,2490
+2026-09-18,Norte,Mochila escolar,1,2490
+2026-09-18,Puerto,Estuche,2,750
+2026-09-18,Centro,Calculadora,1,1290
+2026-09-18,Universidad,Pegamento,2,180
+2026-09-18,Mercado,Estuche,6,750
+2026-09-18,Puerto,Rotuladores x12,6,650
+2026-09-18,Universidad,Agenda 2027,4,1190
+2026-09-18,Norte,Agenda 2027,5,1190
+2026-09-18,Mercado,Cuaderno A5,4,395
+2026-09-18,Puerto,Mochila escolar,3,2490
+2026-09-18,Centro,Estuche,4,750
+2026-09-18,Universidad,Pegamento,3,180
+2026-09-18,Mercado,Mochila escolar,3,2490
+2026-09-18,Mercado,Calculadora,2,1290
+2026-09-18,Norte,Calculadora,4,1290
+2026-09-18,Mercado,Agenda 2027,6,1190
+2026-09-18,Mercado,Pegamento,4,180
+2026-09-18,Norte,Rotuladores x12,3,650
+2026-09-18,Centro,Mochila escolar,2,2490
+2026-09-18,Universidad,Rotuladores x12,2,650
+2026-09-18,Centro,Calculadora,6,1290
+2026-09-18,Puerto,Agenda 2027,3,1190
+2026-09-18,Norte,Carpeta archivadora,4,560
+2026-09-18,Norte,Carpeta archivadora,2,560
+2026-09-18,Puerto,Rotuladores x12,5,650
+2026-09-18,Puerto,Carpeta archivadora,6,560
+2026-09-18,Puerto,Cuaderno A5,1,395
+2026-09-18,Universidad,Carpeta archivadora,3,560
+2026-09-18,Mercado,Mochila escolar,2,2490
+2026-09-19,Mercado,Calculadora,6,1290
+2026-09-19,Centro,Estuche,4,750
+2026-09-19,Centro,Mochila escolar,1,2490
+2026-09-19,Mercado,Rotuladores x12,2,650
+2026-09-19,Centro,Pegamento,2,180
+2026-09-19,Norte,Cuaderno A5,4,395
+2026-09-19,Universidad,Mochila escolar,4,2490
+2026-09-19,Universidad,Agenda 2027,3,1190
+2026-09-19,Norte,Mochila escolar,3,2490
+2026-09-19,Mercado,Rotuladores x12,6,650
+2026-09-19,Norte,Rotuladores x12,3,650
+2026-09-19,Mercado,Estuche,3,750
+2026-09-19,Universidad,Cuaderno A5,5,395
+2026-09-19,Puerto,Agenda 2027,1,1190
+2026-09-19,Norte,Calculadora,4,1290
+2026-09-19,Centro,Pegamento,2,180
+2026-09-19,Norte,Pegamento,4,180
+2026-09-19,Puerto,Estuche,1,750
+2026-09-19,Puerto,Cuaderno A5,2,395
+2026-09-19,Universidad,Calculadora,5,1290
+2026-09-19,Centro,Calculadora,1,1290
+2026-09-19,Universidad,Estuche,2,750
+2026-09-19,Norte,Estuche,5,750
+2026-09-19,Universidad,Carpeta archivadora,5,560
+2026-09-19,Norte,Rotuladores x12,3,650
+2026-09-19,Norte,Mochila escolar,4,2490
+2026-09-19,Puerto,Calculadora,3,1290
+2026-09-19,Puerto,Rotuladores x12,3,650
+2026-09-19,Mercado,Rotuladores x12,2,650
+2026-09-19,Universidad,Mochila escolar,6,2490
+2026-09-19,Mercado,Carpeta archivadora,4,560
+2026-09-19,Puerto,Carpeta archivadora,3,560
+2026-09-19,Norte,Mochila escolar,5,2490
+2026-09-19,Universidad,Mochila escolar,1,2490
+2026-09-19,Mercado,Cuaderno A5,2,395
+2026-09-19,Mercado,Pegamento,1,180
+2026-09-19,Mercado,Mochila escolar,2,2490
+2026-09-19,Puerto,Carpeta archivadora,3,560
+2026-09-19,Norte,Agenda 2027,5,1190
+2026-09-19,Puerto,Rotuladores x12,3,650
+2026-09-19,Norte,Carpeta archivadora,3,560
+2026-09-19,Puerto,Agenda 2027,1,1190
+2026-09-19,Puerto,Pegamento,2,180
+2026-09-19,Norte,Pegamento,3,180
+2026-09-19,Mercado,Estuche,1,750
+2026-09-19,Universidad,Estuche,2,750
+2026-09-19,Norte,Estuche,5,750
+2026-09-19,Universidad,Rotuladores x12,3,650
+2026-09-19,Norte,Mochila escolar,2,2490
+2026-09-19,Universidad,Carpeta archivadora,6,560
+2026-09-19,Universidad,Estuche,4,750
+2026-09-19,Mercado,Carpeta archivadora,3,560
+2026-09-19,Universidad,Estuche,5,750
+2026-09-19,Puerto,Carpeta archivadora,5,560
+2026-09-19,Puerto,Pegamento,2,180
+2026-09-19,Mercado,Rotuladores x12,4,650
+2026-09-19,Centro,Estuche,2,750
+2026-09-19,Universidad,Estuche,2,750
+2026-09-19,Centro,Cuaderno A5,6,395
+2026-09-19,Universidad,Estuche,5,750
+2026-09-19,Universidad,Pegamento,1,180
+2026-09-19,Norte,Calculadora,4,1290
+2026-09-19,Centro,Calculadora,6,1290
+2026-09-19,Puerto,Carpeta archivadora,1,560
+2026-09-19,Puerto,Cuaderno A5,4,395
+2026-09-19,Universidad,Pegamento,3,180
+2026-09-19,Puerto,Pegamento,5,180
+2026-09-19,Mercado,Estuche,1,750
+2026-09-19,Centro,Cuaderno A5,6,395
+2026-09-19,Mercado,Mochila escolar,1,2490
+2026-09-19,Universidad,Calculadora,3,1290
+2026-09-19,Universidad,Agenda 2027,6,1190
+2026-09-19,Norte,Rotuladores x12,6,650
+2026-09-19,Norte,Cuaderno A5,1,395
+2026-09-19,Centro,Agenda 2027,5,1190
+2026-09-19,Puerto,Pegamento,3,180
+2026-09-19,Norte,Estuche,1,750
+2026-09-19,Universidad,Agenda 2027,4,1190
+2026-09-19,Centro,Rotuladores x12,2,650
+2026-09-19,Norte,Pegamento,6,180
+2026-09-20,Norte,Carpeta archivadora,2,560
+2026-09-20,Centro,Mochila escolar,3,2490
+2026-09-20,Puerto,Mochila escolar,3,2490
+2026-09-20,Mercado,Mochila escolar,1,2490
+2026-09-20,Centro,Rotuladores x12,2,650
+2026-09-20,Puerto,Agenda 2027,3,1190
+2026-09-20,Puerto,Rotuladores x12,4,650
+2026-09-20,Centro,Agenda 2027,2,1190
+2026-09-20,Universidad,Cuaderno A5,6,395
+2026-09-20,Mercado,Calculadora,4,1290
+2026-09-20,Puerto,Rotuladores x12,4,650
+2026-09-20,Norte,Calculadora,4,1290
+2026-09-20,Centro,Pegamento,2,180
+2026-09-20,Puerto,Calculadora,3,1290
+2026-09-20,Puerto,Mochila escolar,2,2490
+2026-09-20,Universidad,Carpeta archivadora,2,560
+2026-09-20,Centro,Carpeta archivadora,6,560
+2026-09-20,Universidad,Pegamento,2,180
+2026-09-20,Puerto,Carpeta archivadora,3,560
+2026-09-20,Norte,Mochila escolar,3,2490
+2026-09-20,Universidad,Agenda 2027,2,1190
+2026-09-20,Universidad,Pegamento,6,180
+2026-09-20,Norte,Estuche,3,750
+2026-09-20,Centro,Carpeta archivadora,3,560
+2026-09-20,Mercado,Rotuladores x12,2,650
+2026-09-20,Norte,Pegamento,1,180
+2026-09-20,Puerto,Cuaderno A5,3,395
+2026-09-20,Universidad,Cuaderno A5,3,395
+2026-09-20,Centro,Carpeta archivadora,6,560
+2026-09-20,Norte,Pegamento,1,180
+2026-09-20,Puerto,Mochila escolar,5,2490
+2026-09-20,Norte,Pegamento,1,180
+2026-09-20,Centro,Calculadora,6,1290
+2026-09-20,Centro,Calculadora,1,1290
+2026-09-20,Centro,Pegamento,3,180
+2026-09-20,Mercado,Mochila escolar,4,2490
+2026-09-20,Universidad,Calculadora,6,1290
+2026-09-20,Centro,Cuaderno A5,3,395
+2026-09-20,Universidad,Carpeta archivadora,3,560
+2026-09-20,Norte,Estuche,3,750
+2026-09-20,Mercado,Estuche,5,750
+2026-09-20,Centro,Carpeta archivadora,4,560
+2026-09-20,Mercado,Rotuladores x12,1,650
+2026-09-20,Universidad,Rotuladores x12,4,650
+2026-09-20,Universidad,Carpeta archivadora,6,560
+2026-09-20,Universidad,Estuche,3,750
+2026-09-20,Puerto,Pegamento,6,180
+2026-09-20,Universidad,Calculadora,3,1290
+2026-09-20,Centro,Pegamento,2,180
+2026-09-20,Norte,Agenda 2027,3,1190
+2026-09-20,Puerto,Rotuladores x12,3,650
+2026-09-20,Centro,Calculadora,3,1290
+2026-09-20,Mercado,Calculadora,4,1290
+2026-09-20,Norte,Cuaderno A5,6,395
+2026-09-20,Norte,Agenda 2027,2,1190
+2026-09-20,Mercado,Pegamento,6,180
+2026-09-20,Centro,Calculadora,3,1290
+2026-09-20,Universidad,Mochila escolar,6,2490
+2026-09-20,Norte,Pegamento,4,180
+2026-09-20,Mercado,Estuche,4,750
+2026-09-20,Universidad,Calculadora,2,1290
+2026-09-20,Puerto,Estuche,6,750
+2026-09-20,Universidad,Agenda 2027,3,1190
+2026-09-20,Universidad,Mochila escolar,2,2490
+2026-09-20,Centro,Calculadora,5,1290
+2026-09-20,Mercado,Carpeta archivadora,2,560
+2026-09-20,Universidad,Rotuladores x12,4,650
+2026-09-20,Puerto,Rotuladores x12,6,650
+2026-09-20,Norte,Calculadora,2,1290
+2026-09-20,Puerto,Carpeta archivadora,1,560
+2026-09-20,Norte,Estuche,3,750
+2026-09-20,Puerto,Cuaderno A5,2,395
+2026-09-20,Universidad,Estuche,4,750
+2026-09-20,Mercado,Pegamento,5,180
+2026-09-20,Mercado,Pegamento,3,180
+2026-09-20,Norte,Agenda 2027,6,1190
+2026-09-20,Norte,Calculadora,4,1290
+2026-09-20,Puerto,Estuche,6,750
+2026-09-20,Mercado,Calculadora,6,1290
+2026-09-20,Puerto,Pegamento,1,180
+2026-09-21,Universidad,Pegamento,6,180
+2026-09-21,Centro,Pegamento,1,180
+2026-09-21,Norte,Estuche,1,750
+2026-09-21,Universidad,Estuche,5,750
+2026-09-21,Puerto,Rotuladores x12,3,650
+2026-09-21,Mercado,Mochila escolar,4,2490
+2026-09-21,Universidad,Agenda 2027,4,1190
+2026-09-21,Norte,Carpeta archivadora,6,560
+2026-09-21,Norte,Agenda 2027,6,1190
+2026-09-21,Centro,Cuaderno A5,1,395
+2026-09-21,Puerto,Calculadora,5,1290
+2026-09-21,Mercado,Pegamento,5,180
+2026-09-21,Centro,Mochila escolar,5,2490
+2026-09-21,Centro,Mochila escolar,6,2490
+2026-09-21,Mercado,Estuche,5,750
+2026-09-21,Centro,Rotuladores x12,6,650
+2026-09-21,Puerto,Calculadora,1,1290
+2026-09-21,Puerto,Mochila escolar,1,2490
+2026-09-21,Mercado,Calculadora,1,1290
+2026-09-21,Universidad,Pegamento,4,180
+2026-09-21,Mercado,Calculadora,1,1290
+2026-09-21,Centro,Cuaderno A5,4,395
+2026-09-21,Puerto,Agenda 2027,6,1190
+2026-09-21,Puerto,Rotuladores x12,3,650
+2026-09-21,Norte,Calculadora,1,1290
+2026-09-21,Mercado,Estuche,2,750
+2026-09-21,Puerto,Cuaderno A5,1,395
+2026-09-21,Puerto,Estuche,2,750
+2026-09-21,Mercado,Calculadora,1,1290
+2026-09-21,Norte,Pegamento,1,180
+2026-09-21,Norte,Pegamento,1,180
+2026-09-21,Universidad,Pegamento,6,180
+2026-09-21,Puerto,Pegamento,5,180
+2026-09-21,Universidad,Estuche,3,750
+2026-09-21,Puerto,Pegamento,2,180
+2026-09-21,Puerto,Pegamento,2,180
+2026-09-21,Puerto,Mochila escolar,1,2490
+2026-09-21,Centro,Agenda 2027,1,1190
+2026-09-21,Norte,Rotuladores x12,1,650
+2026-09-21,Norte,Carpeta archivadora,4,560
+2026-09-21,Norte,Agenda 2027,4,1190
+2026-09-21,Norte,Calculadora,6,1290
+2026-09-21,Centro,Pegamento,6,180
+2026-09-21,Mercado,Agenda 2027,4,1190
+2026-09-21,Norte,Cuaderno A5,4,395
+2026-09-21,Norte,Agenda 2027,1,1190
+2026-09-21,Centro,Cuaderno A5,2,395
+2026-09-21,Universidad,Carpeta archivadora,5,560
+2026-09-21,Mercado,Pegamento,6,180
+2026-09-21,Norte,Estuche,4,750
+2026-09-21,Norte,Mochila escolar,1,2490
+2026-09-21,Norte,Pegamento,1,180
+2026-09-21,Norte,Pegamento,4,180
+2026-09-21,Centro,Estuche,4,750
+2026-09-21,Norte,Estuche,2,750
+2026-09-21,Mercado,Agenda 2027,4,1190
+2026-09-21,Norte,Carpeta archivadora,2,560
+2026-09-21,Centro,Pegamento,6,180
+2026-09-21,Mercado,Agenda 2027,2,1190
+2026-09-21,Centro,Estuche,3,750
+2026-09-21,Puerto,Pegamento,5,180
+2026-09-21,Mercado,Mochila escolar,4,2490
+2026-09-21,Centro,Agenda 2027,2,1190
+2026-09-21,Puerto,Pegamento,3,180
+2026-09-21,Puerto,Agenda 2027,4,1190
+2026-09-21,Mercado,Agenda 2027,2,1190
+2026-09-21,Universidad,Pegamento,6,180
+2026-09-21,Puerto,Calculadora,1,1290
+2026-09-21,Puerto,Carpeta archivadora,4,560
+2026-09-21,Puerto,Pegamento,1,180
+2026-09-21,Puerto,Estuche,4,750
+2026-09-21,Centro,Carpeta archivadora,1,560
+2026-09-21,Norte,Rotuladores x12,1,650
+2026-09-21,Centro,Pegamento,3,180
+2026-09-21,Norte,Rotuladores x12,3,650
+2026-09-21,Universidad,Agenda 2027,2,1190
+2026-09-21,Centro,Estuche,5,750
+2026-09-21,Centro,Cuaderno A5,6,395
+2026-09-21,Puerto,Mochila escolar,3,2490
+2026-09-21,Centro,Cuaderno A5,4,395
+2026-09-22,Puerto,Calculadora,6,1290
+2026-09-22,Universidad,Cuaderno A5,2,395
+2026-09-22,Universidad,Cuaderno A5,5,395
+2026-09-22,Norte,Agenda 2027,2,1190
+2026-09-22,Centro,Mochila escolar,3,2490
+2026-09-22,Mercado,Estuche,2,750
+2026-09-22,Puerto,Calculadora,6,1290
+2026-09-22,Centro,Rotuladores x12,5,650
+2026-09-22,Mercado,Cuaderno A5,5,395
+2026-09-22,Centro,Carpeta archivadora,4,560
+2026-09-22,Mercado,Rotuladores x12,3,650
+2026-09-22,Centro,Estuche,4,750
+2026-09-22,Mercado,Mochila escolar,4,2490
+2026-09-22,Mercado,Agenda 2027,6,1190
+2026-09-22,Puerto,Calculadora,6,1290
+2026-09-22,Universidad,Calculadora,1,1290
+2026-09-22,Centro,Agenda 2027,4,1190
+2026-09-22,Norte,Agenda 2027,6,1190
+2026-09-22,Centro,Mochila escolar,3,2490
+2026-09-22,Mercado,Pegamento,4,180
+2026-09-22,Centro,Rotuladores x12,1,650
+2026-09-22,Norte,Calculadora,6,1290
+2026-09-22,Puerto,Mochila escolar,6,2490
+2026-09-22,Puerto,Agenda 2027,6,1190
+2026-09-22,Mercado,Carpeta archivadora,3,560
+2026-09-22,Puerto,Rotuladores x12,5,650
+2026-09-22,Universidad,Pegamento,3,180
+2026-09-22,Puerto,Estuche,5,750
+2026-09-22,Mercado,Cuaderno A5,4,395
+2026-09-22,Mercado,Pegamento,2,180
+2026-09-22,Puerto,Carpeta archivadora,1,560
+2026-09-22,Puerto,Agenda 2027,1,1190
+2026-09-22,Puerto,Calculadora,3,1290
+2026-09-22,Norte,Calculadora,4,1290
+2026-09-22,Centro,Mochila escolar,1,2490
+2026-09-22,Puerto,Mochila escolar,3,2490
+2026-09-22,Puerto,Pegamento,4,180
+2026-09-22,Mercado,Cuaderno A5,6,395
+2026-09-22,Norte,Rotuladores x12,3,650
+2026-09-22,Centro,Estuche,2,750
+2026-09-22,Universidad,Cuaderno A5,1,395
+2026-09-22,Puerto,Rotuladores x12,2,650
+2026-09-22,Puerto,Estuche,1,750
+2026-09-22,Mercado,Agenda 2027,1,1190
+2026-09-22,Norte,Pegamento,3,180
+2026-09-22,Centro,Cuaderno A5,5,395
+2026-09-22,Universidad,Pegamento,3,180
+2026-09-22,Centro,Pegamento,2,180
+2026-09-22,Centro,Carpeta archivadora,1,560
+2026-09-22,Universidad,Carpeta archivadora,2,560
+2026-09-22,Universidad,Rotuladores x12,6,650
+2026-09-22,Mercado,Pegamento,4,180
+2026-09-22,Puerto,Agenda 2027,3,1190
+2026-09-22,Mercado,Cuaderno A5,1,395
+2026-09-22,Mercado,Mochila escolar,3,2490
+2026-09-22,Puerto,Pegamento,5,180
+2026-09-22,Universidad,Pegamento,1,180
+2026-09-22,Norte,Cuaderno A5,5,395
+2026-09-22,Norte,Estuche,4,750
+2026-09-22,Mercado,Calculadora,1,1290
+2026-09-22,Puerto,Calculadora,5,1290
+2026-09-22,Norte,Calculadora,6,1290
+2026-09-22,Norte,Mochila escolar,2,2490
+2026-09-22,Norte,Pegamento,1,180
+2026-09-22,Mercado,Rotuladores x12,1,650
+2026-09-22,Puerto,Cuaderno A5,2,395
+2026-09-22,Puerto,Rotuladores x12,1,650
+2026-09-22,Centro,Pegamento,1,180
+2026-09-22,Mercado,Agenda 2027,3,1190
+2026-09-22,Mercado,Carpeta archivadora,2,560
+2026-09-22,Mercado,Agenda 2027,1,1190
+2026-09-22,Universidad,Rotuladores x12,3,650
+2026-09-22,Mercado,Cuaderno A5,1,395
+2026-09-22,Norte,Cuaderno A5,6,395
+2026-09-22,Universidad,Mochila escolar,2,2490
+2026-09-22,Norte,Estuche,6,750
+2026-09-22,Mercado,Estuche,3,750
+2026-09-22,Norte,Mochila escolar,4,2490
+2026-09-22,Universidad,Rotuladores x12,3,650
+2026-09-22,Norte,Estuche,6,750
+2026-09-23,Mercado,Agenda 2027,4,1190
+2026-09-23,Universidad,Agenda 2027,3,1190
+2026-09-23,Norte,Rotuladores x12,1,650
+2026-09-23,Norte,Rotuladores x12,6,650
+2026-09-23,Mercado,Mochila escolar,6,2490
+2026-09-23,Centro,Mochila escolar,6,2490
+2026-09-23,Universidad,Calculadora,4,1290
+2026-09-23,Centro,Mochila escolar,3,2490
+2026-09-23,Mercado,Calculadora,1,1290
+2026-09-23,Puerto,Calculadora,2,1290
+2026-09-23,Puerto,Calculadora,4,1290
+2026-09-23,Norte,Cuaderno A5,1,395
+2026-09-23,Mercado,Estuche,6,750
+2026-09-23,Norte,Carpeta archivadora,5,560
+2026-09-23,Norte,Calculadora,1,1290
+2026-09-23,Universidad,Carpeta archivadora,3,560
+2026-09-23,Norte,Cuaderno A5,3,395
+2026-09-23,Centro,Rotuladores x12,2,650
+2026-09-23,Centro,Rotuladores x12,6,650
+2026-09-23,Puerto,Rotuladores x12,5,650
+2026-09-23,Puerto,Rotuladores x12,4,650
+2026-09-23,Universidad,Agenda 2027,4,1190
+2026-09-23,Mercado,Calculadora,5,1290
+2026-09-23,Puerto,Pegamento,4,180
+2026-09-23,Centro,Mochila escolar,2,2490
+2026-09-23,Norte,Rotuladores x12,2,650
+2026-09-23,Mercado,Mochila escolar,1,2490
+2026-09-23,Norte,Agenda 2027,4,1190
+2026-09-23,Norte,Carpeta archivadora,6,560
+2026-09-23,Universidad,Carpeta archivadora,1,560
+2026-09-23,Universidad,Calculadora,4,1290
+2026-09-23,Norte,Mochila escolar,5,2490
+2026-09-23,Mercado,Rotuladores x12,3,650
+2026-09-23,Mercado,Agenda 2027,5,1190
+2026-09-23,Puerto,Estuche,3,750
+2026-09-23,Norte,Pegamento,1,180
+2026-09-23,Centro,Pegamento,5,180
+2026-09-23,Centro,Cuaderno A5,1,395
+2026-09-23,Centro,Estuche,5,750
+2026-09-23,Centro,Rotuladores x12,1,650
+2026-09-23,Centro,Carpeta archivadora,3,560
+2026-09-23,Puerto,Estuche,6,750
+2026-09-23,Centro,Agenda 2027,6,1190
+2026-09-23,Norte,Agenda 2027,3,1190
+2026-09-23,Centro,Pegamento,3,180
+2026-09-23,Puerto,Rotuladores x12,2,650
+2026-09-23,Mercado,Estuche,5,750
+2026-09-23,Mercado,Carpeta archivadora,3,560
+2026-09-23,Norte,Carpeta archivadora,4,560
+2026-09-23,Centro,Agenda 2027,6,1190
+2026-09-23,Mercado,Carpeta archivadora,2,560
+2026-09-23,Puerto,Pegamento,1,180
+2026-09-23,Puerto,Carpeta archivadora,6,560
+2026-09-23,Centro,Agenda 2027,3,1190
+2026-09-23,Universidad,Cuaderno A5,4,395
+2026-09-23,Mercado,Mochila escolar,2,2490
+2026-09-23,Norte,Mochila escolar,6,2490
+2026-09-23,Norte,Agenda 2027,3,1190
+2026-09-23,Mercado,Cuaderno A5,6,395
+2026-09-23,Centro,Estuche,6,750
+2026-09-23,Puerto,Mochila escolar,6,2490
+2026-09-23,Universidad,Calculadora,1,1290
+2026-09-23,Universidad,Rotuladores x12,5,650
+2026-09-23,Centro,Cuaderno A5,1,395
+2026-09-23,Norte,Estuche,5,750
+2026-09-23,Norte,Rotuladores x12,5,650
+2026-09-23,Centro,Calculadora,6,1290
+2026-09-23,Universidad,Cuaderno A5,3,395
+2026-09-23,Puerto,Agenda 2027,5,1190
+2026-09-23,Mercado,Calculadora,6,1290
+2026-09-23,Puerto,Cuaderno A5,1,395
+2026-09-23,Universidad,Mochila escolar,4,2490
+2026-09-23,Universidad,Carpeta archivadora,6,560
+2026-09-23,Puerto,Agenda 2027,6,1190
+2026-09-23,Norte,Calculadora,3,1290
+2026-09-23,Norte,Agenda 2027,5,1190
+2026-09-23,Mercado,Carpeta archivadora,3,560
+2026-09-23,Puerto,Cuaderno A5,3,395
+2026-09-23,Norte,Calculadora,5,1290
+2026-09-23,Universidad,Agenda 2027,2,1190
+2026-09-24,Puerto,Calculadora,3,1290
+2026-09-24,Mercado,Calculadora,2,1290
+2026-09-24,Centro,Estuche,3,750
+2026-09-24,Norte,Pegamento,6,180
+2026-09-24,Puerto,Calculadora,1,1290
+2026-09-24,Centro,Rotuladores x12,5,650
+2026-09-24,Centro,Agenda 2027,2,1190
+2026-09-24,Centro,Mochila escolar,2,2490
+2026-09-24,Mercado,Mochila escolar,1,2490
+2026-09-24,Universidad,Calculadora,4,1290
+2026-09-24,Puerto,Mochila escolar,5,2490
+2026-09-24,Universidad,Agenda 2027,6,1190
+2026-09-24,Centro,Carpeta archivadora,2,560
+2026-09-24,Centro,Carpeta archivadora,1,560
+2026-09-24,Norte,Agenda 2027,1,1190
+2026-09-24,Centro,Calculadora,1,1290
+2026-09-24,Mercado,Mochila escolar,6,2490
+2026-09-24,Universidad,Calculadora,5,1290
+2026-09-24,Norte,Rotuladores x12,3,650
+2026-09-24,Universidad,Cuaderno A5,6,395
+2026-09-24,Centro,Calculadora,2,1290
+2026-09-24,Universidad,Calculadora,6,1290
+2026-09-24,Norte,Estuche,4,750
+2026-09-24,Norte,Calculadora,1,1290
+2026-09-24,Norte,Calculadora,3,1290
+2026-09-24,Mercado,Pegamento,2,180
+2026-09-24,Norte,Rotuladores x12,3,650
+2026-09-24,Norte,Rotuladores x12,1,650
+2026-09-24,Norte,Cuaderno A5,3,395
+2026-09-24,Mercado,Calculadora,3,1290
+2026-09-24,Puerto,Estuche,6,750
+2026-09-24,Puerto,Rotuladores x12,3,650
+2026-09-24,Mercado,Agenda 2027,1,1190
+2026-09-24,Norte,Cuaderno A5,6,395
+2026-09-24,Centro,Estuche,5,750
+2026-09-24,Norte,Cuaderno A5,2,395
+2026-09-24,Centro,Pegamento,4,180
+2026-09-24,Puerto,Carpeta archivadora,5,560
+2026-09-24,Universidad,Carpeta archivadora,4,560
+2026-09-24,Norte,Mochila escolar,3,2490
+2026-09-24,Mercado,Pegamento,4,180
+2026-09-24,Universidad,Cuaderno A5,4,395
+2026-09-24,Centro,Rotuladores x12,6,650
+2026-09-24,Centro,Estuche,4,750
+2026-09-24,Puerto,Calculadora,4,1290
+2026-09-24,Centro,Agenda 2027,3,1190
+2026-09-24,Universidad,Estuche,1,750
+2026-09-24,Puerto,Cuaderno A5,3,395
+2026-09-24,Mercado,Rotuladores x12,1,650
+2026-09-24,Norte,Carpeta archivadora,1,560
+2026-09-24,Norte,Rotuladores x12,6,650
+2026-09-24,Norte,Calculadora,1,1290
+2026-09-24,Norte,Pegamento,2,180
+2026-09-24,Universidad,Estuche,2,750
+2026-09-24,Universidad,Carpeta archivadora,5,560
+2026-09-24,Mercado,Estuche,5,750
+2026-09-24,Centro,Calculadora,2,1290
+2026-09-24,Puerto,Estuche,6,750
+2026-09-24,Centro,Mochila escolar,3,2490
+2026-09-24,Universidad,Pegamento,5,180
+2026-09-24,Norte,Cuaderno A5,4,395
+2026-09-24,Mercado,Rotuladores x12,3,650
+2026-09-24,Centro,Pegamento,1,180
+2026-09-24,Norte,Rotuladores x12,6,650
+2026-09-24,Centro,Pegamento,6,180
+2026-09-24,Mercado,Cuaderno A5,2,395
+2026-09-24,Centro,Calculadora,1,1290
+2026-09-24,Centro,Mochila escolar,6,2490
+2026-09-24,Mercado,Cuaderno A5,2,395
+2026-09-24,Universidad,Mochila escolar,4,2490
+2026-09-24,Puerto,Rotuladores x12,1,650
+2026-09-24,Universidad,Rotuladores x12,3,650
+2026-09-24,Puerto,Carpeta archivadora,6,560
+2026-09-24,Mercado,Rotuladores x12,3,650
+2026-09-24,Centro,Carpeta archivadora,4,560
+2026-09-24,Mercado,Mochila escolar,1,2490
+2026-09-24,Centro,Agenda 2027,6,1190
+2026-09-24,Centro,Pegamento,6,180
+2026-09-24,Norte,Cuaderno A5,5,395
+2026-09-24,Norte,Pegamento,3,180
+2026-09-25,Centro,Calculadora,4,1290
+2026-09-25,Centro,Mochila escolar,5,2490
+2026-09-25,Universidad,Mochila escolar,1,2490
+2026-09-25,Puerto,Pegamento,2,180
+2026-09-25,Mercado,Estuche,3,750
+2026-09-25,Puerto,Carpeta archivadora,6,560
+2026-09-25,Centro,Carpeta archivadora,6,560
+2026-09-25,Universidad,Rotuladores x12,6,650
+2026-09-25,Mercado,Rotuladores x12,3,650
+2026-09-25,Mercado,Calculadora,5,1290
+2026-09-25,Puerto,Carpeta archivadora,4,560
+2026-09-25,Universidad,Calculadora,5,1290
+2026-09-25,Norte,Mochila escolar,2,2490
+2026-09-25,Mercado,Carpeta archivadora,1,560
+2026-09-25,Centro,Rotuladores x12,5,650
+2026-09-25,Puerto,Agenda 2027,4,1190
+2026-09-25,Mercado,Estuche,6,750
+2026-09-25,Centro,Pegamento,1,180
+2026-09-25,Mercado,Mochila escolar,2,2490
+2026-09-25,Centro,Agenda 2027,4,1190
+2026-09-25,Mercado,Mochila escolar,3,2490
+2026-09-25,Universidad,Calculadora,4,1290
+2026-09-25,Mercado,Cuaderno A5,1,395
+2026-09-25,Norte,Carpeta archivadora,5,560
+2026-09-25,Norte,Mochila escolar,5,2490
+2026-09-25,Universidad,Cuaderno A5,2,395
+2026-09-25,Puerto,Calculadora,2,1290
+2026-09-25,Puerto,Calculadora,6,1290
+2026-09-25,Norte,Agenda 2027,2,1190
+2026-09-25,Universidad,Agenda 2027,3,1190
+2026-09-25,Centro,Carpeta archivadora,1,560
+2026-09-25,Centro,Pegamento,1,180
+2026-09-25,Puerto,Calculadora,5,1290
+2026-09-25,Universidad,Calculadora,1,1290
+2026-09-25,Puerto,Carpeta archivadora,3,560
+2026-09-25,Centro,Mochila escolar,3,2490
+2026-09-25,Universidad,Pegamento,5,180
+2026-09-25,Norte,Cuaderno A5,2,395
+2026-09-25,Universidad,Rotuladores x12,4,650
+2026-09-25,Norte,Pegamento,6,180
+2026-09-25,Puerto,Rotuladores x12,5,650
+2026-09-25,Norte,Rotuladores x12,4,650
+2026-09-25,Puerto,Estuche,1,750
+2026-09-25,Mercado,Rotuladores x12,2,650
+2026-09-25,Norte,Pegamento,6,180
+2026-09-25,Mercado,Cuaderno A5,2,395
+2026-09-25,Mercado,Agenda 2027,2,1190
+2026-09-25,Mercado,Carpeta archivadora,2,560
+2026-09-25,Centro,Carpeta archivadora,1,560
+2026-09-25,Mercado,Agenda 2027,1,1190
+2026-09-25,Centro,Cuaderno A5,1,395
+2026-09-25,Mercado,Agenda 2027,6,1190
+2026-09-25,Centro,Estuche,5,750
+2026-09-25,Puerto,Calculadora,2,1290
+2026-09-25,Puerto,Mochila escolar,4,2490
+2026-09-25,Mercado,Pegamento,3,180
+2026-09-25,Centro,Mochila escolar,5,2490
+2026-09-25,Universidad,Calculadora,1,1290
+2026-09-25,Norte,Calculadora,1,1290
+2026-09-25,Universidad,Carpeta archivadora,6,560
+2026-09-25,Centro,Calculadora,5,1290
+2026-09-25,Norte,Mochila escolar,3,2490
+2026-09-25,Norte,Carpeta archivadora,5,560
+2026-09-25,Puerto,Cuaderno A5,1,395
+2026-09-25,Universidad,Cuaderno A5,4,395
+2026-09-25,Centro,Estuche,2,750
+2026-09-25,Norte,Rotuladores x12,2,650
+2026-09-25,Puerto,Carpeta archivadora,4,560
+2026-09-25,Centro,Rotuladores x12,6,650
+2026-09-25,Centro,Mochila escolar,2,2490
+2026-09-25,Mercado,Calculadora,3,1290
+2026-09-25,Puerto,Calculadora,5,1290
+2026-09-25,Mercado,Pegamento,1,180
+2026-09-25,Mercado,Pegamento,2,180
+2026-09-25,Centro,Mochila escolar,1,2490
+2026-09-25,Puerto,Calculadora,5,1290
+2026-09-25,Universidad,Cuaderno A5,2,395
+2026-09-25,Centro,Cuaderno A5,5,395
+2026-09-25,Centro,Rotuladores x12,3,650
+2026-09-25,Mercado,Cuaderno A5,6,395
+2026-09-26,Puerto,Rotuladores x12,4,650
+2026-09-26,Centro,Cuaderno A5,6,395
+2026-09-26,Universidad,Rotuladores x12,6,650
+2026-09-26,Norte,Estuche,2,750
+2026-09-26,Universidad,Calculadora,4,1290
+2026-09-26,Puerto,Pegamento,2,180
+2026-09-26,Mercado,Agenda 2027,1,1190
+2026-09-26,Universidad,Pegamento,4,180
+2026-09-26,Mercado,Agenda 2027,6,1190
+2026-09-26,Centro,Calculadora,3,1290
+2026-09-26,Norte,Agenda 2027,2,1190
+2026-09-26,Puerto,Mochila escolar,4,2490
+2026-09-26,Centro,Calculadora,6,1290
+2026-09-26,Mercado,Cuaderno A5,2,395
+2026-09-26,Norte,Calculadora,2,1290
+2026-09-26,Norte,Pegamento,1,180
+2026-09-26,Universidad,Carpeta archivadora,3,560
+2026-09-26,Centro,Estuche,2,750
+2026-09-26,Universidad,Agenda 2027,2,1190
+2026-09-26,Puerto,Agenda 2027,3,1190
+2026-09-26,Universidad,Mochila escolar,5,2490
+2026-09-26,Centro,Agenda 2027,2,1190
+2026-09-26,Universidad,Rotuladores x12,2,650
+2026-09-26,Puerto,Rotuladores x12,2,650
+2026-09-26,Centro,Calculadora,2,1290
+2026-09-26,Mercado,Estuche,1,750
+2026-09-26,Puerto,Pegamento,4,180
+2026-09-26,Puerto,Mochila escolar,3,2490
+2026-09-26,Universidad,Estuche,6,750
+2026-09-26,Mercado,Mochila escolar,2,2490
+2026-09-26,Mercado,Carpeta archivadora,2,560
+2026-09-26,Puerto,Calculadora,1,1290
+2026-09-26,Puerto,Cuaderno A5,4,395
+2026-09-26,Centro,Cuaderno A5,3,395
+2026-09-26,Puerto,Cuaderno A5,6,395
+2026-09-26,Centro,Mochila escolar,5,2490
+2026-09-26,Puerto,Rotuladores x12,3,650
+2026-09-26,Mercado,Calculadora,3,1290
+2026-09-26,Mercado,Calculadora,4,1290
+2026-09-26,Universidad,Calculadora,5,1290
+2026-09-26,Norte,Pegamento,1,180
+2026-09-26,Mercado,Pegamento,1,180
+2026-09-26,Centro,Carpeta archivadora,1,560
+2026-09-26,Universidad,Pegamento,2,180
+2026-09-26,Mercado,Rotuladores x12,4,650
+2026-09-26,Centro,Rotuladores x12,1,650
+2026-09-26,Norte,Agenda 2027,5,1190
+2026-09-26,Norte,Pegamento,6,180
+2026-09-26,Puerto,Cuaderno A5,1,395
+2026-09-26,Puerto,Carpeta archivadora,5,560
+2026-09-26,Puerto,Calculadora,2,1290
+2026-09-26,Centro,Calculadora,5,1290
+2026-09-26,Universidad,Rotuladores x12,2,650
+2026-09-26,Centro,Agenda 2027,1,1190
+2026-09-26,Norte,Rotuladores x12,4,650
+2026-09-26,Puerto,Mochila escolar,2,2490
+2026-09-26,Mercado,Cuaderno A5,6,395
+2026-09-26,Mercado,Cuaderno A5,3,395
+2026-09-26,Puerto,Agenda 2027,1,1190
+2026-09-26,Universidad,Agenda 2027,2,1190
+2026-09-26,Norte,Agenda 2027,1,1190
+2026-09-26,Mercado,Carpeta archivadora,2,560
+2026-09-26,Puerto,Calculadora,4,1290
+2026-09-26,Puerto,Cuaderno A5,1,395
+2026-09-26,Mercado,Agenda 2027,2,1190
+2026-09-26,Universidad,Cuaderno A5,3,395
+2026-09-26,Mercado,Calculadora,3,1290
+2026-09-26,Norte,Pegamento,5,180
+2026-09-26,Mercado,Cuaderno A5,5,395
+2026-09-26,Mercado,Mochila escolar,5,2490
+2026-09-26,Norte,Calculadora,2,1290
+2026-09-26,Centro,Estuche,3,750
+2026-09-26,Universidad,Rotuladores x12,1,650
+2026-09-26,Centro,Mochila escolar,3,2490
+2026-09-26,Mercado,Calculadora,3,1290
+2026-09-26,Mercado,Calculadora,1,1290
+2026-09-26,Universidad,Pegamento,3,180
+2026-09-26,Centro,Carpeta archivadora,5,560
+2026-09-26,Centro,Estuche,1,750
+2026-09-26,Mercado,Estuche,3,750
+2026-09-27,Norte,Rotuladores x12,3,650
+2026-09-27,Centro,Carpeta archivadora,4,560
+2026-09-27,Puerto,Agenda 2027,6,1190
+2026-09-27,Universidad,Cuaderno A5,5,395
+2026-09-27,Puerto,Mochila escolar,3,2490
+2026-09-27,Centro,Mochila escolar,4,2490
+2026-09-27,Puerto,Estuche,3,750
+2026-09-27,Mercado,Mochila escolar,4,2490
+2026-09-27,Universidad,Pegamento,5,180
+2026-09-27,Universidad,Agenda 2027,2,1190
+2026-09-27,Mercado,Rotuladores x12,3,650
+2026-09-27,Mercado,Cuaderno A5,1,395
+2026-09-27,Puerto,Rotuladores x12,1,650
+2026-09-27,Mercado,Pegamento,3,180
+2026-09-27,Mercado,Mochila escolar,2,2490
+2026-09-27,Centro,Rotuladores x12,3,650
+2026-09-27,Mercado,Carpeta archivadora,2,560
+2026-09-27,Mercado,Rotuladores x12,3,650
+2026-09-27,Mercado,Agenda 2027,4,1190
+2026-09-27,Centro,Calculadora,6,1290
+2026-09-27,Puerto,Carpeta archivadora,6,560
+2026-09-27,Mercado,Rotuladores x12,2,650
+2026-09-27,Norte,Cuaderno A5,5,395
+2026-09-27,Universidad,Estuche,6,750
+2026-09-27,Universidad,Agenda 2027,4,1190
+2026-09-27,Mercado,Agenda 2027,2,1190
+2026-09-27,Norte,Agenda 2027,4,1190
+2026-09-27,Mercado,Cuaderno A5,1,395
+2026-09-27,Universidad,Carpeta archivadora,4,560
+2026-09-27,Centro,Carpeta archivadora,5,560
+2026-09-27,Norte,Rotuladores x12,1,650
+2026-09-27,Universidad,Mochila escolar,6,2490
+2026-09-27,Centro,Pegamento,2,180
+2026-09-27,Puerto,Agenda 2027,6,1190
+2026-09-27,Puerto,Pegamento,4,180
+2026-09-27,Norte,Carpeta archivadora,1,560
+2026-09-27,Universidad,Carpeta archivadora,3,560
+2026-09-27,Norte,Calculadora,1,1290
+2026-09-27,Norte,Agenda 2027,3,1190
+2026-09-27,Puerto,Cuaderno A5,5,395
+2026-09-27,Puerto,Calculadora,3,1290
+2026-09-27,Universidad,Carpeta archivadora,3,560
+2026-09-27,Puerto,Carpeta archivadora,2,560
+2026-09-27,Norte,Mochila escolar,2,2490
+2026-09-27,Mercado,Estuche,5,750
+2026-09-27,Puerto,Rotuladores x12,1,650
+2026-09-27,Centro,Calculadora,5,1290
+2026-09-27,Norte,Pegamento,3,180
+2026-09-27,Puerto,Estuche,2,750
+2026-09-27,Norte,Cuaderno A5,6,395
+2026-09-27,Puerto,Calculadora,6,1290
+2026-09-27,Puerto,Agenda 2027,1,1190
+2026-09-27,Centro,Rotuladores x12,3,650
+2026-09-27,Puerto,Mochila escolar,4,2490
+2026-09-27,Puerto,Pegamento,1,180
+2026-09-27,Puerto,Pegamento,3,180
+2026-09-27,Mercado,Pegamento,1,180
+2026-09-27,Mercado,Calculadora,4,1290
+2026-09-27,Norte,Estuche,6,750
+2026-09-27,Puerto,Agenda 2027,2,1190
+2026-09-27,Puerto,Cuaderno A5,2,395
+2026-09-27,Universidad,Cuaderno A5,4,395
+2026-09-27,Mercado,Carpeta archivadora,1,560
+2026-09-27,Universidad,Mochila escolar,4,2490
+2026-09-27,Centro,Rotuladores x12,5,650
+2026-09-27,Centro,Agenda 2027,4,1190
+2026-09-27,Centro,Carpeta archivadora,4,560
+2026-09-27,Mercado,Calculadora,2,1290
+2026-09-27,Centro,Calculadora,4,1290
+2026-09-27,Centro,Calculadora,6,1290
+2026-09-27,Puerto,Mochila escolar,3,2490
+2026-09-27,Universidad,Estuche,5,750
+2026-09-27,Mercado,Estuche,1,750
+2026-09-27,Mercado,Cuaderno A5,3,395
+2026-09-27,Mercado,Rotuladores x12,2,650
+2026-09-27,Mercado,Calculadora,6,1290
+2026-09-27,Universidad,Estuche,2,750
+2026-09-27,Puerto,Calculadora,6,1290
+2026-09-27,Norte,Estuche,1,750
+2026-09-27,Mercado,Mochila escolar,4,2490
+2026-09-28,Mercado,Calculadora,2,1290
+2026-09-28,Centro,Rotuladores x12,3,650
+2026-09-28,Puerto,Pegamento,3,180
+2026-09-28,Puerto,Calculadora,3,1290
+2026-09-28,Universidad,Mochila escolar,5,2490
+2026-09-28,Universidad,Calculadora,5,1290
+2026-09-28,Norte,Calculadora,5,1290
+2026-09-28,Norte,Pegamento,5,180
+2026-09-28,Puerto,Estuche,6,750
+2026-09-28,Centro,Mochila escolar,5,2490
+2026-09-28,Norte,Pegamento,2,180
+2026-09-28,Puerto,Carpeta archivadora,3,560
+2026-09-28,Universidad,Calculadora,3,1290
+2026-09-28,Mercado,Rotuladores x12,5,650
+2026-09-28,Centro,Carpeta archivadora,4,560
+2026-09-28,Universidad,Mochila escolar,6,2490
+2026-09-28,Centro,Cuaderno A5,4,395
+2026-09-28,Centro,Estuche,3,750
+2026-09-28,Puerto,Calculadora,3,1290
+2026-09-28,Puerto,Calculadora,5,1290
+2026-09-28,Mercado,Carpeta archivadora,2,560
+2026-09-28,Universidad,Carpeta archivadora,2,560
+2026-09-28,Puerto,Pegamento,4,180
+2026-09-28,Centro,Calculadora,6,1290
+2026-09-28,Norte,Rotuladores x12,6,650
+2026-09-28,Centro,Mochila escolar,6,2490
+2026-09-28,Norte,Agenda 2027,6,1190
+2026-09-28,Mercado,Calculadora,2,1290
+2026-09-28,Universidad,Rotuladores x12,4,650
+2026-09-28,Universidad,Carpeta archivadora,1,560
+2026-09-28,Mercado,Cuaderno A5,2,395
+2026-09-28,Norte,Mochila escolar,3,2490
+2026-09-28,Centro,Mochila escolar,4,2490
+2026-09-28,Mercado,Carpeta archivadora,4,560
+2026-09-28,Universidad,Estuche,4,750
+2026-09-28,Norte,Cuaderno A5,3,395
+2026-09-28,Norte,Calculadora,5,1290
+2026-09-28,Norte,Agenda 2027,4,1190
+2026-09-28,Norte,Cuaderno A5,2,395
+2026-09-28,Centro,Rotuladores x12,4,650
+2026-09-28,Centro,Carpeta archivadora,1,560
+2026-09-28,Centro,Mochila escolar,2,2490
+2026-09-28,Mercado,Estuche,2,750
+2026-09-28,Universidad,Carpeta archivadora,5,560
+2026-09-28,Universidad,Rotuladores x12,6,650
+2026-09-28,Mercado,Mochila escolar,6,2490
+2026-09-28,Centro,Mochila escolar,6,2490
+2026-09-28,Centro,Pegamento,6,180
+2026-09-28,Universidad,Carpeta archivadora,2,560
+2026-09-28,Universidad,Pegamento,4,180
+2026-09-28,Puerto,Agenda 2027,5,1190
+2026-09-28,Centro,Calculadora,2,1290
+2026-09-28,Norte,Rotuladores x12,3,650
+2026-09-28,Mercado,Rotuladores x12,4,650
+2026-09-28,Norte,Pegamento,1,180
+2026-09-28,Universidad,Pegamento,2,180
+2026-09-28,Puerto,Estuche,1,750
+2026-09-28,Universidad,Rotuladores x12,2,650
+2026-09-28,Universidad,Rotuladores x12,6,650
+2026-09-28,Puerto,Estuche,6,750
+2026-09-28,Universidad,Estuche,1,750
+2026-09-28,Universidad,Estuche,1,750
+2026-09-28,Centro,Agenda 2027,4,1190
+2026-09-28,Universidad,Rotuladores x12,6,650
+2026-09-28,Puerto,Estuche,4,750
+2026-09-28,Universidad,Rotuladores x12,4,650
+2026-09-28,Puerto,Pegamento,2,180
+2026-09-28,Centro,Calculadora,5,1290
+2026-09-28,Puerto,Rotuladores x12,2,650
+2026-09-28,Norte,Estuche,2,750
+2026-09-28,Puerto,Estuche,1,750
+2026-09-28,Universidad,Calculadora,1,1290
+2026-09-28,Puerto,Pegamento,3,180
+2026-09-28,Norte,Cuaderno A5,5,395
+2026-09-28,Puerto,Rotuladores x12,2,650
+2026-09-28,Universidad,Pegamento,1,180
+2026-09-28,Mercado,Agenda 2027,4,1190
+2026-09-28,Norte,Cuaderno A5,1,395
+2026-09-28,Mercado,Calculadora,5,1290
+2026-09-28,Mercado,Agenda 2027,5,1190
+2026-09-29,Puerto,Carpeta archivadora,6,560
+2026-09-29,Mercado,Cuaderno A5,2,395
+2026-09-29,Universidad,Mochila escolar,1,2490
+2026-09-29,Universidad,Pegamento,5,180
+2026-09-29,Norte,Mochila escolar,1,2490
+2026-09-29,Universidad,Cuaderno A5,5,395
+2026-09-29,Norte,Agenda 2027,4,1190
+2026-09-29,Centro,Carpeta archivadora,1,560
+2026-09-29,Centro,Carpeta archivadora,4,560
+2026-09-29,Mercado,Rotuladores x12,2,650
+2026-09-29,Universidad,Pegamento,5,180
+2026-09-29,Norte,Calculadora,6,1290
+2026-09-29,Mercado,Cuaderno A5,1,395
+2026-09-29,Norte,Cuaderno A5,5,395
+2026-09-29,Centro,Calculadora,3,1290
+2026-09-29,Puerto,Carpeta archivadora,2,560
+2026-09-29,Norte,Agenda 2027,5,1190
+2026-09-29,Norte,Calculadora,6,1290
+2026-09-29,Norte,Carpeta archivadora,3,560
+2026-09-29,Mercado,Calculadora,6,1290
+2026-09-29,Mercado,Estuche,6,750
+2026-09-29,Norte,Rotuladores x12,6,650
+2026-09-29,Universidad,Pegamento,2,180
+2026-09-29,Puerto,Carpeta archivadora,4,560
+2026-09-29,Universidad,Carpeta archivadora,3,560
+2026-09-29,Centro,Mochila escolar,5,2490
+2026-09-29,Universidad,Pegamento,4,180
+2026-09-29,Norte,Mochila escolar,2,2490
+2026-09-29,Norte,Cuaderno A5,4,395
+2026-09-29,Mercado,Estuche,1,750
+2026-09-29,Norte,Estuche,3,750
+2026-09-29,Universidad,Rotuladores x12,3,650
+2026-09-29,Centro,Estuche,6,750
+2026-09-29,Mercado,Estuche,5,750
+2026-09-29,Centro,Calculadora,2,1290
+2026-09-29,Norte,Agenda 2027,6,1190
+2026-09-29,Puerto,Cuaderno A5,4,395
+2026-09-29,Universidad,Carpeta archivadora,1,560
+2026-09-29,Puerto,Calculadora,1,1290
+2026-09-29,Norte,Calculadora,4,1290
+2026-09-29,Mercado,Pegamento,6,180
+2026-09-29,Universidad,Agenda 2027,3,1190
+2026-09-29,Puerto,Cuaderno A5,5,395
+2026-09-29,Norte,Cuaderno A5,3,395
+2026-09-29,Centro,Mochila escolar,2,2490
+2026-09-29,Norte,Rotuladores x12,4,650
+2026-09-29,Puerto,Carpeta archivadora,2,560
+2026-09-29,Mercado,Agenda 2027,4,1190
+2026-09-29,Puerto,Agenda 2027,6,1190
+2026-09-29,Puerto,Mochila escolar,1,2490
+2026-09-29,Centro,Mochila escolar,1,2490
+2026-09-29,Universidad,Estuche,1,750
+2026-09-29,Centro,Agenda 2027,4,1190
+2026-09-29,Centro,Mochila escolar,5,2490
+2026-09-29,Norte,Rotuladores x12,3,650
+2026-09-29,Universidad,Agenda 2027,5,1190
+2026-09-29,Puerto,Cuaderno A5,3,395
+2026-09-29,Mercado,Rotuladores x12,2,650
+2026-09-29,Universidad,Pegamento,3,180
+2026-09-29,Universidad,Estuche,5,750
+2026-09-29,Norte,Mochila escolar,5,2490
+2026-09-29,Mercado,Pegamento,1,180
+2026-09-29,Centro,Estuche,3,750
+2026-09-29,Puerto,Pegamento,2,180
+2026-09-29,Centro,Cuaderno A5,3,395
+2026-09-29,Puerto,Rotuladores x12,6,650
+2026-09-29,Mercado,Carpeta archivadora,2,560
+2026-09-29,Norte,Estuche,2,750
+2026-09-29,Mercado,Calculadora,2,1290
+2026-09-29,Puerto,Calculadora,4,1290
+2026-09-29,Centro,Pegamento,4,180
+2026-09-29,Mercado,Rotuladores x12,3,650
+2026-09-29,Norte,Rotuladores x12,3,650
+2026-09-29,Centro,Agenda 2027,1,1190
+2026-09-29,Mercado,Carpeta archivadora,6,560
+2026-09-29,Centro,Mochila escolar,1,2490
+2026-09-29,Universidad,Agenda 2027,6,1190
+2026-09-29,Centro,Rotuladores x12,2,650
+2026-09-29,Puerto,Pegamento,6,180
+2026-09-29,Centro,Pegamento,3,180
+2026-09-30,Norte,Mochila escolar,5,2490
+2026-09-30,Centro,Mochila escolar,6,2490
+2026-09-30,Universidad,Carpeta archivadora,4,560
+2026-09-30,Puerto,Estuche,3,750
+2026-09-30,Universidad,Agenda 2027,6,1190
+2026-09-30,Norte,Cuaderno A5,6,395
+2026-09-30,Centro,Calculadora,6,1290
+2026-09-30,Centro,Estuche,6,750
+2026-09-30,Mercado,Estuche,5,750
+2026-09-30,Mercado,Rotuladores x12,1,650
+2026-09-30,Mercado,Pegamento,1,180
+2026-09-30,Centro,Cuaderno A5,2,395
+2026-09-30,Universidad,Carpeta archivadora,3,560
+2026-09-30,Puerto,Cuaderno A5,6,395
+2026-09-30,Norte,Carpeta archivadora,6,560
+2026-09-30,Puerto,Mochila escolar,6,2490
+2026-09-30,Mercado,Carpeta archivadora,4,560
+2026-09-30,Mercado,Rotuladores x12,4,650
+2026-09-30,Centro,Rotuladores x12,2,650
+2026-09-30,Puerto,Cuaderno A5,1,395
+2026-09-30,Norte,Carpeta archivadora,4,560
+2026-09-30,Centro,Carpeta archivadora,1,560
+2026-09-30,Norte,Cuaderno A5,3,395
+2026-09-30,Centro,Rotuladores x12,2,650
+2026-09-30,Universidad,Calculadora,4,1290
+2026-09-30,Universidad,Pegamento,6,180
+2026-09-30,Universidad,Agenda 2027,5,1190
+2026-09-30,Centro,Mochila escolar,1,2490
+2026-09-30,Mercado,Agenda 2027,1,1190
+2026-09-30,Universidad,Mochila escolar,1,2490
+2026-09-30,Centro,Agenda 2027,2,1190
+2026-09-30,Mercado,Estuche,3,750
+2026-09-30,Mercado,Agenda 2027,1,1190
+2026-09-30,Centro,Agenda 2027,3,1190
+2026-09-30,Centro,Mochila escolar,2,2490
+2026-09-30,Norte,Estuche,5,750
+2026-09-30,Centro,Rotuladores x12,6,650
+2026-09-30,Norte,Agenda 2027,3,1190
+2026-09-30,Centro,Pegamento,1,180
+2026-09-30,Norte,Mochila escolar,4,2490
+2026-09-30,Puerto,Agenda 2027,4,1190
+2026-09-30,Puerto,Rotuladores x12,1,650
+2026-09-30,Puerto,Carpeta archivadora,2,560
+2026-09-30,Centro,Calculadora,4,1290
+2026-09-30,Universidad,Rotuladores x12,6,650
+2026-09-30,Puerto,Pegamento,2,180
+2026-09-30,Norte,Pegamento,1,180
+2026-09-30,Centro,Carpeta archivadora,2,560
+2026-09-30,Centro,Agenda 2027,2,1190
+2026-09-30,Puerto,Rotuladores x12,5,650
+2026-09-30,Norte,Agenda 2027,2,1190
+2026-09-30,Universidad,Rotuladores x12,5,650
+2026-09-30,Norte,Carpeta archivadora,6,560
+2026-09-30,Puerto,Calculadora,1,1290
+2026-09-30,Puerto,Calculadora,5,1290
+2026-09-30,Mercado,Calculadora,6,1290
+2026-09-30,Universidad,Estuche,1,750
+2026-09-30,Puerto,Agenda 2027,1,1190
+2026-09-30,Puerto,Rotuladores x12,2,650
+2026-09-30,Universidad,Agenda 2027,1,1190
+2026-09-30,Centro,Calculadora,1,1290
+2026-09-30,Centro,Calculadora,5,1290
+2026-09-30,Centro,Estuche,3,750
+2026-09-30,Centro,Calculadora,4,1290
+2026-09-30,Mercado,Carpeta archivadora,4,560
+2026-09-30,Mercado,Rotuladores x12,4,650
+2026-09-30,Mercado,Calculadora,3,1290
+2026-09-30,Centro,Carpeta archivadora,4,560
+2026-09-30,Puerto,Cuaderno A5,5,395
+2026-09-30,Centro,Carpeta archivadora,2,560
+2026-09-30,Puerto,Calculadora,6,1290
+2026-09-30,Norte,Estuche,5,750
+2026-09-30,Puerto,Carpeta archivadora,1,560
+2026-09-30,Puerto,Cuaderno A5,2,395
+2026-09-30,Norte,Agenda 2027,2,1190
+2026-09-30,Centro,Mochila escolar,5,2490
+2026-09-30,Norte,Carpeta archivadora,5,560
+2026-09-30,Mercado,Pegamento,1,180
+2026-09-30,Norte,Cuaderno A5,6,395
+2026-09-30,Mercado,Carpeta archivadora,3,560

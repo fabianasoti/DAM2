@@ -1,0 +1,115 @@
+/* Estilo: lila pastel, sencillo */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+  background: #f3effa;
+  color: #3d3550;
+}
+
+main {
+  max-width: 640px;
+  margin: auto;
+}
+
+h1 {
+  margin: 0 0 6px 0;
+  color: #6b4fa0;
+}
+
+header p {
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 18px rgba(107, 79, 160, 0.15);
+}
+
+.oculto { display: none; }
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid #cfc5e6;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button {
+  background: #9b86c9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#aviso { color: #a0443f; font-size: 14px; }
+
+/* Barra de estado */
+.barra {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c9bfe0;
+}
+
+.punto.activo { background: #6fbf8b; }
+
+/* Conversación */
+#mensajes {
+  height: 380px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: #faf8fd;
+  border-radius: 10px;
+}
+
+.burbuja {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.burbuja p { margin: 0; white-space: pre-wrap; }
+.burbuja small { display: block; margin-top: 4px; font-size: 11px; opacity: 0.7; }
+
+.burbuja.yo { align-self: flex-end; background: #9b86c9; color: white; }
+.burbuja.ia { align-self: flex-start; background: #ece6f7; }
+.burbuja.sistema { align-self: center; background: transparent; font-size: 12px; color: #7a6f90; text-align: center; }
+.burbuja.pensando { opacity: 0.6; font-style: italic; }
+
+#formulario {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#formulario input { margin-top: 0; }

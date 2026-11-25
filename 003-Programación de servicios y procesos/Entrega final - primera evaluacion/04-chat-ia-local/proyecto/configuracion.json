@@ -1,0 +1,7 @@
+{
+  "puerto": 8765,
+  "clave_usuarios": "aula-lila-2026",
+  "clave_ia": "ia-lila-2026",
+  "ollama": "http://127.0.0.1:11434",
+  "modelo": "gemma3:4b"
+}

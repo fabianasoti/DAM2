@@ -1,0 +1,19 @@
+# comandos: cliente.py pedir/mostrador/pantalla contra servidor.py en el puerto 5052 (colores quitados)
+Tu turno es el 1: no hay nadie delante.
+Tu turno es el 2: hay 1 persona delante.
+El servidor dice: ERROR nombre no valido (solo letras, de 1 a 20)
+Mostrador 2. Pulsa Enter para llamar al siguiente (Ctrl+C para salir).
+Llamando al turno 1: Ana
+Llamando al turno 2: Luis
+No hay nadie esperando.
+No se puede conectar con el servidor de turnos en 127.0.0.1 59999
+--- salida de la pantalla:
+=== SALA DE ESPERA ===
+
+Turno 1  Ana  ->  Mostrador 2
+
+=== SALA DE ESPERA ===
+
+Turno 2  Luis  ->  Mostrador 2
+
+Turno 1  Ana  (mostrador 2)

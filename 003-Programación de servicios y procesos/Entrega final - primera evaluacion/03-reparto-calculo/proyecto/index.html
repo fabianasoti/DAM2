@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reparto de cálculo entre ordenadores</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<main>
+  <h1>Reparto de cálculo</h1>
+  <p>Una cadena de papelerías (ficticia) quiere saber cuánto ha ingresado cada tienda en septiembre. El análisis se reparte en paquetes y cada ordenador del aula calcula los suyos. Abre esta página en varios ordenadores: uno hace de maestro y los demás de esclavos.</p>
+
+  <div class="botones">
+    <button id="botonMaestro">Soy el maestro</button>
+    <button id="botonEsclavo">Soy un esclavo</button>
+  </div>
+
+  <section id="panelMaestro" class="panel oculto">
+    <h2>Maestro</h2>
+    <div class="fila">
+      <label>Filas por paquete <input id="tamano" type="number" value="40" min="5" max="500"></label>
+      <label>Carga artificial por paquete <input id="carga" type="number" value="2000000" min="0" max="50000000"></label>
+    </div>
+    <div class="botones">
+      <button id="preparar">Preparar trabajo</button>
+      <button id="reiniciar" class="secundario">Reiniciar</button>
+    </div>
+    <p id="mensajeMaestro"></p>
+
+    <div class="tarjetas">
+      <div class="tarjeta">Paquetes<span id="mTotal">0</span></div>
+      <div class="tarjeta">Pendientes<span id="mPendientes">0</span></div>
+      <div class="tarjeta">En marcha<span id="mAsignados">0</span></div>
+      <div class="tarjeta">Terminados<span id="mTerminados">0</span></div>
+      <div class="tarjeta">Segundos<span id="mSegundos">0</span></div>
+    </div>
+
+    <div id="tablero"></div>
+    <p class="leyenda"><span class="paquete p"></span> pendiente <span class="paquete a"></span> en marcha <span class="paquete t"></span> terminado</p>
+
+    <h3>Quién ha calculado qué</h3>
+    <ul id="listaEsclavos"></ul>
+
+    <h3>Resultado: ingresos por tienda</h3>
+    <ul id="ingresos"></ul>
+    <p id="masVendido"></p>
+    <p id="comprobacion"></p>
+  </section>
+
+  <section id="panelEsclavo" class="panel oculto">
+    <h2>Esclavo</h2>
+    <p id="identidad"></p>
+    <div class="tarjetas">
+      <div class="tarjeta">Paquete actual<span id="ePaquete">-</span></div>
+      <div class="tarjeta">Terminados<span id="eTerminados">0</span></div>
+      <div class="tarjeta">Último paquete<span id="eTiempo">-</span></div>
+    </div>
+    <p id="mensajeEsclavo">Esperando trabajo...</p>
+    <progress id="progreso" max="100" value="0"></progress>
+  </section>
+</main>
+
+<script src="js/principal.js"></script>
+</body>
+</html>

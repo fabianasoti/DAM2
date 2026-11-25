@@ -1,0 +1,5 @@
+sin nombre ni clave -> Escribe tu nombre y la clave del aula
+clave mala -> Clave incorrecta
+entrada correcta -> chat visible: true | estado: 1 IA conectada
+tras enviar, burbujas: burbuja+sistema , burbuja+yo , burbuja+ia+pensando
+tras la respuesta: burbuja+sistema: Conectado. Escribe tu primera pregunta. | burbuja+yo: ¿Qué es un worker? | burbuja+ia: [Respuesta simulada, sin IA real] Has preguntado: ¿Qué es un worker?

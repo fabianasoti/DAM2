@@ -1,0 +1,117 @@
+/* Estilo: lila pastel, sencillo */
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  background: #f3effa;
+  color: #3d3550;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(107, 79, 160, 0.15);
+}
+
+h1, h2, h3 {
+  color: #6b4fa0;
+}
+
+h1 { margin-top: 0; }
+
+.oculto { display: none; }
+
+.botones {
+  display: flex;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+button {
+  background: #9b86c9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.secundario { background: #b9aed3; }
+
+.panel {
+  border: 1px solid #e3dcf0;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 16px;
+}
+
+.fila {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+label { font-size: 14px; }
+
+input {
+  display: block;
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid #cfc5e6;
+  border-radius: 6px;
+  width: 200px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.tarjeta {
+  background: #ece6f7;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.tarjeta span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #6b4fa0;
+}
+
+/* Tablero de paquetes */
+#tablero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 12px 0;
+}
+
+.paquete {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.paquete.p { background: #e3dcf0; }
+.paquete.a { background: #f0c987; }
+.paquete.t { background: #8fcf9f; }
+
+.leyenda { font-size: 13px; }
+
+progress {
+  width: 100%;
+  height: 20px;
+  accent-color: #9b86c9;
+}
+
+#comprobacion { font-weight: bold; }

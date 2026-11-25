@@ -1,0 +1,9 @@
+tamano 0 y carga enorme se limitan: paquetes = 480 (480 si tamano 5)
+esclavo con nombre no válido: {"trabajo":false,"espera":false,"mensaje":"Identificador de esclavo no válido"}
+entrega de otro esclavo: {"ok":false,"error":"Este paquete pertenece a otro esclavo"}
+entrega con resultado roto: {"ok":false,"error":"Resultado no válido"}
+entrega de paquete inexistente: {"ok":false,"error":"Paquete inexistente"}
+entrega correcta: {"ok":true,"id":1}
+entrega repetida: {"ok":false,"error":"El paquete ya estaba terminado"}
+reiniciar: {"ok":true,"mensaje":"Cola reiniciada"}
+tras reiniciar, paquetes = 0

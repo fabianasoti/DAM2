@@ -1,0 +1,23 @@
+# 2026-11-25 02:31
+# comando: python3 pruebas.py   (Python 3.12.3, solo librería estándar)
+OK    ESTADO con la sala vacía -> ESPERANDO 0 ULTIMO 0
+OK    LLAMAR sin nadie esperando
+OK    primer turno
+OK    segundo turno, con una persona delante
+OK    la pantalla se registra
+OK    se llama primero a quien llegó antes
+OK    la pantalla recibe el aviso
+OK    ESTADO con una persona esperando
+OK    nombre con números -> ERROR nombre no valido (solo letras, de 1 a 20)
+OK    nombre de 21 letras
+OK    nombre con inyección
+OK    mostrador no numérico
+OK    orden desconocida
+OK    orden vacía
+OK    bytes que no son texto
+OK    los errores no consumen turnos -> ESPERANDO 1 ULTIMO 2
+OK    línea de 300 bytes sin final: error y corte -> ERROR linea demasiado larga
+OK    tras caerse una pantalla, el servidor sigue
+OK    300 clientes simultáneos piden turno -> distintos=300, del 4 al 303, 0.17 s
+OK    4 mostradores llaman a la vez: cada turno una sola vez -> llamados=300, 0.04 s
+OK    la pantalla recibe todos los avisos, sin mezclarse -> avisos=300

@@ -1,0 +1,4 @@
+t=0 s: 'se-cae' coge el paquete 1 y desaparece
+'fiable' ha hecho los paquetes: 2, 3, 4, 5, 1 (el perdido, a los 31 s)
+'se-cae' reaparece y entrega tarde: {"ok":false,"error":"Este paquete pertenece a otro esclavo"}
+Estado final: terminados 5 de 5 | coincide: true

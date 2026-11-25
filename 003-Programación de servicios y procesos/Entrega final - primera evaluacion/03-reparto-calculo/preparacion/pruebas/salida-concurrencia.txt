@@ -1,0 +1,5 @@
+Preparado: {"ok":true,"filas":2400,"paquetes":480,"tamano":5,"carga":0}
+Esclavos simultáneos: 16
+Paquetes entregados: 480 | distintos: 480 | total preparados: 480
+Reparto por esclavo: 31 30 30 30 31 30 31 31 30 30 30 30 29 29 29 29
+Estado final: terminados 480 de 480 | coincide: true | importe 7837610 | esperado 7837610
