@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hormiguero: cuánto trabajo aguanta tu navegador</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <header>
+    <h1>Hormiguero</h1>
+    <p>Una página web solo tiene un hilo para pensar y dibujar. Aquí lo puedes ver: cuanto más piensan las hormigas, más se frena todo, hasta que repartimos el trabajo con workers.</p>
+  </header>
+
+  <main>
+    <section class="escena">
+      <canvas id="lienzo"></canvas>
+    </section>
+
+    <aside class="panel">
+      <h2>Controles</h2>
+
+      <label>Hormigas: <strong id="textoHormigas"></strong>
+        <input type="range" id="hormigas" min="10" max="3000" step="10" value="1000">
+      </label>
+
+      <label>Carga por hormiga: <strong id="textoCarga"></strong>
+        <input type="range" id="carga" min="0" max="20000" step="100" value="1000">
+      </label>
+
+      <label>Workers: <strong id="textoWorkers"></strong>
+        <input type="range" id="workers" min="0" max="8" step="1" value="0">
+      </label>
+
+      <p id="modo" class="modo"></p>
+
+      <div class="marcadores">
+        <div><span id="fps">0</span><small>FPS</small></div>
+        <div><span id="ms">0</span><small>ms de cálculo</small></div>
+      </div>
+
+      <button id="medir">Medir 0, 1, 2, 4 y 8 workers</button>
+      <div id="tabla"></div>
+
+      <h2>Qué estás viendo</h2>
+      <ul>
+        <li>La carga es lo que cada hormiga "piensa" antes de dar un paso.</li>
+        <li>Con 0 workers, el hilo principal calcula y dibuja: si hay mucha carga, los FPS caen.</li>
+        <li>Con workers, el cálculo se reparte entre varios hilos y el dibujo sigue fluido.</li>
+        <li>Pasarse de workers no ayuda: cada uno cuesta enviar y recibir datos.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script src="js/hormigas.js"></script>
+  <script src="js/principal.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Estilo: lila pastel, sencillo */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3effa;
+  color: #3d3550;
+}
+
+header {
+  padding: 20px 30px 0 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0 0 6px 0;
+  color: #6b4fa0;
+}
+
+header p {
+  margin: 0;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  gap: 24px;
+  padding: 20px 30px 30px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.escena {
+  flex: 1 1 640px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(107, 79, 160, 0.2);
+}
+
+.panel {
+  flex: 0 0 300px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 18px rgba(107, 79, 160, 0.12);
+}
+
+.panel h2 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #6b4fa0;
+}
+
+label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #9b86c9;
+}
+
+.modo {
+  background: #ece6f7;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.marcadores {
+  display: flex;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.marcadores div {
+  flex: 1;
+  background: #ece6f7;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.marcadores span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #6b4fa0;
+}
+
+.marcadores small {
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  background: #9b86c9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #c9bfe0;
+  cursor: default;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+th, td {
+  padding: 5px;
+  border-bottom: 1px solid #e3dcf0;
+  text-align: right;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+ul {
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
