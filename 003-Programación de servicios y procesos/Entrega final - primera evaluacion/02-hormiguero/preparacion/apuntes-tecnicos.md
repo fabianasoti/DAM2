@@ -45,7 +45,7 @@ Hilos y workers; programación concurrente (varias cosas a la vez) y paralela (v
 - `node --check` de los tres JS: sin errores.
 - Prueba de humo con navegador simulado (`preparacion/mediciones/prueba-humo.js`): sin workers y con 4 funcionan, `99999` hormigas se limita a 3000 y `abc` en carga vuelve a 1000.
 - Medición del tiempo de cálculo en Node (`mediciones/salida-node.txt`), equipo de 4 núcleos y 8 hilos. Con 1000 hormigas y carga 5000: **55,5 ms sin workers frente a 22,7 ms con 8** (2,4 veces más rápido). Con carga 0: **0,06 ms frente a 0,36 ms**, los workers empeoran.
-- **Sin medir todavía:** FPS reales en el navegador y aspecto visual (no hay navegador en este equipo). Se mide con el botón "Medir".
+- **FPS en el navegador (medido por ti):** 1000 hormigas, carga 5000: de 7,1 FPS sin workers a 17,7 FPS con 8 (2,5 veces); el cálculo baja de 139,3 ms a 49,3 ms.
 - Fallos reales al construir: ninguno detectado en estas pruebas.
 
 ## 8. Limitaciones y mejora
@@ -72,7 +72,7 @@ Los 8 workers no dan 8 veces más: el equipo tiene 4 núcleos físicos, y copiar
 - **Intro:** una página que se congela con cálculos largos; quién lo sufre (editores de fotos, mapas, paneles con muchos datos); lo vemos con hormigas.
 - **Para qué sirve:** ver la diferencia entre 0 y varios workers; sliders de hormigas y carga; usos reales: no bloquear la página.
 - **Técnica:** un hilo en el navegador; workers por mensajes; mismo cálculo en ambos; esperar a todos con `pendientes`; dibujo en 2 trazos.
-- **Verificación:** 55,5 ms frente a 22,7 ms (1000 hormigas, carga 5000, 8 workers, Node); con carga 0 los workers pierden (0,06 frente a 0,36 ms); límite de 4 núcleos; FPS del navegador: [anota el tuyo].
+- **Verificación:** 55,5 ms frente a 22,7 ms (1000 hormigas, carga 5000, 8 workers, Node); con carga 0 los workers pierden (0,06 frente a 0,36 ms); límite de 4 núcleos; en tu navegador, de 7,1 a 17,7 FPS con 8 workers.
 - **Cierre:** funciona en el navegador sin instalar; no es 8 veces por 8 workers; mejora con memoria compartida.
 
 ## 12. EJEMPLO PARA ADAPTAR (post de 5 párrafos)
@@ -82,6 +82,6 @@ Para entender por qué pasa, hice un hormiguero. Cada hormiga calcula su camino 
 
 Técnicamente, el navegador tiene un solo hilo para calcular y dibujar. Los workers son hilos aparte que no comparten variables: se hablan por mensajes. Cada worker recibe su grupo de hormigas, calcula y devuelve las posiciones, y la página espera a que todos terminen antes de dibujar. El mismo código de cálculo se usa con y sin workers para que la comparación sea justa.
 
-Lo medí: con 1000 hormigas y carga alta, un fotograma tardó 55 ms sin workers y 23 ms con 8. Con poca carga, los workers fueron peores (0,06 ms frente a 0,36 ms), porque copiar datos también cuesta. [Añade aquí tu FPS del navegador.] Probé también que los controles no admiten valores raros.
+Lo medí: con 1000 hormigas y carga alta, un fotograma tardó 55 ms sin workers y 23 ms con 8. Con poca carga, los workers fueron peores (0,06 ms frente a 0,36 ms), porque copiar datos también cuesta. En el navegador pasé de unos 7 fotogramas por segundo a casi 18. Probé también que los controles no admiten valores raros.
 
 Resultado: una herramienta sencilla que enseña cuándo compensa repartir el trabajo y cuándo no. No es ocho veces más rápida con ocho workers: mi equipo tiene cuatro núcleos y los mensajes cuestan. La mejora que haría es compartir memoria para evitar copias. [Cierra con tu agradecimiento.]

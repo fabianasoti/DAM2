@@ -20,4 +20,4 @@
 - Los workers no arrancan: abrir por `http://localhost`, no por archivo.
 - Los FPS no cambian: subir hormigas y carga.
 - El botón Medir falla o tarda: enseñar `mediciones/salida-node.txt`.
-- Apunta el FPS que veas para la ficha y el texto.
+- Referencia de tu medición (1000 hormigas, carga 5000): 7,1 FPS sin workers y 17,7 con 8. Para el vídeo usa esos valores de controles.

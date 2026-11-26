@@ -30,7 +30,16 @@ Equipo: i7-1185G7, 4 núcleos y 8 hilos, Node v22.23.5. Tiempo de cálculo por f
 | 1000 | 5000 | 55,48 | 48,03 | 29,36 | 26,04 | 22,70 |
 | 3000 | 5000 | 161,54 | 174,88 | 116,33 | 79,67 | 66,96 |
 
-Son medidas de cálculo, no de FPS. Entre ejecuciones hay variación (una ejecución anterior dio 48,51 ms en 1000/5000/0 workers). **Pendiente (lo mides tú):** FPS reales en el navegador con el botón "Medir"; apunta aquí la tabla: ______.
+Son medidas de cálculo, no de FPS. Entre ejecuciones hay variación (una ejecución anterior dio 48,51 ms en 1000/5000/0 workers).
+
+**FPS en el navegador (medido por ti el 2026-11-26, botón "Medir"; 1000 hormigas, carga 5000):**
+
+| Workers | 0 | 1 | 2 | 4 | 8 |
+|---|---|---|---|---|---|
+| FPS | 7,1 | 7,3 | 10,6 | 15,0 | 17,7 |
+| ms de cálculo | 139,3 | 127,7 | 84,6 | 57,9 | 49,3 |
+
+Con 8 workers hay 2,5 veces más FPS y el cálculo es 2,8 veces más rápido. En el navegador cada fotograma tarda más que en la medición con Node (139 frente a 55 ms sin workers), pero la proporción se parece.
 
 ## Pruebas ejecutadas
 - `node --check` sobre `hormigas.js`, `trabajador.js` y `principal.js`: sin errores.

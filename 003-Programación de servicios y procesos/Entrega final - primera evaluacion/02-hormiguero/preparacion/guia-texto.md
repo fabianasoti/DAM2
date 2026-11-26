@@ -9,7 +9,7 @@ Objetivo: de 4 a 6 párrafos, estilo post. Redáctalo tú. Cuando me pases tu bo
 
 ## Párrafos 2 y 3: Para qué sirve (1-2 párrafos; competencia 6)
 **Debe contener:** a quién ayuda, qué mejora concreta, un ejemplo de uso y una medida verificable; la utilidad, no la lista de funciones; límites.
-**Datos reales:** sliders de hormigas, carga y workers; 55,5 ms frente a 22,7 ms (1000 hormigas, carga 5000, 8 workers); con carga 0 empeora (0,06 frente a 0,36 ms); tus FPS del navegador.
+**Datos reales:** sliders de hormigas, carga y workers; 55,5 ms frente a 22,7 ms (1000 hormigas, carga 5000, 8 workers); con carga 0 empeora (0,06 frente a 0,36 ms); en tu navegador, de 7,1 a 17,7 FPS con 8 workers.
 **EJEMPLO PARA ADAPTAR:** "Con él se ve cuándo compensa repartir el trabajo y cuándo no..."
 
 ## Párrafos 4 y 5: Cuestiones técnicas (1-2 párrafos; competencias 1, 3, 5 y, si quieres, 2)
@@ -20,7 +20,7 @@ Objetivo: de 4 a 6 párrafos, estilo post. Redáctalo tú. Cuando me pases tu bo
 
 ## Párrafo 6: Cierre (1 párrafo; competencias 6 y 7)
 **Debe contener:** volver al problema, qué está resuelto, qué limitación reconoces, qué mejorarías, agradecimiento. Sin lista de tecnologías.
-**Datos reales:** 4 núcleos, no 8 veces más; mejora: memoria compartida; FPS del navegador sin medir si no los apuntas.
+**Datos reales:** 4 núcleos, no 8 veces más; mejora: memoria compartida; FPS medidos solo en tu equipo.
 **EJEMPLO PARA ADAPTAR:** "Al final, una herramienta sencilla para entender cuándo repartir el trabajo. Me falta..."
 
 Ejemplo completo de 5 párrafos en `apuntes-tecnicos.md`, sección 12.

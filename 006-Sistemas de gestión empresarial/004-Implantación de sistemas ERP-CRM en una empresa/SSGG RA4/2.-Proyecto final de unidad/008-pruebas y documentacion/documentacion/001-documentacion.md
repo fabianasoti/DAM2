@@ -27,7 +27,9 @@ gestionar reservas, recepción, limpieza, mantenimiento y facturación. Todos lo
 4. **Informes**: parte diario de recepción, facturación mensual y factura, para imprimir o guardar en PDF.
 5. **Procedimientos de servidor**: SQLite no tiene procedimientos almacenados, así que la lógica de la
    base de datos se escribe con triggers: factura automática al hacer el check-out, factura que no se
-   puede modificar ni borrar y auditoría de los cambios de precio.
+   puede modificar ni borrar y auditoría de los cambios de precio. Además, `data/004-procedimientos mysql.sql`
+   adapta la facturación a MySQL con tres procedimientos almacenados: `hacer_checkout`,
+   `resumen_facturacion` y `habitaciones_libres`.
 6. **Paneles**: facturación mensual, IVA, formas de pago y países con más ingresos.
 7. **Integración**: envío de clientes y facturas al ERP darkorange por su API
    (cliente, producto, pedido y factura). Solo viajan nombre, apellidos y email.
@@ -55,6 +57,12 @@ php -S 127.0.0.1:8001
 
 Después: Administración > Integración > "Enviar siguientes facturas".
 
+Los procedimientos almacenados se prueban aparte en MySQL (el script crea su propia base `thistle_mysql`):
+
+```
+mysql -u root -p < "data/004-procedimientos mysql.sql"
+```
+
 ## 4. Pruebas
 
 | Prueba | Archivo | Resultado |
@@ -62,7 +70,9 @@ Después: Administración > Integración > "Enviar siguientes facturas".
 | Base: acceso, roles, reservas, concurrencia, seguridad y exportación | `pruebas/001-pruebas base.py` | 109 de 109 (`003-salida pruebas base.txt`) |
 | Adaptaciones: vistas, facturas, informes, triggers, paneles e integración | `pruebas/002-pruebas adaptaciones.py` | 46 de 46 (`004-salida pruebas adaptaciones.txt`) |
 
-La integración se prueba contra una copia real de darkorange.
+La integración se prueba contra una copia real de darkorange. El script de MySQL se ejecutó en
+MySQL 8.0: emite las facturas con numeración correlativa, rechaza un check-out no permitido y unas
+fechas al revés, y se puede volver a ejecutar sin errores.
 
 ## 5. Incidencias observadas
 
@@ -81,4 +91,5 @@ La integración se prueba contra una copia real de darkorange.
 - Facturación simplificada: sin facturas rectificativas ni envío a la Agencia Tributaria.
 - La integración va en un solo sentido, de 25 en 25. Si se pulsa a la vez desde dos sesiones podría duplicar envíos.
 - Si se reinicia la base de datos de darkorange, los identificadores guardados dejan de ser válidos.
+- Los procedimientos de MySQL son una demostración aparte: la aplicación sigue usando SQLite.
 - SQLite admite un solo escritor a la vez; sin HTTPS ni recuperación de contraseña.

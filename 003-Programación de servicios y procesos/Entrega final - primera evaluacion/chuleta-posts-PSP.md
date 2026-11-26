@@ -70,9 +70,9 @@ No es ocho veces más rápido porque mi equipo tiene cuatro núcleos físicos. L
 - **Técnica:** un solo hilo · workers que se comunican por mensajes · mismo cálculo con y sin workers · esperar a todos
 - **Cierre:** no siempre compensa repartir · memoria compartida
 
-**Cifras:** 1000 hormigas con carga 5000, un fotograma tarda 55,5 ms sin workers y 22,7 ms con 8 · con carga 0, los workers empeoran (0,06 frente a 0,36 ms).
+**Cifras:** 1000 hormigas con carga 5000, en tu navegador: **de 7 a 18 FPS** con 8 workers · el cálculo baja de 139 a 49 ms · con carga 0, los workers empeoran (medido aparte con Node: 0,06 frente a 0,36 ms).
 **Limitación:** el dibujo sigue en el hilo principal. **Mejora:** memoria compartida para no copiar datos.
-**Antes de grabar:** apunta tus FPS; si los mides, puedes ponerlos en el texto.
+**Para grabar:** pon 1000 hormigas y carga 5000, como en tu medición.
 
 ## Ejemplo (5 párrafos)
 Todos hemos visto una página que se queda "pensando": pulsas un botón y no pasa nada. Cuando estás aprendiendo, cuesta entender por qué ocurre.
@@ -81,7 +81,7 @@ Para verlo, hice un hormiguero. Cada hormiga calcula su camino antes de dar un p
 
 El navegador usa un mismo hilo para calcular y dibujar. Los workers son hilos aparte que no comparten variables y hablan por mensajes. Cada uno lleva su grupo de hormigas y la página espera a que terminen todos. Usé el mismo cálculo con y sin workers para que la comparación fuera justa.
 
-Con 1000 hormigas y mucha carga, un fotograma tardaba 55 ms sin workers y 23 ms con ocho. Con poca carga pasó lo contrario, porque copiar datos también cuesta.
+En mi navegador, con 1000 hormigas y mucha carga, la animación pasó de 7 fotogramas por segundo sin workers a casi 18 con ocho. Con poca carga pasó lo contrario, porque copiar datos también cuesta.
 
 Aprendí que repartir no siempre compensa. Me gustaría probar memoria compartida para evitar las copias. ¡Gracias por leer!
 

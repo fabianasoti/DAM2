@@ -6,7 +6,7 @@ Estructura: `NN-proyecto/proyecto/` (lo que va al generador) y `NN-proyecto/prep
 | # | Carpeta | Concepto | Peso | Construido y probado | Falta (tú) |
 |---|---|---|---|---|---|
 | 01 | `01-procesador-fotos` | Workers con cola, C++/OpenMP | 2,0 MB (21 fotos) | Código tuyo copiado; C++ medido por mí | Repaso del apunte; fallos reales que recuerdes; probar en navegador |
-| 02 | `02-hormiguero` | Workers, concurrencia, FPS | 40 KB | Sí (cálculo medido en Node; página con navegador simulado) | Pulsar "Medir" en el navegador y anotar FPS; repaso |
+| 02 | `02-hormiguero` | Workers, concurrencia, FPS | 40 KB | Sí (cálculo medido en Node; página con navegador simulado) | FPS medidos (7,1 a 17,7); repaso |
 | 03 | `03-reparto-calculo` | Computación distribuida, `flock` | 156 KB | Sí (16 esclavos, paquete perdido, entradas inválidas, velocidad) | Probar con varias ventanas; anotar tiempos; repaso |
 | 04 | `04-chat-ia-local` | WebSocket, IAs, claves | 44 KB | Sí: 15 pruebas con IA simulada y Ollama falso, y **prueba con Ollama real** (`gemma3:4b`, respuestas de 2 a 9,5 s) | Verlo en un navegador; repaso. Ojo: tu `pasarela.py` usa el puerto 8765 como el chat (ver abajo) |
 | 05 | `05-turnos-tcp` (opcional) | Sockets TCP, hilos, candado | 16 KB | Sí (21 comprobaciones, 300 clientes) | Decidir si lo incluyes; repaso |

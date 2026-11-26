@@ -65,9 +65,9 @@ Supuesto empresarial: el Hotel Cardo Marino (ficticio, en Valencia) necesita ges
 ### RA 4 - Criterio g
 **Pregunta / criterio:** g) Se han adaptado procedimientos almacenados de servidor.
 
-**Respuesta:** Mi base de datos es SQLite, que no tiene procedimientos almacenados. La lógica que se ejecuta dentro de la base de datos la escribí con triggers: crear la factura al hacer el check-out, impedir que una factura se modifique o se borre, auditar los cambios de precio y evitar reservas solapadas.
+**Respuesta:** Adapté la facturación a MySQL con tres procedimientos almacenados: hacer el check-out y emitir la factura en una transacción, resumir lo facturado en un mes y buscar habitaciones libres. La aplicación usa SQLite, que no tiene procedimientos, y allí la lógica de servidor la escribí con triggers.
 
-**Evidencia:** `2.-Proyecto final de unidad/005-procedimientos de servidor/data/001-schema.sql`
+**Evidencia:** `2.-Proyecto final de unidad/005-procedimientos de servidor/data/004-procedimientos mysql.sql` y `2.-Proyecto final de unidad/005-procedimientos de servidor/data/001-schema.sql`
 
 ---
 
