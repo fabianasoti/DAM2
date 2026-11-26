@@ -10,6 +10,7 @@
 | Decisión | Alternativa descartada | Por qué |
 |---|---|---|
 | Cola en JSON con `flock` | Base de datos | Es lo visto en clase y suficiente para un aula. |
+| Escena con fichas que se mueven y mesas por esclavo | Tablero de cuadrados | Se ve quién tiene cada paquete y qué pasa si alguien desaparece. |
 | Cola en carpeta temporal | Carpeta del proyecto | No hace falta cambiar permisos. |
 | Importes en céntimos enteros | Euros con decimales | Sumas exactas y comparación exacta. |
 | Paquete perdido a los 30 s | Esperar indefinidamente | Un esclavo caído no bloquea el trabajo. |
@@ -31,15 +32,15 @@ Los esclavos son procesos Node que usan el mismo `trabajador.js`; no son navegad
 - `node pruebas.js concurrencia` (`salida-concurrencia.txt`): 16 esclavos, 480 paquetes, 480 distintos, coincide.
 - `node pruebas.js negativas` (`salida-negativas.txt`): entradas inválidas rechazadas, límites aplicados, reinicio.
 - `node pruebas.js perdido` (`salida-perdido.txt`): paquete recuperado a los 31 s; entrega tardía rechazada.
-- `node prueba-pagina.js` (`salida-pagina.txt`): página maestro y esclavo con navegador simulado.
+- `node prueba-pagina.js` (`salida-pagina.txt`): 19 comprobaciones de la escena y del esclavo con navegador simulado, incluido un esclavo que no entrega (mesa en rojo y reasignación).
 - A través de Apache: `preparar.php`, `estado.php` y `reiniciar.php` responden.
-- No probado: varios ordenadores reales ni navegador real.
+- No probado: varios ordenadores reales ni navegador real (la animación y los colores no los he visto).
 
 ## Fallos reales al construir y su corrección
 Ninguno detectado en las pruebas.
 
 ## Limitaciones
-Un solo servidor; sin autenticación; cola en archivo (no escala); con 4 núcleos el beneficio se queda en unas 2,4 veces; la medición usa procesos Node, no navegadores.
+Un solo servidor; sin autenticación; cola en archivo (no escala); con 4 núcleos el beneficio se queda en unas 2,4 veces; la medición usa procesos Node, no navegadores; el indicador de candado es ilustrativo y el aviso de "no responde" a los 8 s puede saltar en un equipo muy lento.
 
 ## Siguiente mejora
 Base de datos para la cola y esclavos autenticados.

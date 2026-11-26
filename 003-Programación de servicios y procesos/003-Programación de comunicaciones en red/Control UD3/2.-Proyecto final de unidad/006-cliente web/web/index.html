@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat de sala</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+
+  <body>
+
+    <main>
+
+      <header>
+        <h1>Chat de sala</h1>
+        <p>
+          <span id="estado" class="desconectado">Desconectado</span>
+          · Tu apodo: <strong id="apodo">-</strong>
+        </p>
+      </header>
+
+      <!-- Aquí aparecen los mensajes -->
+      <section id="mensajes"></section>
+
+      <!-- Escribir un mensaje -->
+      <form id="formulario" autocomplete="off">
+        <input type="text" id="texto" maxlength="200"
+               placeholder="Escribe un mensaje o un comando (/ayuda)">
+        <button type="submit" id="enviar">Enviar</button>
+      </form>
+
+      <div id="botones">
+        <button id="usuarios" class="secundario">Ver usuarios</button>
+        <button id="reconectar" class="secundario" hidden>Reconectar</button>
+      </div>
+
+      <!-- Comandos del chat (siempre visibles) -->
+      <p id="ayuda">
+        Comandos:
+        <code>/nick nombre</code> cambia tu apodo ·
+        <code>/usuarios</code> quién hay conectado ·
+        <code>/ayuda</code> esta ayuda ·
+        <code>/salir</code> salir del chat
+      </p>
+
+    </main>
+
+    <script src="js/chat.js"></script>
+  </body>
+</html>

@@ -19,14 +19,15 @@
 
 ## Mediciones (reales)
 Con IA simulada (cada respuesta tarda 1 s): 8 preguntas entre 2 IAs en 4,0 s (4 y 4). Con una IA sería ~8 s (estimado, 8 × 1 s). Archivo: `pruebas/salida-pruebas.txt`.
-**Pendiente (lo mides tú):** segundos por respuesta con Ollama real y `gemma3:4b` (los muestra cada burbuja): ______.
+**Con IA real (medido por mí):** Con Ollama real y `gemma3:4b` (equipo sin GPU dedicada): 9,5 s la primera respuesta (puede incluir la carga del modelo), 4,3 s la segunda y 2,0 s la tercera, con preguntas cortas. Archivo: `pruebas/salida-ollama-real.txt`. Los tiempos varían con la pregunta y con el equipo; no es una medición estadística (3 preguntas).
 
 ## Pruebas ejecutadas
 - `py_compile` de `servidor.py` e `ia.py` y `node --check` de `chat.js`.
 - `probar_chat.py`: 15 pruebas con servidor e IAs reales (`salida-pruebas.txt` con websockets 17.4 y `salida-pruebas-websockets-10.4.txt` con 10.4): todas correctas.
 - IA real contra un **Ollama falso** (servidor HTTP de prueba) y con Ollama apagado.
 - `prueba_pagina.js`: página con navegador simulado contra el servidor real.
-- **No probado:** Ollama real, navegador real, varios ordenadores, Ollama dentro de Windows frente a WSL.
+- `salida-ollama-real.txt`: servidor + IA real + Ollama real (3 preguntas, respuestas coherentes).
+- **No probado:** navegador real, varios ordenadores, Ollama en Windows.
 
 ## Fallos reales al construir y su corrección
 Ninguno en el proyecto. En mi script de pruebas hubo dos errores míos, ya corregidos: terminaba también el proceso del servidor, y leía avisos de estado antiguos antes de que se conectara la segunda IA (el reparto parecía fallar y era la prueba).

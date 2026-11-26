@@ -9,8 +9,8 @@ Objetivo: de 4 a 6 párrafos, estilo post. Redáctalo tú. Cuando me pases tu bo
 
 ## Párrafos 2 y 3: Para qué sirve (competencia 6)
 **Debe contener:** a quién ayuda, la mejora concreta y una medida verificable; función frente a beneficio; límites.
-**Datos reales:** ingresos por tienda y producto más vendido; tablero en directo; 74 s con 1 esclavo frente a 31 s con 8; comprobación de la suma.
-**EJEMPLO PARA ADAPTAR:** "Con un tablero de colores se ve cuántos paquetes quedan..."
+**Datos reales:** ingresos por tienda y producto más vendido; escena en directo (fichas y mesas), ejemplo de los exámenes; 74 s con 1 esclavo frente a 31 s con 8; comprobación de la suma.
+**EJEMPLO PARA ADAPTAR:** "Es como repartir exámenes: se ve cada paquete salir del montón y llegar a una mesa..."
 
 ## Párrafos 4 y 5: Cuestiones técnicas (competencias 1, 3, 4, 5; 2 si procede)
 **Debe contener:** dos decisiones con alternativa, ventaja y coste; qué verificaste y qué riesgo queda; dónde se ejecuta.

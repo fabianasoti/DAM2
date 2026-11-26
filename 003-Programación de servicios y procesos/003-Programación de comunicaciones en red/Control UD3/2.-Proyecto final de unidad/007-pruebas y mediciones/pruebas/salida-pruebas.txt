@@ -1,0 +1,46 @@
+Pruebas del chat de sala
+Equipo: 8 hilos de CPU, Python 3.12.3, Linux
+Las pruebas se hacen en el mismo equipo (localhost), no en una red real.
+
+1. Funcionamiento del chat (servidor TCP)
+  OK   el primer cliente recibe su apodo: @apodo invitado1
+  OK   un mensaje llega a todos los clientes
+  OK   /nick con un apodo válido
+  OK   apodo repetido rechazado (sin distinguir mayúsculas)
+  OK   apodo con espacios rechazado
+  OK   apodo de más de 15 caracteres rechazado
+  OK   /usuarios muestra a los conectados: * Conectados: invitado1, ana, invitado3
+  OK   comando desconocido avisado
+  OK   mensaje de más de 200 caracteres rechazado
+  OK   si un cliente se cae, el servidor sigue funcionando
+  OK   /salir avisa a los demás: * ana ha salido
+  OK   se crea el archivo chat.log
+  OK   chat.log recoge conexiones y cambios de apodo
+  OK   chat.log no guarda el texto de los mensajes (privacidad)
+
+2. Límite de clientes
+  OK   con 3 plazas ocupadas, el cuarto es rechazado: * El servidor está lleno, inténtalo más tarde.
+  OK   al salir uno, vuelve a haber plaza
+
+3. Pasarela WebSocket (navegador <-> servidor)
+  OK   el navegador recibe su apodo a través de la pasarela
+  OK   un comando enviado desde el navegador llega al servidor
+  OK   un mensaje de un cliente TCP llega al navegador
+  OK   un mensaje del navegador llega a un cliente TCP
+  OK   /salir cierra la conexión WebSocket
+  OK   sin servidor de chat, el navegador recibe un aviso claro
+
+4. Carga: N clientes a la vez, cada uno envía 1 mensaje y todos reciben los N mensajes
+
+| Clientes | Mensajes entregados | Conectar (s) | Repartir (s) | Resultado |
+|---|---|---|---|---|
+| 10 | 100 | 0.00 | 0.05 | correcto |
+  OK   10 clientes: todos reciben los 10 mensajes
+| 50 | 2500 | 0.00 | 0.22 | correcto |
+  OK   50 clientes: todos reciben los 50 mensajes
+| 100 | 10000 | 0.01 | 0.62 | correcto |
+  OK   100 clientes: todos reciben los 100 mensajes
+| 200 | 40000 | 1.02 | 1.36 | correcto |
+  OK   200 clientes: todos reciben los 200 mensajes
+
+RESULTADO: 26 de 26 comprobaciones correctas

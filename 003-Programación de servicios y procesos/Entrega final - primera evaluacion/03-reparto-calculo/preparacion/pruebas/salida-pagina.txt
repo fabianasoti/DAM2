@@ -1,6 +1,21 @@
-maestro tras preparar: 2400 ventas en 24 paquetes de 100 | total: 24
-esclavo: terminados = 24 | mensaje: Todos los paquetes están terminados
-maestro: terminados = 24 de 24
-ingresos:  | Centro: 16.418,90 € |  | Norte: 16.045,20 € |  | Mercado: 15.808,15 € |  | Universidad: 15.167,60 € |  | Puerto: 14.936,25 € | 
-Más vendido: Calculadora (1195 unidades)
-Comprobado: la suma de los esclavos (78.376,10 €) coincide con la suma directa del archivo.
+OK    al preparar, las 24 fichas están en el montón de pendientes -> 24
+OK    sin esclavos se muestra la indicación
+OK    dos esclavos cogen paquete: aparecen dos mesas con su ficha -> 2 mesas
+OK    cada mesa lleva el código de su esclavo
+OK    quedan 22 fichas pendientes
+OK    el candado se encendió al coger paquetes -> 1 veces
+OK    al entregar, la ficha pasa a terminados
+OK    aparecen las barras de ingresos por tienda -> 5 tiendas
+OK    la mesa del que entregó queda sin paquete
+OK    a los 8 s sin entregar, su mesa se pone en rojo con cuenta atrás -> No responde. Su paquete se podrá dar a otro en 22 s
+OK    pasado el tiempo máximo avisa de que se puede reasignar
+OK    la ventana de esclavo dice su código -> Esta ventana es: Esclavo 634q
+OK    todas las fichas acaban en terminados -> 24
+OK    el paquete perdido se reasignó: ya no hay mesas en rojo ni fichas en marcha
+OK    la suma de los esclavos coincide con la del archivo -> Comprobado: la suma de los esclavos (78.376,10 €) coincide con la suma directa del archivo.
+OK    muestra el producto más vendido -> Más vendido: Calculadora (1195 unidades)
+OK    al reiniciar se vacía la escena
+OK    se puede preparar otro trabajo después
+OK    ningún error de JavaScript -> 
+
+Resumen: 19 correctas, 0 con fallo

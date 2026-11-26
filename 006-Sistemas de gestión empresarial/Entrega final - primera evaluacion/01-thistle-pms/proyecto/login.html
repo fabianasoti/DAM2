@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thistle PMS | Iniciar sesión</title>
+  <link rel="shortcut icon" href="img/fs-favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="login-pagina">
+  <main class="login">
+    <article class="login-marca">
+      <img src="img/fs-monograma-blanco.svg" alt="">
+      <h1>Thistle PMS</h1>
+      <p>Gestión hotelera: reservas, habitaciones y mantenimiento.</p>
+    </article>
+    <article class="login-tarjeta">
+      <h2>Iniciar sesión</h2>
+      <p>Introduce tus credenciales de personal.</p>
+      <form class="form" id="formulario" novalidate>
+        <label>
+          <span>Email</span>
+          <input type="email" id="email" required autocomplete="username" placeholder="nombre@hotel.example">
+        </label>
+        <label>
+          <span>Contraseña</span>
+          <input type="password" id="password" required autocomplete="current-password" placeholder="••••••••">
+        </label>
+        <p class="error-form" id="mensaje" role="alert"></p>
+        <button class="btn" type="submit" id="entrar">Entrar</button>
+      </form>
+    </article>
+  </main>
+  <script src="js/login.js"></script>
+</body>
+</html>

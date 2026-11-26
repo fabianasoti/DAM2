@@ -13,6 +13,7 @@ $pendientes = 0;
 $asignados = 0;
 $terminados = 0;
 $tablero = [];        // una letra por paquete: p, a o t
+$enMarcha = [];       // qué paquete tiene cada esclavo ahora y desde hace cuánto
 $porEsclavo = [];     // paquetes terminados por cada esclavo
 $ingresos = [];       // suma de los ingresos de cada tienda (céntimos)
 $unidades = [];       // suma de unidades de cada producto
@@ -26,6 +27,11 @@ foreach ($cola["paquetes"] as $paquete) {
     } elseif ($paquete["estado"] === "asignado") {
         $asignados++;
         $tablero[] = "a";
+        $enMarcha[] = [
+            "id" => $paquete["id"],
+            "esclavo" => $paquete["esclavo"],
+            "segundos" => time() - $paquete["asignado_en"]
+        ];
     } else {
         $terminados++;
         $tablero[] = "t";
@@ -60,6 +66,9 @@ responder([
     "asignados" => $asignados,
     "terminados" => $terminados,
     "tablero" => $tablero,
+    "en_marcha" => $enMarcha,
+    "preparado" => $cola["inicio"],
+    "tiempo_maximo" => TIEMPO_MAXIMO,
     "por_esclavo" => $porEsclavo,
     "ingresos" => $ingresos,
     "unidades" => $unidades,

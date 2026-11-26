@@ -87,26 +87,121 @@ input {
   color: #6b4fa0;
 }
 
-/* Tablero de paquetes */
-#tablero {
+/* La escena: pendientes, mesas y terminados */
+.escena {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 12px;
+  margin: 12px 0 20px;
+}
+
+.zona {
+  background: #faf8fd;
+  border: 1px solid #e3dcf0;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.zona h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.monton {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  margin: 12px 0;
+  gap: 5px;
+  align-content: flex-start;
+  min-height: 90px;
 }
 
-.paquete {
+/* Cada paquete es una ficha numerada */
+.ficha {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 26px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+}
+
+.ficha.p { background: #e3dcf0; color: #5a4a80; }
+.ficha.a { background: #f0c987; color: #5c4008; }
+.ficha.t { background: #8fcf9f; color: #14461f; }
+
+.mesa {
+  background: white;
+  border: 2px solid #e3dcf0;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.hueco {
+  min-height: 30px;
+  padding-top: 4px;
+}
+
+.mesa small { display: block; font-size: 12px; }
+
+/* Un esclavo que no responde */
+.mesa.perdida {
+  border-color: #d9534f;
+  background: #fdf0ef;
+}
+
+.mesa.perdida .ficha { background: #e8807d; color: white; }
+
+.ayuda { font-size: 12px; color: #7a6f90; }
+
+/* Candado de la cola */
+.candado {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
+  border: 2px solid #e3dcf0;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  transition: background 0.15s;
 }
 
-.paquete.p { background: #e3dcf0; }
-.paquete.a { background: #f0c987; }
-.paquete.t { background: #8fcf9f; }
+.candado.cerrado {
+  background: #9b86c9;
+  border-color: #9b86c9;
+  color: white;
+}
 
-.leyenda { font-size: 13px; }
+/* Barras de ingresos */
+.fila-tienda {
+  display: grid;
+  grid-template-columns: 110px 1fr 110px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.barra {
+  height: 16px;
+  background: #ece6f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.barra div {
+  height: 100%;
+  width: 0;
+  background: #9b86c9;
+  transition: width 0.5s;
+}
+
+.importe { text-align: right; }
+
+@media (max-width: 700px) {
+  .escena { grid-template-columns: 1fr; }
+}
 
 progress {
   width: 100%;

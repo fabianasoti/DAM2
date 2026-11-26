@@ -3,6 +3,11 @@
 // Identificador único de este navegador cuando actúa como esclavo
 const esclavoId = "esclavo-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 8)
 
+// Código corto (4 últimos caracteres) para reconocer cada ventana en la pantalla del maestro
+function codigo(id) {
+  return "Esclavo " + id.slice(-4)
+}
+
 let temporizador = null   // actualiza el panel del maestro
 let trabajador = null     // el worker del esclavo
 let terminados = 0
@@ -17,14 +22,15 @@ document.querySelector("#botonMaestro").onclick = function () {
   panelEsclavo.classList.add("oculto")
   pararEsclavo()
   actualizarMaestro()
-  temporizador = setInterval(actualizarMaestro, 1000)
+  clearInterval(temporizador)
+  temporizador = setInterval(actualizarMaestro, 500)
 }
 
 document.querySelector("#botonEsclavo").onclick = function () {
   panelEsclavo.classList.remove("oculto")
   panelMaestro.classList.add("oculto")
   clearInterval(temporizador)
-  document.querySelector("#identidad").textContent = "Identificador: " + esclavoId
+  document.querySelector("#identidad").textContent = "Esta ventana es: " + codigo(esclavoId)
   trabajando = true
   trabajador = new Worker("js/trabajador.js")
   trabajador.onmessage = alRecibirDelWorker
@@ -59,6 +65,129 @@ document.querySelector("#reiniciar").onclick = function () {
   })
 }
 
+// ---------- La escena: cada paquete es una ficha que se mueve de zona ----------
+let fichas = {}          // id del paquete -> su ficha
+let mesas = {}           // id del esclavo -> su mesa
+let trabajoActual = ""   // para saber si el maestro ha preparado un trabajo nuevo
+let asignadas = {}       // paquetes que ya estaban en una mesa (para encender el candado)
+
+// A partir de estos segundos sin entregar, se avisa de que el esclavo no responde
+const AVISO_LENTO = 8
+
+// Mueve una ficha a otra zona deslizándola: se mide dónde estaba, se cambia de sitio
+// y se anima desde la posición antigua hasta la nueva
+function mover(ficha, destino) {
+  if (ficha.parentNode === destino) return
+  const antes = ficha.getBoundingClientRect()
+  const estabaEnPantalla = ficha.parentNode !== null
+  destino.appendChild(ficha)
+  if (!estabaEnPantalla) return
+
+  const despues = ficha.getBoundingClientRect()
+  ficha.style.transition = "none"
+  ficha.style.transform = "translate(" + (antes.left - despues.left) + "px, " + (antes.top - despues.top) + "px)"
+  ficha.getBoundingClientRect()    // obliga al navegador a colocarla antes de animar
+  ficha.style.transition = "transform 0.6s"
+  ficha.style.transform = ""
+}
+
+function limpiarEscena() {
+  fichas = {}
+  mesas = {}
+  asignadas = {}
+  document.querySelector("#monton").innerHTML = ""
+  document.querySelector("#hechos").innerHTML = ""
+  document.querySelector("#mesas").innerHTML = ""
+}
+
+// La mesa de un esclavo: su nombre, el paquete que tiene y cuántos ha hecho
+function buscarMesa(id) {
+  if (!mesas[id]) {
+    const caja = document.createElement("div")
+    caja.className = "mesa"
+    const nombre = document.createElement("strong")
+    nombre.textContent = codigo(id)
+    const hueco = document.createElement("div")
+    hueco.className = "hueco"
+    const nota = document.createElement("small")
+    caja.append(nombre, hueco, nota)
+    document.querySelector("#mesas").appendChild(caja)
+    mesas[id] = { caja: caja, hueco: hueco, nota: nota }
+  }
+  return mesas[id]
+}
+
+function pintarEscena(datos) {
+  const trabajo = datos.preparado + "-" + datos.total
+  if (trabajo !== trabajoActual) {
+    limpiarEscena()
+    trabajoActual = trabajo
+  }
+
+  // Qué paquetes están en alguna mesa ahora mismo
+  const enMesa = {}
+  datos.en_marcha.forEach(function (p) { enMesa[p.id] = p })
+
+  // Cada paquete va a su zona
+  for (let i = 0; i < datos.tablero.length; i++) {
+    const id = i + 1
+    if (!fichas[id]) {
+      fichas[id] = document.createElement("span")
+      fichas[id].textContent = id
+    }
+    const ficha = fichas[id]
+    const estado = datos.tablero[i]
+    ficha.className = "ficha " + estado
+
+    if (estado === "p") {
+      mover(ficha, document.querySelector("#monton"))
+    } else if (estado === "t") {
+      mover(ficha, document.querySelector("#hechos"))
+    } else {
+      mover(ficha, buscarMesa(enMesa[id].esclavo).hueco)
+    }
+  }
+
+  // Candado: parpadea cuando algún esclavo acaba de coger un paquete nuevo
+  const nuevas = datos.en_marcha.filter(function (p) { return asignadas[p.id] !== p.esclavo })
+  asignadas = {}
+  datos.en_marcha.forEach(function (p) { asignadas[p.id] = p.esclavo })
+  if (nuevas.length > 0) {
+    encenderCandado()
+  }
+
+  // Mesas: crea las de quienes han terminado algo y escribe la nota de cada una
+  Object.keys(datos.por_esclavo).forEach(buscarMesa)
+  Object.keys(mesas).forEach(function (id) {
+    const mesa = mesas[id]
+    const suyo = datos.en_marcha.find(function (p) { return p.esclavo === id })
+    const hechos = datos.por_esclavo[id] || 0
+    mesa.caja.classList.remove("perdida")
+
+    if (suyo && suyo.segundos >= AVISO_LENTO) {
+      // Lleva demasiado: puede que se haya cerrado la ventana
+      mesa.caja.classList.add("perdida")
+      const faltan = datos.tiempo_maximo - suyo.segundos
+      mesa.nota.textContent = faltan > 0
+        ? "No responde. Su paquete se podrá dar a otro en " + faltan + " s"
+        : "Paquete perdido: se lo quedará el próximo esclavo que pida trabajo"
+    } else if (suyo) {
+      mesa.nota.textContent = "Calculando. Terminados: " + hechos
+    } else {
+      mesa.nota.textContent = "Sin paquete. Terminados: " + hechos
+    }
+  })
+  document.querySelector("#sinMesas").classList.toggle("oculto", Object.keys(mesas).length > 0)
+}
+
+let apagarCandado = null
+function encenderCandado() {
+  const candado = document.querySelector("#candado")
+  candado.classList.add("cerrado")
+  clearTimeout(apagarCandado)
+  apagarCandado = setTimeout(function () { candado.classList.remove("cerrado") }, 350)
+}
+
 // Pregunta al servidor cómo va todo y lo pinta
 function actualizarMaestro() {
   fetch("php/estado.php")
@@ -70,34 +199,44 @@ function actualizarMaestro() {
       document.querySelector("#mTerminados").textContent = datos.terminados
       document.querySelector("#mSegundos").textContent = datos.segundos
 
-      // Tablero: un cuadrado por paquete, de un color según su estado
-      let html = ""
-      for (let i = 0; i < datos.tablero.length; i++) {
-        html += '<span class="paquete ' + datos.tablero[i] + '"></span>'
-      }
-      document.querySelector("#tablero").innerHTML = html
-
-      // Quién ha hecho cuánto
-      let esclavos = ""
-      for (const nombre in datos.por_esclavo) {
-        esclavos += "<li>" + nombre + ": " + datos.por_esclavo[nombre] + " paquetes</li>"
-      }
-      document.querySelector("#listaEsclavos").innerHTML = esclavos
-
+      pintarEscena(datos)
       mostrarResultado(datos)
     })
 }
 
-// Resultado: ingresos por tienda y comprobación
+// Resultado: una barra por tienda, que crece según llegan los paquetes
+let barras = {}    // tienda -> sus elementos
+
 function mostrarResultado(datos) {
-  let html = ""
-  const tiendas = Object.keys(datos.ingresos).sort(function (a, b) {
-    return datos.ingresos[b] - datos.ingresos[a]
-  })
-  for (let i = 0; i < tiendas.length; i++) {
-    html += "<li>" + tiendas[i] + ": " + euros(datos.ingresos[tiendas[i]]) + "</li>"
+  const zona = document.querySelector("#ingresos")
+  const tiendas = Object.keys(datos.ingresos).sort()
+  if (tiendas.length === 0) {
+    zona.innerHTML = ""
+    barras = {}
   }
-  document.querySelector("#ingresos").innerHTML = html
+
+  // La barra más larga es la de la tienda que debería llegar más lejos (una parte del total esperado)
+  const referencia = datos.esperado ? datos.esperado.importe / 4 : 1
+
+  tiendas.forEach(function (tienda) {
+    if (!barras[tienda]) {
+      const fila = document.createElement("div")
+      fila.className = "fila-tienda"
+      const nombre = document.createElement("span")
+      nombre.textContent = tienda
+      const barra = document.createElement("div")
+      barra.className = "barra"
+      const relleno = document.createElement("div")
+      barra.appendChild(relleno)
+      const importe = document.createElement("span")
+      importe.className = "importe"
+      fila.append(nombre, barra, importe)
+      zona.appendChild(fila)
+      barras[tienda] = { relleno: relleno, importe: importe }
+    }
+    barras[tienda].relleno.style.width = Math.min(100, datos.ingresos[tienda] / referencia * 100) + "%"
+    barras[tienda].importe.textContent = euros(datos.ingresos[tienda])
+  })
 
   // Producto más vendido
   let mejor = null

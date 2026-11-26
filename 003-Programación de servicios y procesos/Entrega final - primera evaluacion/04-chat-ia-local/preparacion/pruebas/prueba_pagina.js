@@ -1,5 +1,6 @@
 // Prueba de humo de js/chat.js con un navegador simulado (Node 22 trae WebSocket)
-// Antes hay que arrancar el servidor y una IA simulada, desde la carpeta proyecto:
+// Antes hay que arrancar el servidor y una IA simulada, desde la carpeta proyecto
+// (si el puerto 8765 está ocupado: cambia "puerto" en configuracion.json y ejecuta esta prueba con PUERTO=<nuevo>):
 //   python3 servidor.py   y   python3 ia.py --simulada
 const fs = require("fs")
 const vm = require("vm")
@@ -28,8 +29,8 @@ function crear() {
 }
 const contexto = vm.createContext({
   document: { querySelector: elemento, createElement: crear },
-  location: { hostname: "127.0.0.1" },
-  WebSocket, JSON, console
+  location: { hostname: "127.0.0.1", search: process.env.PUERTO ? "?puerto=" + process.env.PUERTO : "" },
+  WebSocket, JSON, console, URLSearchParams
 })
 vm.runInContext(fs.readFileSync(path.join(__dirname, "../../proyecto/js/chat.js"), "utf8"), contexto)
 

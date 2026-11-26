@@ -54,7 +54,8 @@ Datos: solo mensajes en memoria. Validación: nombre de 1 a 20 caracteres, pregu
 - Si una IA se cae con una pregunta pendiente, el usuario recibe aviso.
 - IA real hablando con un **Ollama falso**, y con Ollama apagado, error claro.
 - Página (navegador simulado): entrar, clave mala, pregunta y respuesta.
-- **Sin probar:** Ollama real, navegador real y varios ordenadores. Los segundos de una IA real los verás en cada burbuja.
+- **Con Ollama real** (`gemma3:4b`, equipo sin GPU dedicada): respuestas en 9,5 s (la primera, que puede incluir la carga del modelo), 4,3 s y 2,0 s.
+- **Sin probar:** navegador real y varios ordenadores.
 
 ## 8. Limitaciones y mejora
 Sin cifrado (`wss`); claves compartidas; no hay historial ni cuentas; el reparto no pondera la potencia. Mejora: cifrado, usuarios con cuenta y respuesta que aparece palabra a palabra.
@@ -81,7 +82,7 @@ Sin cifrado (`wss`); claves compartidas; no hay historial ni cuentas; el reparto
 - **Para qué sirve:** chat web, varias IAs, aviso de cuántas hay; las respuestas indican quién y en cuánto tiempo.
 - **Técnica:** WebSocket; servidor que reparte; IAs como programas aparte; `to_thread`; clave por rol.
 - **Verificación:** 15 pruebas; 4 s en vez de ~8 con 2 IAs; caída de una IA; Ollama apagado.
-- **Cierre:** sin cifrado ni historial; mejora: `wss` y cuentas; tu tiempo con Ollama real: [apúntalo].
+- **Cierre:** sin cifrado ni historial; mejora: `wss` y cuentas; respuestas reales de 2 a 9,5 s con `gemma3:4b`.
 
 ## 12. EJEMPLO PARA ADAPTAR (post de 5 párrafos)
 Muchas personas usan asistentes de IA, pero no siempre pueden escribir en ellos lo que quieren: preguntas internas, datos de clientes, apuntes de clase. Enviar todo eso a un servicio externo no siempre es buena idea.
@@ -90,6 +91,6 @@ Para probar otra opción, hice un chat de aula en el que las preguntas las conte
 
 Por dentro, un servidor WebSocket mantiene las conexiones abiertas y reparte cada pregunta a la IA que menos trabajo tiene. Cada IA es un programa aparte que habla con Ollama, así que se pueden añadir más sin tocar el servidor. Las claves se comparan de forma segura, y hay límites de tamaño y de ritmo para que nadie sature el sistema.
 
-Lo comprobé con quince pruebas: claves incorrectas, preguntas vacías o demasiado largas, y el caso en que una IA se cae con una pregunta pendiente, donde el usuario recibe un aviso. Con dos IAs, ocho preguntas de un segundo se contestaron en cuatro segundos en lugar de unos ocho. [Añade el tiempo que midas con Ollama real.]
+Lo comprobé con quince pruebas: claves incorrectas, preguntas vacías o demasiado largas, y el caso en que una IA se cae con una pregunta pendiente, donde el usuario recibe un aviso. Con dos IAs, ocho preguntas de un segundo se contestaron en cuatro segundos en lugar de unos ocho. Con el modelo real de Ollama, las respuestas tardaron entre dos y diez segundos.
 
 Reconozco límites: la conexión no va cifrada y no hay historial ni cuentas, solo una clave compartida. Lo siguiente sería cifrar la conexión y dar cuenta a cada usuario. [Cierra con tu agradecimiento.]

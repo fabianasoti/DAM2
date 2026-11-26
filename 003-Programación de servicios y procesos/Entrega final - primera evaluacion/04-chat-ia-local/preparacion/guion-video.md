@@ -4,7 +4,8 @@
 - Instala `websockets` (te doy el comando cuando lo revisemos) e inicia Ollama con el modelo `gemma3:4b`.
 - Terminal 1: `python3 servidor.py` (en `proyecto/`). Terminal 2: `python3 ia.py`. Si tienes un segundo equipo, otra IA con `python3 ia.py --servidor ws://IP:8765 --nombre ia-2`.
 - Navegador con la URL del chat, dos ventanas (dos usuarios). Clave del aula: la de `configuracion.json`.
-- Ensaya las preguntas antes: la respuesta de Ollama puede tardar varios segundos.
+- Ensaya las preguntas antes: en mi prueba las respuestas tardaron de 2 a 9,5 s (la primera es más lenta). Haz una pregunta de calentamiento antes de grabar.
+- Si `pasarela.py` u otro programa usa el puerto 8765, cambia `puerto` en `configuracion.json` y abre la página con `?puerto=NUEVO`.
 
 ## Guion
 | Tiempo | Qué se ve | Qué digo (ideas, no frases) |

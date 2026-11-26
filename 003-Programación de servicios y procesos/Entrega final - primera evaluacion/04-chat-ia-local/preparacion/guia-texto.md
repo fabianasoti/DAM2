@@ -9,7 +9,7 @@ Objetivo: de 4 a 6 párrafos, estilo post. Redáctalo tú. Cuando me pases tu bo
 
 ## Párrafos 2 y 3: Para qué sirve (competencia 6)
 **Debe contener:** qué hace una persona con él, qué gana, un ejemplo y una medida verificable; límites.
-**Datos reales:** chat web con clave, aviso de cuántas IAs hay, respuesta con nombre de IA y tiempo; 4 s frente a ~8 s con 2 IAs (simuladas); tu tiempo con Ollama real.
+**Datos reales:** chat web con clave, aviso de cuántas IAs hay, respuesta con nombre de IA y tiempo; 4 s frente a ~8 s con 2 IAs (simuladas); respuestas reales de 2 a 9,5 s con Ollama.
 **EJEMPLO PARA ADAPTAR:** "Se entra con una clave, se escribe y la respuesta llega indicando qué IA contestó..."
 
 ## Párrafos 4 y 5: Cuestiones técnicas (competencias 1, 2, 3, 5)

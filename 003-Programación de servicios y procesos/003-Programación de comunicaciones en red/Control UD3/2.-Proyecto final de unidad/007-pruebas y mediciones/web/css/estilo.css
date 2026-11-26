@@ -1,0 +1,181 @@
+/* Estilo sencillo y suave (lila pastel) */
+
+:root{
+  --fondo:#f6f2fc;
+  --tarjeta:#ffffff;
+  --principal:#a48ad9;
+  --principal-oscuro:#8c72c6;
+  --texto:#40384d;
+  --suave:#8f87a0;
+  --borde:#e3daf3;
+  --mio:#e9e1fa;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:25px 15px;
+  font-family:system-ui, Arial, sans-serif;
+  background:var(--fondo);
+  color:var(--texto);
+}
+
+main{
+  max-width:700px;
+  margin:0 auto;
+}
+
+header{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+header h1{
+  margin:0 0 6px 0;
+}
+
+header p{
+  margin:0;
+  color:var(--suave);
+}
+
+/* Estado de la conexión */
+
+#estado{
+  font-weight:600;
+}
+
+#estado.conectado{
+  color:#4e9f6c;
+}
+
+#estado.desconectado{
+  color:#c0576b;
+}
+
+/* Zona de mensajes */
+
+#mensajes{
+  height:420px;
+  overflow-y:auto;
+  padding:15px;
+  background:var(--tarjeta);
+  border-radius:18px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.07);
+}
+
+.mensaje{
+  max-width:80%;
+  margin:0 0 10px 0;
+  padding:8px 12px;
+  border-radius:14px;
+  background:var(--fondo);
+  word-wrap:break-word;
+}
+
+.mensaje.mio{
+  margin-left:auto;
+  background:var(--mio);
+}
+
+.mensaje .autor{
+  font-size:12px;
+  font-weight:600;
+  color:var(--principal-oscuro);
+}
+
+.mensaje .hora{
+  margin-left:6px;
+  font-size:11px;
+  font-weight:400;
+  color:var(--suave);
+}
+
+.sistema{
+  margin:0 0 10px 0;
+  text-align:center;
+  font-size:14px;
+  color:#6f6580;
+}
+
+/* Formulario y botones */
+
+#formulario{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+#texto{
+  flex:1;
+  padding:11px 16px;
+  border:2px solid var(--borde);
+  border-radius:999px;
+  font-size:15px;
+  font-family:inherit;
+  color:var(--texto);
+}
+
+#texto:focus{
+  outline:none;
+  border-color:var(--principal);
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:999px;
+  font-size:15px;
+  font-family:inherit;
+  background:var(--principal);
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{
+  background:var(--principal-oscuro);
+}
+
+button.secundario{
+  background:var(--tarjeta);
+  color:var(--principal-oscuro);
+  border:2px solid var(--borde);
+  font-size:13px;
+  padding:6px 14px;
+}
+
+button.secundario:hover{
+  background:var(--mio);
+}
+
+#botones{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:12px;
+}
+
+[hidden]{
+  display:none !important;
+}
+
+/* Comandos visibles bajo el formulario */
+
+#ayuda{
+  margin:14px 0 0 0;
+  text-align:center;
+  font-size:13px;
+  line-height:1.9;
+  color:var(--suave);
+}
+
+#ayuda code{
+  padding:2px 8px;
+  border-radius:999px;
+  background:var(--mio);
+  color:var(--principal-oscuro);
+  font-size:12px;
+}

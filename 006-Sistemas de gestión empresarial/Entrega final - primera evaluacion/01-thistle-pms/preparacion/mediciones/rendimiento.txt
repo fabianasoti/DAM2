@@ -1,0 +1,32 @@
+# 2026-11-25 16:18
+# equipo: 11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz
+# PHP 8.3.6, SQLite 3.45.1, servidor integrado de PHP (un solo equipo, sin caché)
+primer login (incluye crear la base de datos con datos de ejemplo): 376 ms
+
+30 repeticiones por petición (milisegundos)
+
+| Petición | Mediana | Mínimo | Máximo | Tamaño |
+|---|---|---|---|---|
+| disponibles (50 habitaciones, precio por noche y temporada) | 1.2 | 1.2 | 1.5 | 1 KB |
+| lista de reservas (300 filas, sin filtros) | 1.2 | 1.1 | 1.6 | 74 KB |
+| lista de reservas filtrada por estado | 0.7 | 0.6 | 1.0 | 6 KB |
+| tablero (habitaciones, llegadas, salidas y calendario de 14 días) | 2.6 | 2.5 | 3.2 | 28 KB |
+| dashboard (12 meses, canales, tipos y próximos 14 días) | 56.2 | 54.9 | 62.1 | 3 KB |
+| lista de clientes (400 filas) | 1.3 | 1.1 | 1.4 | 67 KB |
+
+## Datos
+- habitaciones: 50 filas
+- clientes: 400 filas
+- reservas: 4948 filas
+- mantenimiento: 40 filas
+- tamaño de la base de datos: 872 KB
+
+## EXPLAIN QUERY PLAN: ¿hay solape? (se ejecuta antes de cada reserva)
+   SEARCH reservas USING INDEX idx_reservas_habitacion (habitacion_id=? AND fecha_entrada<?)
+
+## EXPLAIN QUERY PLAN: llegadas de hoy
+   SEARCH reservas USING INDEX idx_reservas_entrada (fecha_entrada=?)
+
+## Efecto del índice idx_reservas_habitacion (50 comprobaciones de solape seguidas, mejor de 5)
+- con índice: 0.48 ms
+- sin índice: 35.13 ms

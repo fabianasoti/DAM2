@@ -8,7 +8,7 @@ Estructura: `NN-proyecto/proyecto/` (lo que va al generador) y `NN-proyecto/prep
 | 01 | `01-procesador-fotos` | Workers con cola, C++/OpenMP | 2,0 MB (21 fotos) | Código tuyo copiado; C++ medido por mí | Repaso del apunte; fallos reales que recuerdes; probar en navegador |
 | 02 | `02-hormiguero` | Workers, concurrencia, FPS | 40 KB | Sí (cálculo medido en Node; página con navegador simulado) | Pulsar "Medir" en el navegador y anotar FPS; repaso |
 | 03 | `03-reparto-calculo` | Computación distribuida, `flock` | 156 KB | Sí (16 esclavos, paquete perdido, entradas inválidas, velocidad) | Probar con varias ventanas; anotar tiempos; repaso |
-| 04 | `04-chat-ia-local` | WebSocket, IAs, claves | 44 KB | Sí, con IA simulada y Ollama falso (15 pruebas) | Instalar `websockets`, arrancar Ollama, medir una respuesta real; repaso |
+| 04 | `04-chat-ia-local` | WebSocket, IAs, claves | 44 KB | Sí: 15 pruebas con IA simulada y Ollama falso, y **prueba con Ollama real** (`gemma3:4b`, respuestas de 2 a 9,5 s) | Verlo en un navegador; repaso. Ojo: tu `pasarela.py` usa el puerto 8765 como el chat (ver abajo) |
 | 05 | `05-turnos-tcp` (opcional) | Sockets TCP, hilos, candado | 16 KB | Sí (21 comprobaciones, 300 clientes) | Decidir si lo incluyes; repaso |
 
 ## Orden para grabar (propuesto)
@@ -35,14 +35,14 @@ g++ -O2 -fopenmp cpp/filtro.cpp -o ~/filtro $(pkg-config --cflags --libs opencv4
 2. 01: ¿dejamos las 21 fotos (1,9 MB, ilustraciones) o reducimos a unas pocas para que sea más ligero?
 3. Hipótesis del problema y del usuario de cada proyecto: confirma o cambia las de cada `ficha.md`.
 4. Competencia 2 (orquestación de IA): cómo vas a contar tu uso del asistente.
-5. 04: dónde está Ollama (Windows o WSL) y si `gemma3:4b` está descargado.
+5. 04: Ollama ya está instalado en este Linux con `gemma3:4b`. Si el puerto 8765 está ocupado (por ejemplo, por `pasarela.py`), cambia `puerto` en `configuracion.json` y abre la página con `?puerto=NUEVO`.
 6. Los números que aparecen en los ejemplos de post vienen de mis mediciones; los del navegador faltan hasta que midas.
 
 ## Pendiente de verificar por ti (no he podido: no hay navegador en este equipo)
 - Aspecto y funcionamiento reales de 01, 02, 03 y 04 en un navegador.
 - FPS del hormiguero y tabla "Medir" de 01 y 02.
 - Varias ventanas o equipos reales en el 03; varios equipos en el 04 y el 05.
-- Ollama real en el 04.
+- Ollama real en el 04: ya probado por mí desde la línea de comandos (no en el navegador).
 
 ## Lista de comprobación (la haces tú)
 - [ ] Sesión de supervisión iniciada (condición imprescindible).

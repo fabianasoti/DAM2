@@ -1,0 +1,66 @@
+# 2026-11-25 16:19
+# comando: NODE_PATH=<node_modules con jsdom> SQLITE_EXT=<sqlite3.so> node pruebas_interfaz.js   (navegador simulado jsdom 31 + servidor PHP real; NO es un navegador real)
+OK    contraseña incorrecta: se muestra el error en pantalla -> Credenciales incorrectas
+OK    campos vacíos: se pide email y contraseña
+OK    admin: ve solo sus módulos -> Recepción, Operaciones, Informes, Administración
+OK    admin: botón 'Nueva reserva' solo para recepción
+OK    admin: vista #recepcion/tablero se dibuja sin errores -> 50 habitaciones
+OK    admin: vista #recepcion/reservas se dibuja sin errores -> 300 reservas
+OK    admin: vista #recepcion/clientes se dibuja sin errores -> 400 registros
+OK    admin: vista #operaciones/averias se dibuja sin errores -> 5 registros
+OK    admin: vista #operaciones/limpieza se dibuja sin errores -> 5 registros
+OK    admin: vista #informes/dashboard se dibuja sin errores -> 5 gráficas
+OK    admin: vista #informes/exportar se dibuja sin errores -> 0 gráficas
+OK    admin: vista #administracion/usuarios se dibuja sin errores -> 6 registros
+OK    admin: vista #administracion/habitaciones se dibuja sin errores -> 50 registros
+OK    admin: vista #administracion/temporadas se dibuja sin errores -> 21 registros
+OK    admin: vista #administracion/auditoria se dibuja sin errores -> 2 registros
+OK    recepcion: ve solo sus módulos -> Recepción, Operaciones, Informes
+OK    recepcion: botón 'Nueva reserva' solo para recepción
+OK    recepcion: vista #recepcion/tablero se dibuja sin errores -> 50 habitaciones
+OK    recepcion: vista #recepcion/reservas se dibuja sin errores -> 300 reservas
+OK    recepcion: vista #recepcion/clientes se dibuja sin errores -> 400 registros
+OK    recepcion: vista #operaciones/averias se dibuja sin errores -> 5 registros
+OK    recepcion: vista #operaciones/limpieza se dibuja sin errores -> 5 registros
+OK    recepcion: vista #informes/dashboard se dibuja sin errores -> 5 gráficas
+OK    recepcion: vista #informes/exportar se dibuja sin errores -> 0 gráficas
+OK    mantenimiento: ve solo sus módulos -> Operaciones
+OK    mantenimiento: botón 'Nueva reserva' solo para recepción
+OK    mantenimiento: vista #operaciones/estado se dibuja sin errores -> 50 habitaciones
+OK    mantenimiento: vista #operaciones/averias se dibuja sin errores -> 5 registros
+OK    limpieza: ve solo sus módulos -> Operaciones
+OK    limpieza: botón 'Nueva reserva' solo para recepción
+OK    limpieza: vista #operaciones/estado se dibuja sin errores -> 50 habitaciones
+OK    limpieza: vista #operaciones/limpieza se dibuja sin errores -> 5 registros
+OK    el tablero muestra las 50 habitaciones
+OK    la leyenda suma 50 -> 19 + 24 + 5 + 2
+OK    pulsar un estado destaca solo esas habitaciones
+OK    el calendario tiene una fila por habitación y 14 días
+OK    cada fila del calendario ocupa exactamente 14 columnas -> 14
+OK    pulsar una habitación abre su panel
+OK    el panel se cierra
+OK    una celda vacía abre 'Nueva reserva' con la fecha puesta -> Reservar la 101 desde el 29/11/2026
+OK    se listan habitaciones disponibles con su precio -> 29 opciones
+OK    sin elegir habitación y cliente, el botón de confirmar está desactivado
+OK    elegidos habitación y cliente, se puede confirmar
+OK    la reserva se crea y aparece el aviso -> Reserva creada1 noche · 59,50 €
+OK    el panel se cierra al crear
+OK    la reserva existe en el servidor -> #4948 hab. 510
+OK    la nueva reserva aparece en la lista -> 300 filas
+OK    el detalle ofrece check-in y cancelar
+OK    cancelar pide confirmación
+OK    la reserva queda cancelada en el servidor
+OK    filtrar por estado muestra solo esas reservas -> 24 reservas
+OK    el buscador filtra las filas de la tabla -> 1 de 400
+OK    guardar un cliente vacío muestra el motivo en el formulario -> Nombre es obligatorio
+OK    el dashboard dibuja tarjetas y gráficas -> 9 tarjetas, 5 gráficas
+OK    la gráfica de ocupación tiene 12 barras con su valor -> dic · Ocupación: 63 %
+OK    limpieza ve sus partes con el botón Resolver -> 5 partes
+OK    al resolver aparece el aviso y la habitación queda disponible -> Parte resueltoLa habitación queda disponible
+OK    el parte resuelto desaparece de la lista de abiertos
+OK    limpieza ve el estado de las habitaciones sin nombres de huéspedes
+OK    una vista no permitida (administración) no se abre aunque se escriba en la dirección
+OK    un nombre con etiquetas HTML se muestra como texto y no se ejecuta -> guardado=true, ejecutado=false, imágenes=0, se ve como texto=true
+OK    ningún error de JavaScript en toda la sesión
+
+Resumen: 62 correctas, 0 con fallo

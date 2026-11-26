@@ -1,0 +1,21 @@
+# 2026-11-25 17:00
+# prueba con la IA REAL: servidor.py + ia.py (sin --simulada) + Ollama 0.40.18, modelo gemma3:4b (3,4 GB)
+# equipo: 11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz sin GPU dedicada, websockets 10.4
+# la primera respuesta puede incluir la carga del modelo en memoria (no medido por separado)
+# tiempos: desde que se envía la pregunta hasta que llega la respuesta
+
+registrado: {'tipo': 'registrado', 'rol': 'usuario', 'ias': 1}
+
+> ¿Qué es un worker en JavaScript? Responde en una frase.
+[respuesta, 9.5 s medidos aquí, 9.5 s según el servidor]
+Un worker en JavaScript es un hilo de ejecución separado que permite realizar tareas en segundo plano sin bloquear el hilo principal de la interfaz de usuario.
+
+> Dame tres consejos para proteger una contraseña.
+[respuesta, 4.3 s medidos aquí, 4.3 s según el servidor]
+1.  Usa contraseñas fuertes y únicas para cada cuenta.
+2.  Activa la autenticación de dos factores siempre que sea posible.
+3.  No compartas tus contraseñas con nadie.
+
+> ¿Cuántas noches hay entre el 3 y el 7 de mayo?
+[respuesta, 2.0 s medidos aquí, 2.0 s según el servidor]
+Hay cuatro noches entre el 3 y el 7 de mayo.

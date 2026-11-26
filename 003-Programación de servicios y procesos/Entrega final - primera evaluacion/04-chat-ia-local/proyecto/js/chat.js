@@ -1,7 +1,10 @@
 // Página del chat: se conecta al servidor por WebSocket y muestra la conversación
 
-// El servidor está en el mismo ordenador que sirve esta página (puerto 8765)
-const direccion = "ws://" + (location.hostname || "localhost") + ":8765"
+// El servidor está en el mismo ordenador que sirve esta página. Puerto por defecto: 8765.
+// Si ese puerto está ocupado, se puede abrir la página con otro: index.html?puerto=8799
+// (y arrancar el servidor con el mismo puerto en configuracion.json)
+const puerto = new URLSearchParams(location.search).get("puerto") || "8765"
+const direccion = "ws://" + (location.hostname || "localhost") + ":" + puerto
 
 let conexion = null
 let pensando = null   // burbuja "pensando..." mientras esperamos una respuesta
