@@ -1,0 +1,15 @@
+{
+  "aplicacion": "Thistle PMS",
+  "hotel": "Hotel Cardo Marino",
+  "color": "#224653",
+  "integracion": {
+    "darkorange_url": "http://127.0.0.1:8001/darkorange/api/superapi.php",
+    "proyecto": "23cb2312-844e-41aa-983c-4010a6f5af40"
+  },
+  "emisor": {
+    "razon_social": "Hotel Cardo Marino (empresa ficticia)",
+    "nif": "ZZ0000000 (ficticio)",
+    "direccion": "Dirección ficticia, Valencia",
+    "aviso": "Documento de ejemplo con datos inventados. No es una factura real."
+  }
+}

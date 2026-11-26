@@ -15,7 +15,7 @@ import sys
 
 import websockets
 
-IP_WEB = "localhost"           # "0.0.0.0" para aceptar navegadores de otros equipos
+IP_WEB = "0.0.0.0"           # "0.0.0.0" para aceptar navegadores de otros equipos
 PUERTO_WEB = 8765
 IP_CHAT = "localhost"          # dónde está el servidor de chat (TCP)
 PUERTO_CHAT = 5000

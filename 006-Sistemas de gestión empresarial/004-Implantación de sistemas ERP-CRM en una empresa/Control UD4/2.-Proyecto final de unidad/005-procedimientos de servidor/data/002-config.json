@@ -1,0 +1,11 @@
+{
+  "aplicacion": "Thistle PMS",
+  "hotel": "Hotel Cardo Marino",
+  "color": "#224653",
+  "emisor": {
+    "razon_social": "Hotel Cardo Marino (empresa ficticia)",
+    "nif": "ZZ0000000 (ficticio)",
+    "direccion": "Dirección ficticia, Valencia",
+    "aviso": "Documento de ejemplo con datos inventados. No es una factura real."
+  }
+}

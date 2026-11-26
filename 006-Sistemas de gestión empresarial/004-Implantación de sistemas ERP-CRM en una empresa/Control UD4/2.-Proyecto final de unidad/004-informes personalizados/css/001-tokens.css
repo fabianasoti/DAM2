@@ -1,0 +1,94 @@
+/* ==========================================================
+   TOKENS DE DISEÑO · Manual de Identidad Corporativo
+   Copia este archivo en tus proyectos y usa solo las variables
+   semánticas (--bg, --text, --cta...), no los colores crudos.
+   ========================================================== */
+:root {
+	/* ---------- 1. Paleta cruda (nombres de la paleta) ---------- */
+	/* Columna izquierda: estructura */
+	--hawthorn-blossom: #F9F8F4;
+	--silver-birch:     #D5DCDF;
+	--blackthorn-berry: #224653;
+	--willow-leaf:      #86915D;
+	/* Columna derecha: acentos */
+	--ivy-bloom:        #40654A;
+	--gorse-bloom:      #C4A524;
+	--cowslip-meadow:   #E4C259;
+	--wild-honeysuckle: #ED9F77;
+	--dog-rose:         #DCA3B9;
+	--foxglove-bell:    #D2437A;
+	--rowan-berry:      #E65855;
+	--copper-beech:     #C45524;
+
+	/* Variantes derivadas (hover y texto accesible) */
+	--blackthorn-deep:  #1A3641;  /* hover de elementos oscuros */
+	--foxglove-strong:  #C73871;  /* relleno CTA (texto blanco 4.96:1) */
+	--foxglove-deep:    #A82A5C;  /* hover CTA y texto rosa sobre claro (6.7:1) */
+	--copper-deep:      #A8471C;  /* texto cobre sobre claro (5.9:1) */
+	--dogrose-deep:     #CE8FAA;  /* hover botón secundario */
+	--rowan-text:       #C23B38;  /* texto de error (5.3:1 sobre blanco) */
+	--gorse-text:       #735B0E;  /* texto sobre fondos amarillos claros */
+	--willow-text:      #4C5432;  /* texto sobre willow claro */
+
+	/* ---------- 2. Tokens semánticos (USA ESTOS) ---------- */
+	/* Superficies */
+	--bg:            var(--hawthorn-blossom);
+	--surface:       #FFFFFF;
+	--surface-alt:   var(--silver-birch);
+	--border:        var(--silver-birch);
+	/* Texto */
+	--text:          var(--blackthorn-berry);
+	--text-muted:    #4F6670;
+	--text-inverse:  var(--hawthorn-blossom);
+	/* Estructura (sidebar, header, tablas) */
+	--structure:       var(--blackthorn-berry);
+	--structure-hover: var(--blackthorn-deep);
+	/* Acciones */
+	--cta:            var(--foxglove-strong);
+	--cta-hover:      var(--foxglove-deep);
+	--secondary:      var(--dog-rose);
+	--secondary-hover:var(--dogrose-deep);
+	--focus-ring:     var(--foxglove-bell);
+	--link:           var(--ivy-bloom);
+	/* Estados */
+	--success:  var(--ivy-bloom);
+	--warning:  var(--cowslip-meadow);
+	--danger:   var(--rowan-berry);
+	--danger-text: var(--rowan-text);
+	--info:     var(--blackthorn-berry);
+	/* Acentos de personalidad */
+	--highlight: var(--gorse-bloom);
+	--delight:   var(--copper-beech);
+	--delight-text: var(--copper-deep);
+	--warm:      var(--wild-honeysuckle);
+	--nature:    var(--willow-leaf);
+
+	/* ---------- 3. Tipografía ---------- */
+	--font-display: 'Instrument Serif', Georgia, serif; /* SOLO nombre corporativo, nombres de app y titulares de inicio */
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
+	--fs-xs: 0.75rem;   /* 12 */
+	--fs-sm: 0.875rem;  /* 14 */
+	--fs-md: 1rem;      /* 16 */
+	--fs-lg: 1.25rem;   /* 20 */
+	--fs-xl: 1.5rem;    /* 24 */
+	--fs-2xl: 2rem;     /* 32 */
+	--fs-3xl: 3rem;     /* 48 */
+
+	/* ---------- 4. Forma, espacio, sombra ---------- */
+	--radius-sm: 0.5rem;
+	--radius-md: 0.75rem;   /* botones e inputs */
+	--radius-lg: 1rem;      /* tarjetas */
+	--radius-pill: 999px;
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-6: 1.5rem;
+	--space-8: 2rem;
+	--space-12: 3rem;
+	--shadow-sm: 0 1px 2px rgb(34 70 83 / 0.08);
+	--shadow-md: 0 4px 14px rgb(34 70 83 / 0.10);
+	--shadow-cta: 0 4px 12px rgb(199 56 113 / 0.28);
+	--transition: 160ms ease;
+}

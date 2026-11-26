@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thistle PMS</title>
+  <link rel="shortcut icon" href="img/001-fs favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/001-tokens.css">
+  <link rel="stylesheet" href="css/002-estilo.css">
+</head>
+<body class="app">
+
+  <!-- Cabecera -->
+  <header>
+    <div class="marca">
+      <img src="img/002-fs monograma blanco.svg" alt="">
+      <h1>Thistle PMS</h1>
+      <small id="nombreHotel"></small>
+    </div>
+    <div id="herramientas">
+      <input id="buscador" type="search" placeholder="Filtrar la tabla…" aria-label="Filtrar la tabla">
+      <button class="btn oculto" id="botonNuevaReserva" type="button">Nueva reserva</button>
+    </div>
+    <div id="usuario">
+      <div>
+        <p id="nombreUsuario"></p>
+        <small id="rolUsuario"></small>
+        <button type="button" id="cerrarSesion">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cuerpo: tres columnas (módulos, vistas y escenario) -->
+  <main>
+    <nav aria-label="Módulos">
+      <div class="titulo-columna">Módulos</div>
+      <div class="contenido-columna" id="listaModulos"></div>
+    </nav>
+    <section aria-label="Vistas">
+      <div class="titulo-columna">Vistas</div>
+      <div class="contenido-columna" id="listaVistas"></div>
+    </section>
+    <div id="escenario"></div>
+  </main>
+
+  <!-- Barra de estado -->
+  <footer>
+    <span id="estadoModulo"></span>
+    <span id="estadoVista"></span>
+    <span id="estadoRegistros"></span>
+    <span id="estadoEvento">Listo</span>
+    <span id="estadoConexion">● En línea</span>
+  </footer>
+
+  <!-- Panel lateral, ventana modal y avisos -->
+  <div class="capa" id="capaPanel"></div>
+  <aside class="panel" id="panel" aria-hidden="true">
+    <div class="panel-cabecera">
+      <div><small id="panelEtiqueta"></small><h2 id="panelTitulo"></h2></div>
+      <button class="cerrar" id="panelCerrar" type="button" aria-label="Cerrar"></button>
+    </div>
+    <div class="panel-cuerpo" id="panelCuerpo"></div>
+    <div class="panel-pie" id="panelPie"></div>
+  </aside>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal-ventana">
+      <h2 id="modalTitulo"></h2>
+      <p id="modalTexto"></p>
+      <div class="fila-botones" style="justify-content: flex-end" id="modalBotones"></div>
+    </div>
+  </div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/001-iconos.js"></script>
+  <script src="js/002-nucleo.js"></script>
+  <script src="js/003-graficas.js"></script>
+  <script src="js/004-tabla.js"></script>
+  <script src="js/005-reservas.js"></script>
+  <script src="js/006-tablero.js"></script>
+  <script src="js/007-mantenimiento.js"></script>
+  <script src="js/008-dashboard.js"></script>
+  <script src="js/009-principal.js"></script>
+</body>
+</html>

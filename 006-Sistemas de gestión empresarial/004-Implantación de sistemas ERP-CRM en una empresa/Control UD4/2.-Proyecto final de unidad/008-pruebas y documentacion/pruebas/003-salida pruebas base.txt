@@ -1,0 +1,111 @@
+OK    la base de datos no existe antes del primer uso
+OK    sin sesión, /yo responde 401 -> 401
+OK    al primer login se instala sola la base de datos
+OK    datos de ejemplo -> habitaciones=50 clientes=400 reservas=4991
+OK    los datos de ejemplo no tienen reservas solapadas -> 0
+OK    cada habitación ocupada tiene exactamente un huésped en check-in -> 0
+OK    las contraseñas están cifradas (no en texto plano)
+OK    estados de las habitaciones
+OK    sin sesión, todos los servicios responden 401 -> [401, 401, 401, 401, 401, 401]
+OK    contraseña incorrecta: 401 y mensaje genérico -> Credenciales incorrectas
+OK    usuario inexistente: mismo mensaje (no revela qué emails existen)
+OK    las peticiones que no son JSON se rechazan (protección CSRF) -> 415
+OK    la cookie se envía con HttpOnly y SameSite=Strict -> thistle=4lam2vaij8f9thtu1i1uujkbej; path=/; HttpOnly; SameSite=Strict
+OK    la lista de usuarios no contiene el hash ni la columna de contraseña
+OK    limpieza no puede ver reservas
+OK    mantenimiento no puede ver el dashboard
+OK    recepción no puede ver usuarios
+OK    recepción no puede ver la auditoría
+OK    recepción no puede crear habitaciones
+OK    una entidad inexistente da 404 (no se puede consultar cualquier tabla)
+OK    limpieza no puede exportar clientes
+OK    limpieza ve las habitaciones pero no los nombres de huéspedes
+OK    recepción sí ve huéspedes y llegadas
+OK    tras 5 intentos fallidos, se bloquea el acceso aunque la contraseña sea correcta -> Demasiados intentos. Espera 10 minutos
+OK    el bloqueo no afecta a otros usuarios
+OK    la auditoría registra login, login fallido y bloqueo -> ['login', 'login bloqueado', 'login fallido']
+OK    salida anterior a la entrada se rechaza
+OK    salida igual a la entrada se rechaza
+OK    entrada en el pasado se rechaza
+OK    fecha inexistente (30 de febrero) se rechaza
+OK    estancia de más de 30 noches se rechaza
+OK    canal inventado se rechaza
+OK    más huéspedes que la capacidad se rechaza
+OK    cliente inexistente se rechaza
+OK    habitación inexistente se rechaza
+OK    un rol sin permiso (limpieza) no puede reservar
+OK    reserva correcta -> {'ok': True, 'id': 4992, 'importe': 191.25, 'noches': 3}
+OK    el importe coincide con el cálculo independiente por temporadas -> 191.25 frente a 191.25
+OK    queda guardada como confirmada con su importe
+OK    la misma habitación y fechas: rechazada -> La habitación ya está reservada en esas fechas
+OK    fechas que se pisan solo en parte (entrada dentro de la estancia): rechazada
+OK    fechas que envuelven a la reserva existente: rechazada
+OK    reservar justo al terminar otra (salida = entrada) sí se permite
+OK    la habitación reservada ya no aparece como disponible
+OK    las habitaciones disponibles traen su precio calculado -> 13
+OK    sin solapes tras todas las pruebas (comprobado en la base de datos)
+OK    el disparador de la base de datos impide un solape (sin pasar por PHP) -> La habitación ya está reservada en esas fechas
+OK    la restricción CHECK impide salida igual a entrada
+OK    12 reservas simultáneas de la misma habitación: solo una se acepta -> [201, 409, 409, 409, 409, 409, 409, 409, 409, 409, 409, 409] en 0.04 s
+OK    en la base de datos queda exactamente una
+OK    reserva con llegada hoy -> {'ok': True, 'id': 4995, 'importe': 178.5, 'noches': 3}
+OK    check-in antes del día de entrada: rechazado -> Todavía no es el día de entrada (2026-12-16)
+OK    check-out sin haber hecho check-in: rechazado -> No se puede pasar una reserva de 'confirmada' a 'check-out'
+OK    check-in correcto: la habitación pasa a ocupada -> {'ok': True, 'estado': 'check-in', 'estado_habitacion': 'ocupada', 'factura': None}
+OK    segundo check-in: rechazado
+OK    no se puede cancelar una reserva con check-in
+OK    check-out: la habitación pasa a sucia -> {'ok': True, 'estado': 'check-out', 'estado_habitacion': 'sucia', 'factura': 'F2026-03485'}
+OK    salida anticipada: la estancia se acorta y se recalcula el importe -> ('2026-11-27', 59.5)
+OK    el check-out crea un parte de limpieza pendiente
+OK    cancelar una reserva confirmada
+OK    una reserva cancelada no se puede cancelar de nuevo
+OK    al cancelar, esas fechas vuelven a estar disponibles
+OK    check-in con la habitación 'sucia': rechazado -> La habitación 308 está sucia: falta la limpieza
+OK    check-in con la habitación 'mantenimiento': rechazado -> La habitación 310 está en mantenimiento
+OK    check-in con la habitación 'ocupada': rechazado -> La habitación 402 sigue ocupada: hay que hacer antes el check-out del huésped anterior
+OK    mantenimiento no puede resolver un parte de limpieza
+OK    limpieza no puede ver las averías
+OK    limpieza resuelve su parte: la habitación vuelve a disponible -> {'ok': True, 'estado_habitacion': 'disponible'}
+OK    un parte resuelto no se puede resolver otra vez
+OK    avería urgente: la habitación pasa a mantenimiento -> {'ok': True, 'id': 42, 'estado_habitacion': 'mantenimiento'}
+OK    una habitación en mantenimiento no se ofrece como disponible
+OK    no se puede reservar una habitación bloqueada por avería
+OK    recepción no puede resolver averías
+OK    mantenimiento se asigna el parte
+OK    mantenimiento resuelve: la habitación vuelve a disponible -> {'ok': True, 'estado_habitacion': 'disponible'}
+OK    avería con prioridad baja no bloquea la habitación
+OK    descripción vacía se rechaza
+OK    el dashboard responde
+OK    noches e ingresos de los 12 meses coinciden con el cálculo independiente -> [('2026-10-01', 1131, 1131), ('2026-11-01', 871, 871)]
+OK    ocupación, ADR y RevPAR son coherentes (RevPAR = ocupación x ADR) -> 58.1 % x 90.66 = 52.64
+OK    las habitaciones por estado coinciden con la base de datos
+OK    canales: la suma de reservas coincide con la base de datos
+OK    crear un cliente -> {'ok': True, 'id': 401}
+OK    documento repetido: error entendible
+OK    email no válido se rechaza
+OK    campo obligatorio vacío se rechaza
+OK    inyección SQL en un campo se guarda como texto, sin efecto
+OK    editar solo cambia lo enviado
+OK    recepción no puede borrar clientes
+OK    no se borra un cliente con reservas (integridad referencial) -> No se puede completar: hay datos relacionados (por ejemplo, reservas)
+OK    admin borra un cliente sin reservas
+OK    contraseña de menos de 8 caracteres se rechaza
+OK    admin crea un usuario con contraseña
+OK    el usuario nuevo puede entrar y su contraseña se guardó cifrada
+OK    el admin no puede borrarse a sí mismo
+OK    el admin no puede quitarse el rol
+OK    un usuario desactivado ya no puede entrar
+OK    exportar reservas a CSV -> 5001 líneas
+OK    exportar usuarios no incluye las contraseñas cifradas
+OK    una celda que empieza por = se protege como texto en el CSV
+OK    tabla no permitida en la exportación
+OK    importar clientes: 2 válidos y 3 rechazados con su motivo -> {'ok': True, 'insertados': 2, 'rechazados': [{'linea': 3, 'motivo': 'Falta nombre'}, {'linea': 4, 'motivo': 'Ya existe un registro con ese valor (dni_pasaporte)'}, {'linea': 5, 'motivo': 'Email no válido'}]}
+OK    importar un archivo sin columnas obligatorias se rechaza
+OK    limpieza no puede importar clientes
+OK    la exportación programada crea CSV por tabla, JSON completo y log -> [2026-11-26 01:08:23] 8 tablas, 9346 registros, 0.043 s, 0 archivos antiguos borrados
+OK    la exportación programada no incluye contraseñas ni intentos de login
+OK    el script de exportación no se puede ejecutar desde la web -> 403
+OK    instalar --forzar recrea la base de datos -> 0.52 s: 4991 reservas, 30 habitaciones ocupadas hoy, 5 sucias
+OK    instalar sin --forzar no borra la base existente
+
+Resumen: 109 correctas, 0 con fallo

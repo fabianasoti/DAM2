@@ -1,0 +1,58 @@
+
+== Tablas, vistas y consultas ==
+  OK    lista de reservas desde la vista
+  OK    búsqueda por nombre en la vista
+  OK    consultas sobre vistas
+  OK    la suma por países cuadra con las reservas
+  OK    el formulario de clientes tiene idioma y observaciones
+  OK    alta con campos nuevos {'ok': True, 'id': 401}
+  OK    idioma no válido rechazado
+  OK    mantenimiento no puede ver las consultas
+  OK    idiomas coherentes con el país
+
+== Facturación ==
+  OK    facturas del mes actual: {'facturas': 233, 'base': 63922.98, 'iva': 6392.27, 'total': 70315.25}
+  OK    una factura por cada estancia terminada
+  OK    base + IVA = total en todas
+  OK    números de factura sin repetir
+  OK    numeración correlativa sin huecos por año
+  OK    detalle de factura F2026-03484
+  OK    mes inválido rechazado
+  OK    factura inexistente 404
+  OK    exportación de facturas
+  OK    limpieza no ve facturas
+  OK    sin sesión no se ven
+
+== Informes imprimibles ==
+  OK    parte diario: 8 llegadas, 2 salidas, 36 alojados
+  OK    los alojados cuadran con la base de datos
+  OK    resumen mensual cuadra por tipo y por pago: 70315.25 €
+  OK    factura imprimible con aviso de datos ficticios
+  OK    fecha inválida rechazada
+  OK    acción inválida rechazada
+  OK    limpieza no ve los informes
+
+== Procedimientos del servidor (triggers) ==
+  OK    el check-out crea la factura con el número siguiente: F2026-03485
+  OK    importe, IVA, cliente y fecha correctos
+  OK    solo se crea una factura
+  OK    factura: Una factura emitida no se puede modificar
+  OK    factura: Una factura emitida no se puede borrar
+  OK    repetir el check-out se rechaza
+  OK    el cambio de precio queda auditado {'ok': True, 'id': 1}
+
+== Paneles e integración con darkorange ==
+  OK    paneles: facturación 12 meses, formas de pago y países
+  OK    el facturado del mes cuadra: 70315.25 €
+  OK    sin darkorange: 'sin respuesta', 3765 pendientes
+  OK    enviar con darkorange apagado: aviso claro
+  OK    con darkorange arrancado: disponible
+  OK    envía 25 facturas 
+  OK    en darkorange: 25 facturas nuevas y 23 clientes nuevos (sin duplicar clientes)
+  OK    factura F2026-03460: mismo importe y mismo cliente en los dos sistemas
+  OK    25 pedidos enlazados y 3 productos (tipos de habitación) sin duplicar
+  OK    segundo envío: 50 en total, ninguna repetida
+  OK    solo el administrador puede integrar
+  OK    enviar exige POST
+
+RESULTADO: 46 de 46 comprobaciones correctas
